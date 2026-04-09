@@ -38,7 +38,7 @@ theme_set(theme_minimal())
 | 23 December 2022 | Cease publication of both R and growth rate |
 :::
 
-## Estimates
+## Consensus estimates
 
 R and growth rate estimates were published in real time from May 2020. A final dataset was published 7 December 2022^[https://www.gov.uk/government/publications/reproduction-number-r-and-growth-rate-methodology]. These estimates are:
 
@@ -59,21 +59,60 @@ knitr::kable(head(r_gr))
 Looking at just the R and growth rate estimates for England:
 
 ```{r}
-plot_estimates <- function(region) {
-    r_gr |>
+plot_estimates <- function(region, data) {
+    data |>
 filter(region == {{region}}) |>
 mutate(reference = ifelse(value_type == "R", 1, 0)) |>
-ggplot(aes(x = date)) +
+ggplot(aes(x = date, col = model, fill = model)) +
 geom_line(aes(y = value_lower), alpha = 0.4) +
 geom_line(aes(y = value_upper), alpha = 0.4) +
 geom_ribbon(aes(ymin = value_lower, ymax = value_upper), alpha = 0.3) +
-geom_line(aes(y = reference), lty=2) +
+geom_line(aes(y = reference), lty=2, col="grey50") +
 facet_wrap(~value_type, ncol=1, scales = "free_y") +
-labs(x = NULL, y = "Weekly estimate (90% CI)",
-title = paste({{region}}, "COVID-19 epidemic indicators"), subtitle = "UK government public estimates of R and growth rate")
+labs(x = NULL, y = "Estimate (90% CI)",
+title = paste({{region}}, "COVID-19 epidemic indicators")) +
+theme(legend.position = "bottom")
 }
-plot_estimates("England")
+r_gr <- mutate(r_gr, model = "Weekly consensus")
+plot_estimates("England", r_gr)
 ```
+
+## Retrospective comparison
+
+Using Rt and growth rate from inc2prev.
+
+```{r}
+i2p_nation <- read_csv("https://github.com/epiforecasts/inc2prev/raw/refs/heads/main/outputs/estimates_national.csv") |>
+filter(variable == "England")
+i2p_region <- read_csv("https://raw.githubusercontent.com/epiforecasts/inc2prev/refs/heads/main/outputs/estimates_regional.csv")
+
+i2p <- bind_rows(i2p_nation, i2p_region) |>
+select(date, region = variable, value_type = name, value_lower = q10, value_upper = q90) |>
+filter(value_type %in% c("R", "r")) |>
+mutate(value_type = ifelse(value_type == "r", "growth rate", "R"))
+knitr::kable(head(i2p))
+```
+
+Plotting directly against consensus estimates.
+
+```{r}
+i2p <- mutate(i2p, model = "i2p")
+comp <- bind_rows(i2p, r_gr)
+plot_estimates("England", comp)
+```
+
+But i2p is calculated daily. 
+We should keep only the days that overlap with the consensus, or take an average across the week covered by the consensus estimate.
+
+## Future work
+
+- Comparison with retrospectively calculated R and GR using latest available methodology and data
+    - recalculate weekly, on diff sources
+- Comparison with contemporary estimates contributing to the ensemble presented above (e.g. via requesting accesss to CrystalCast)
+- Text analysis of interpretation presented in consensus statements from SPI-M and EMRG^[https://www.gov.uk/government/publications/consensus-statements-on-covid-19]
+
+## Appendix
+
 
 ### Regional estimates
 
@@ -82,20 +121,10 @@ regions <- unique(r_gr$region)
 for (i in regions) {
     cat("\n::: {.callout-note collapse=\"true\"}")
     cat("\n####", i, "\n")
-    print(plot_estimates(i))
+    print(plot_estimates(i, r_gr))
     cat("\n:::\n")
 }
 ```
-
-## Future work
-
-- Comparison with retrospectively calculated R and GR using latest available methodology and data
-    - Calcuation of R from epinowcast
-    - Data on infections from ONS incidence survey; or latest UKHSA estimates of deaths within 28 days and latest best estimates of delay from infection through death (if time-varying)
-- Comparison with contemporary estimates contributing to the ensemble presented above (e.g. via requesting accesss to CrystalCast)
-- Text analysis of interpretation presented in consensus statements from SPI-M and EMRG^[https://www.gov.uk/government/publications/consensus-statements-on-covid-19]
-
-## Appendix
 
 ::: {.callout-note collapse="true"}
 
