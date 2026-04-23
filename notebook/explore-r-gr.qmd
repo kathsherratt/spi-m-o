@@ -129,7 +129,7 @@ geom_linerange(aes(ymin = value_lower_consensus, ymax = value_upper_consensus), 
 geom_ribbon(aes(ymin = value_lower, ymax = value_upper), alpha = 0.3, col = "#7fbf7b", fill = "#7fbf7b") +
 geom_line(aes(y = reference), lty=2, col="grey50") +
 facet_wrap(~value_type, ncol=1, scales = "free_y") +
-labs(x = NULL, y = "Estimate (90% CI)",
+labs(x = NULL, y = "Estimate (90% CI)", caption = "SPI-M-O consensus (bars) and retrospective estimate from infection survey (inc2prev)",
 title = paste({{region}}, "COVID-19 epidemic indicators")) +
 theme(legend.position = "bottom")
 }
