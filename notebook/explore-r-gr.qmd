@@ -1,5 +1,5 @@
 ---
-title: "England R and growth rate estimates"
+title: "SPI-M: COVID-19 R and growth rate estimates in England"
 date: today
 author: Kath Sherratt
 format: html
@@ -13,8 +13,8 @@ execute:
 ```{r}
 #| label: setup
 #| include: false
-library(here)
-library(ggplot2)
+pacman::p_load(here, readr, dplyr, ggplot2)
+source(here("R", "process-r-gr.r"))
 theme_set(theme_minimal())
 ```
 
@@ -24,15 +24,18 @@ theme_set(theme_minimal())
 
 | Date | Event |
 | :--- | :--- |
+| 2020 | |
 | 29 May 2020 | Government begin publishing the R value on a weekly basis |
 | 12 June 2020 | Additional publication of growth rate |
 | 10 July 2020 | Reliability indicator introduced^[The reliability indicator showed where estimates were "insufficiently robust to inform policy decisions alone" (Timeseries of R and Growth Rate, Table 1, Note 2). It was based on "daily deaths in a region averaged over a 10-day period... to determine whether it was based on very few cases in a particular area. (Timeseries of R and Growth Rate, Notes and Definitions, Note 7)] |
+| 2021 | |
 | 26 March 2021 | Update methodology for combining the R values and growth rate: modelling groups now submit a time series of estimates and a given date across all models is used, rather than their most recent estimates |
 | 2 April 2021 | Cease estimates for whole- UK R value and growth rate |
 | 30 April 2021 | Updated methodology for the reliability indicator^[Updated to: "the number of individuals admitted to hospital with COVID-19 and inpatients newly diagnosed with COVID-19"] |
 | 30 April 2021 | Methodology published^[https://www.gov.uk/government/publications/reproduction-number-r-and-growth-rate-methodology] |
 | 21 July 2021 | JBC take on responsibility for R and growth rate estimates |
 | 6 September 2021 | JBC update published methodology |
+| 2022 | |
 | 1 April 2022 | UKHSA publish statement of voluntary compliance with the Code of Practice for Statistics^[https://www.gov.uk/government/publications/r-value-and-growth-rate-statement-of-voluntary-compliance-with-the-code-of-practice-for-statistics/reproduction-number-r-and-growth-rate-statement-of-voluntary-compliance-with-the-code-of-practice-for-statistics] |
 | 7 December 2022 | Historical estimates of R and growth rate published as single download |
 | 23 December 2022 | Cease publication of both R and growth rate |
@@ -40,69 +43,117 @@ theme_set(theme_minimal())
 
 ## Consensus estimates
 
-R and growth rate estimates were published in real time from May 2020. A final dataset was published 7 December 2022^[https://www.gov.uk/government/publications/reproduction-number-r-and-growth-rate-methodology]. These estimates are:
+R and growth rate estimates were published in real time from May 2020.
+Between 3-12 modelling groups provided R estimates each week, considered in group discussion, and combined in a simple average.
+This was the "consensus estimate".
+
+:::  {.callout-note collapse="true"}
+
+### SPI-M-O R estimates
+
+Each modelling group produced estimates of R and the growth rate, before discussing and comparing across their estimates each week.
+All the estimates were combined as the mean average, and rounded to one decimal place. 
+
+> From around May 2020, SPI-M-O began to combine these nowcasts using a statistical approach across a minimum of 3, but often more than 10, models to provide a consensus range... all models have been weighted equally when estimating R
+> 
+
+Producing something each week that looked like this: 
+
+![SPI-M consensus statement of 17 September 2020, showing 90% range of modelled estimates of R for England from groups and consensus (grey)](../figures/2020-09-17-eng-r.png)
+
+A final dataset of all the weekly consensus estimates was published in 2022^[https://www.gov.uk/government/publications/reproduction-number-r-and-growth-rate-methodology], as:
 
 > a time series of contemporary estimates, which were calculated using the data available at the time and do not necessarily represent the current understanding of R and growth rates for those dates. Estimates have not been revised to include new data.^[Timeseries of R and Growth Rate, Note 4]
 
-Published data tables include lower and upper bound estimates for R and the growth rate per day (90% Confidence Interval), for England and the seven NHS England regions. Data were downloaded and lightly pre-processed.
+Published data include lower and upper bound estimates for R and the growth rate per day (90% Confidence Interval), for England and the seven NHS England regions. Here, data were downloaded and lightly [pre-processed](../R/process-r-gr.R).
 
-::: {.callout-note collapse="true"}
-### Data preview
-
-```{r}
-source(here("R", "process-r-gr.R"))
-r_gr <- process_r_gr()
-knitr::kable(head(r_gr))
-```
 :::
 
 Looking at just the R and growth rate estimates for England:
 
 ```{r}
-plot_estimates <- function(region, data) {
+r_gr <- process_r_gr()
+r_gr <- mutate(r_gr, model = "Weekly consensus",
+production = ifelse(date < as.Date("2021-07-21"), "SPI-M", "JCB"))
+
+plot_estimates <- function(region, data, value_type = "R") {
     data |>
 filter(region == {{region}}) |>
+filter(value_type %in% {{value_type}}) |>
 mutate(reference = ifelse(value_type == "R", 1, 0)) |>
-ggplot(aes(x = date, col = model, fill = model)) +
-geom_line(aes(y = value_lower), alpha = 0.4) +
-geom_line(aes(y = value_upper), alpha = 0.4) +
-geom_ribbon(aes(ymin = value_lower, ymax = value_upper), alpha = 0.3) +
+ggplot(aes(x = date, col = production, fill = production)) +
+geom_linerange(aes(ymin = value_lower, ymax = value_upper), alpha = 0.4, lwd=1, col = "#af8dc3") +
 geom_line(aes(y = reference), lty=2, col="grey50") +
 facet_wrap(~value_type, ncol=1, scales = "free_y") +
 labs(x = NULL, y = "Estimate (90% CI)",
 title = paste({{region}}, "COVID-19 epidemic indicators")) +
 theme(legend.position = "bottom")
 }
-r_gr <- mutate(r_gr, model = "Weekly consensus")
 plot_estimates("England", r_gr)
 ```
 
 ## Retrospective comparison
 
-Using Rt and growth rate from inc2prev.
+We don't typically collect data on R directly (as it is an average of transmission chains). 
+This makes it difficult to evaluate. 
+However, we can compare these real-time estimates against a retrospective "best estimate".
+Plotting directly against consensus estimates, using Rt and growth rate from inc2prev:
 
 ```{r}
-i2p_nation <- read_csv("https://github.com/epiforecasts/inc2prev/raw/refs/heads/main/outputs/estimates_national.csv") |>
-filter(variable == "England")
-i2p_region <- read_csv("https://raw.githubusercontent.com/epiforecasts/inc2prev/refs/heads/main/outputs/estimates_regional.csv")
+i2p <- read_csv("https://github.com/epiforecasts/inc2prev/raw/refs/heads/main/outputs/estimates_national.csv") 
 
-i2p <- bind_rows(i2p_nation, i2p_region) |>
+i2p <- i2p |>
+filter(variable == "England") |>
 select(date, region = variable, value_type = name, value_lower = q10, value_upper = q90) |>
 filter(value_type %in% c("R", "r")) |>
-mutate(value_type = ifelse(value_type == "r", "growth rate", "R"))
-knitr::kable(head(i2p))
+mutate(value_lower = ifelse(value_lower == "r", value_lower*100, value_lower),
+value_upper = ifelse(value_upper == "r", value_upper*100, value_upper),
+value_type = ifelse(value_type == "r", "growth rate", "R"),
+model = "inc2prev")
 ```
-
-Plotting directly against consensus estimates.
 
 ```{r}
-i2p <- mutate(i2p, model = "i2p")
-comp <- bind_rows(i2p, r_gr)
-plot_estimates("England", comp)
+r_gr2 <- r_gr |>
+rename(value_lower_consensus = value_lower,
+value_upper_consensus = value_upper)
+
+comp <- left_join(i2p, r_gr2, by = c("date", "region", "value_type"))
+
+plot_estimates_comp <- function(region, data, value_type = "R") {
+    data |>
+filter(region == {{region}}) |>
+filter(value_type %in% {{value_type}}) |>
+mutate(reference = ifelse(value_type == "R", 1, 0)) |>
+ggplot(aes(x = date)) +
+geom_linerange(aes(ymin = value_lower_consensus, ymax = value_upper_consensus), alpha = 0.4, lwd=1, col = "#af8dc3") +
+geom_ribbon(aes(ymin = value_lower, ymax = value_upper), alpha = 0.3, col = "#7fbf7b", fill = "#7fbf7b") +
+geom_line(aes(y = reference), lty=2, col="grey50") +
+facet_wrap(~value_type, ncol=1, scales = "free_y") +
+labs(x = NULL, y = "Estimate (90% CI)",
+title = paste({{region}}, "COVID-19 epidemic indicators")) +
+theme(legend.position = "bottom")
+}
+plot_estimates_comp("England", data = comp, value_type = "R")
 ```
 
-But i2p is calculated daily. 
-We should keep only the days that overlap with the consensus, or take an average across the week covered by the consensus estimate.
+But inc2prev is calculated daily, to 4 d.p. 
+To make it a fairer comparison, we can round inc2prev estimates to 1 d.p. and keep only the days that overlap with the consensus.
+
+```{r, eval="false"}
+comp_trunc <- comp |>
+mutate(
+    #across(c(value_lower, value_upper), ~ zoo::rollmean(.x, k=7)),
+    across(c(value_lower, value_upper), ~ round(.x, digits = 1))) |>
+    filter(date %in% r_gr$date)
+
+plot_estimates_comp("England", data = comp_trunc, value_type = "R")
+```
+
+## Evaluation
+
+CMO Report on COVID-19^[https://www.gov.uk/government/publications/technical-report-on-the-covid-19-pandemic-in-the-uk/chapter-5-modelling]:
+
+> ...all models have been weighted equally when estimating R, but other methods of statistical combination might be more appropriate in the future.
 
 ## Future work
 
@@ -113,18 +164,13 @@ We should keep only the days that overlap with the consensus, or take an average
 
 ## Appendix
 
+::: {.callout-note collapse="true"}
 
-### Regional estimates
+### Reading
 
-```{r output="asis"}
-regions <- unique(r_gr$region)
-for (i in regions) {
-    cat("\n::: {.callout-note collapse=\"true\"}")
-    cat("\n####", i, "\n")
-    print(plot_estimates(i, r_gr))
-    cat("\n:::\n")
-}
-```
+CMO Report on COVID-19^[https://www.gov.uk/government/publications/technical-report-on-the-covid-19-pandemic-in-the-uk/chapter-5-modelling]
+
+:::
 
 ::: {.callout-note collapse="true"}
 

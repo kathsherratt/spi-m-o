@@ -1,0 +1,65 @@
+# SPI-M
+
+
+
+
+#### Role of SPI-M vs. UKHSA
+
+*Background*. In COVID-19, SPI-M provided an “equal consensus” approach to comparing and combining evidence from multiple models. Thanks to a (good) expansion of capacity and skill within UKHSA, during Pegasus we saw a clearer steer towards a “champion/challenge” model. In this format, the UKHSA produces estimates for relevant policy questions, and SPI-M's role is to challenge based on expertise. Rather than comparing among modelling work equally, we have a kind of strong prior to be confronted and updated with other models/expertise. 
+
+*Challenge.* This led to substantial confusion during Pegasus: it was unclear whether the function of SPI-M was to produce meaningful analysis, to describe their intended analysis, or to provide peer review/critique of UKHSA analysis. Without clarity on what UKHSA was planning to or capable of producing, it was difficult to avoid duplicated effort; and unclear when duplicated effort was the intention, i.e. scientific replication, vs redundant. By contrast, we could have spent this time supporting UKHSA in their internal process, e.g. reviewing code or supporting tool adoption.
+
+*Implications.*
+
+* Operational. We need to clarify UKHSA capacity both in advance (ideally working with them on whatever their internal protocol is for outbreak response), and in real-time (e.g. code sharing).  
+* Epistemic*.* The champion/challenge format changes how we produce and evaluate evidence.  
+  * *Function.* When might we actually need multiple independent models (to complement UKHSA), rather than critique? Are there some policy questions we should prioritise for challenge?  
+  * *Process*. We could consider UKHSA estimates as an “informative prior”. How could/should UKHSA estimates be adjusted based on other work (e.g. weighted)?   
+  * *Outputs*. How do we write a representative consensus statement in this format? How is the language of consistency/conflict expressed, and interpreted (e.g. "Other models were broadly consistent with"), relative to known uncertainty?
+
+#### SPI-M-O, expert elicitation, and group dynamics
+
+*Background*. Modelling work is particularly useful as a system for integrating across a patchwork of highly uncertain sources. This uncertainty also means that modelling work is highly flexible to individual analytical choices, and open to interpretation. As a result, there is no single “best” source of modelling evidence from which to draw policy advice. The SPI-M-O group is specifically convened to provide this diversity, from which to create a consensus of evidence for policy decisions. In addition, there is strong evidence that experts working in small groups can enable better (more accurate, creative) outcomes. 
+
+*Challenge*. However, this can also be compromised by (1) recruitment, needing to balance both relevance and diversity of expertise; and (2) group facilitation, to avoid biases in group decision-making (which could be individual, e.g. anchoring, ease of recall; or social, e.g. groupthink, “halo” effects). The real-time pressure of emergencies may add to these effects in either direction, while also making it very difficult to capture, report, and consider the impact of such dynamics. Nonetheless, addressing groupthink in advisory processes was a specific recommendation of the UK COVID-19 Inquiry. As far as I’m aware, there has been little work addressing this within scientific advisory groups in outbreak modelling (if not in other fields). 
+
+*Implications.* In the context of SPI-M: it’s not always clear how/when quantitative work informs qualitative discussion; or the influence of the qualitative discussion on a resulting consensus statement. I can imagine several ways to look at this:
+
+* Clarifying and comparing the role of SPI-M-O in convening discussions, versus asking for and providing quantitative estimates alone   
+* Reviewing concepts from judgement and decision-making literature, where these could be applied to SPI-M processes   
+* Trialling validated tools for expert elicitation (for example, DELPHI or SHELF methods)  
+* Reviewing and considering (existing) civil service standards for both (1) group facilitation for policy decision-making and (2) quality control of “business-critical” modelling work in the civil service  
+* Guidance for communicating the extent of uncertainty, consensus, and conflict around decision making thresholds
+
+## Evaluating the calibration of SPI-M consensus statements
+
+Background:  
+During COVID-19, the UK’s Scientific Advisory Group for Emergencies relied on “consensus statements” produced by the epidemiological modelling sub-group, SPI-M. It is useful to evaluate the accuracy of these statements.
+
+Methods:
+
+- Mine text of all consensus statements for probabilistic language  
+- Metadata: date, contributors, topics covered, policy context  
+- Take individual statements and match to framework of uncertainty language  
+- Match consistency in statements about specific quantities over time: e.g. changes in direction  
+- Where quantities can be measured, assess against observed data  
+- Note language of disagreement, caveats  
+- Note references to quantity and clarity of supporting evidence
+
+Example results:
+
+- Among all evaluable probabilistic statements calibration was X  
+- Bias in the direction of Y  
+- Stratified by   
+  - Variant phase  
+  - Variant competition (introduction vs dominance)  
+  - Type of evidence supporting  
+  - Number of contributors  
+- Statements about A were X internally consistent   
+- Caveats were present in X% statements  
+- X statements were presented with directly supporting evidence
+
+Interpretation: 
+
+- Potentially: compare to frameworks for writing consensus statements
+

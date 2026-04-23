@@ -1,0 +1,89 @@
+## Commentary
+
+### Comment on the end of the COVID-19 Inquiry
+
+I think the Inquiry actively inhibited scientific evaluation of the work we produced during COVID-19.
+
+I'm coming purely from an academic modeller's perspective, having spent the last few years gently asking around about who might be interested in evaluating the work of SPI-M. The response has mostly been "we have to wait for the Inquiry".
+
+I think there are a few reasons contributing to this, and frustratingly I still don't see a natural avenue for this work. TLDR; I think burn-out, and academic (dis)incentives, have created a "missing middle" in the academic hierarchy where we might otherwise expect this work to come from.
+
+As far as I can tell, up until now we've had:
+
+(1) a catastrophic, wildfire level of burn-out among those contributing to the COVID response. We've discussed in some depth elsewhere (see: Wellcome Open Research paper)
+
+(2) relatedly, rapid turnover among those who worked on the response - encouraged by the prevalence of short-term contracts in academia
+
+(3) no professional incentives for retrospective evaluation work (i.e. difficult to get quick tractable publications out of evaluation, again a particular issue for those on more junior/short-term contracts)
+
+(4) the Inquiry providing an active disincentive, by (a) quickly and thoroughly using up any of the very limited capacity that we had to reflect on COVID work; (b) providing a diversion for any attempt at reflection, towards a bureaucratic/legalistic/public office framing
+
+I think this has meant we have had neither emotional nor professional capacity for serious, systematic evaluation of COVID-19 work. And that makes it wildly frustrating that the Inquiry did not use whatever capacity we had, well.
+
+Now the Inquiry is over I am still struggling to see where any scientific evaluation can come from, because of the biased losses to institutional memory:
+
+(5) Among those in academia who worked on the real-time COVID response - we still have no capacity for retrospective evaluation, because we've spent the last 3-6 years seeking funding for entirely new work. (At best, this newly funded work might include some element of COVID-19 evaluation for background/learning from.) We also represent 'survivor bias': I think we've seen clear differential attrition among academic careers of responders
+
+(6) Those in academia who might have capacity, tend to be junior researchers - who are unlikely to have directly worked on the response. This would make it very difficult to build a strategy for evaluating across the pandemic work as a whole, not to mention intimidating from the perspective of critiquing the work of one's (new) colleagues in a small field
+
+I am personally very invested in attempting some meaningful evaluation of the modelling work that went into the COVID-19 response in the UK. But it's taken... four or five years to get comfortable with even writing that up into a research proposal (and I am still missing all my deadlines).
+
+### Book proposal
+
+#### Why a book?
+
+- Giving a fair account of how and why SPI-M worked during COVID-19 requires an understanding of the historical development of SPI-M, its participants, and its role within the Westminster system
+- There is a natural narrative arc in the successive generations of emergency response that SPI-M has grown out of
+- The readership should be wider than academic modelling community; there are lessons here for any kind of expert advice in policy, scientific culture and consensus making under pressure, the use of science as a political tool and the resulting conflicts facing scientists. 
+
+#### Audience
+
+- Evidence consumers (public health, humanitarian aid, ...) seeking expert advice. 
+   - Why? This audience, at least in public health, seems to view SPI-M as a best practice to follow, but without clarity on how SPI-M really functions.
+   - So what? The book should help them reflect on what they want, from who, in an emergency (not "more numbers better"), and provide (implicit) examples of better/worse options for executing this (e.g. group structure, conflict, elicitation).
+- Academics looking to have policy impact. 
+   - Why? SPI-M in COVID-19 was an immediate and shocking collison between the worlds of academia and national politics
+   - So what? This is an excellent example of the costs of policy facing work, and a good way to explore the responsibilities and boundaries of academics providing evidence with highly consequential use 
+- General public
+    - Why? SPI-M is a matter of national interest - as a body with strong influence on the politicians and policies governing a democratic society, potentially at any time and with extreme and universal impact.
+
+#### Informative comparisons
+
+- Hacking, The Taming of Chance
+- Porter, Trust in Numbers
+- Thompson, Escape from Model Land
+- Schneider, Science as a Contact Sport
+- Parkhurt, The Politics of Evidence
+
+### History of SPI-M
+
+Context: epidemiological analysis contributing to policy 
+
+Choice of approach
+
+- Outbreak-by-outbreak  
+- Outbreak phase: detection, wave, stand-down  
+- Evaluation criteria: credibility/scientific validity, relevance/policy interaction, legitimacy/public accountability
+
+Methods
+
+- Survey - cohorts of analysts identified across outbreaks   
+- Interviews - key informants (consistent participants), + ?large random selection of one-off participants  
+- text mining & processing - e.g. relative term frequency across witness statements; topic modelling to identify role of quantitative work/reliance on modellers as experts; sentiment analysis; network analysis of co-mentions of people, institutions, topics
+
+Themes:
+
+- Resources - “we had a single computer”  
+- Teams: who was working on what, when, where? What training did they have? Who left & where did they move to? Who stayed & why?   
+  - Hypothesis - survivor bias & Matthew effect of self-reinforcing career path dependency  
+  - Lessons: selection, recruitment, diversity, participation
+
+### Ethical integration of research in public health emergencies 
+
+The government has previously published guidance on [ethical research in emergencies](https://www.gov.uk/government/publications/ethical-integration-of-research-in-publ[…]-in-public-health-emergencies-preparation-response-and-recovery); it would be useful to reflect on how these apply to SPI-M. Specifically:
+
+*Responsibilities that arise for policy-makers include support for emergency preparedness encompassing…*
+
+- ***sustainable support for, and enablement of, the infrastructure required to conduct that research,** including multi-institution research platforms, priority-setting mechanisms, community engagement plans, and data sharing arrangements*  
+- *a minimum commitment to ensuring that evidence is generated during or after policy implementation, and that well-designed studies begin as soon as possible after the start of the emergency, addressing **evidence gaps that have been prioritised in a transparent and accountable manner***  
+- ***transparency with respect to how emerging evidence has been incorporated into decisions** (including decisions not to act), and what underlying values have steered policy and operational choices*

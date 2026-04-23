@@ -1,0 +1,37 @@
+---
+title: "Sources of evidence from which to evaluate SPI-M"
+format: html
+---
+
+### Data
+
+- EMRG consensus statements: https://www.gov.uk/government/publications/consensus-statements-on-covid-19 
+- R and growth rate from May 2020: https://assets.publishing.service.gov.uk/media/63a46e3ed3bf7f375c7d833d/221221_R_and_growth_rate_time_series_for_publication_v1.0.ods
+
+
+- https://www.ons.gov.uk/peoplepopulationandcommunity/healthandsocialcare/conditionsanddiseases/bulletins/coronaviruscovid19infectionsurveypilot/latest
+- https://coronavirus.data.gov.uk/
+
+### Metadata
+
+each model
+- https://www.gov.uk/government/publications/reproduction-number-r-and-growth-rate-methodology/reproduction-number-r-and-growth-rate-methodology
+
+### Process
+
+- Political landscape
+  - Hine report & post-swine flu inquiry
+  - COVID Inquiriy witness statements & testimony
+    - https://covid19.public-inquiry.uk/documents/
+    - 1920 individual documents
+    - 12548 collected evidence
+    - 6 reports (to date)
+    - 21 Every Story Matters records
+  - Hansard  
+  - Freedom of Information requests e.g. internal Pegasus evaluation
+  - Overton
+  - News media
+
+- Academic landscape
+    - Publications 
+    - Citation networks

@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Kath Sherratt">
-<meta name="dcterms.date" content="2026-04-07">
+<meta name="dcterms.date" content="2026-04-23">
 
-<title>England R and growth rate estimates</title>
+<title>SPI-M: COVID-19 R and growth rate estimates in England</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -83,7 +83,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">England R and growth rate estimates</h1>
+<h1 class="title">SPI-M: COVID-19 R and growth rate estimates in England</h1>
 </div>
 
 
@@ -100,7 +100,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">April 7, 2026</p>
+      <p class="date">April 23, 2026</p>
     </div>
   </div>
   
@@ -137,16 +137,24 @@ Publication timeline
 </thead>
 <tbody>
 <tr class="odd">
+<td style="text-align: left;">2020</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
 <td style="text-align: left;">29 May 2020</td>
 <td style="text-align: left;">Government begin publishing the R value on a weekly basis</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">12 June 2020</td>
 <td style="text-align: left;">Additional publication of growth rate</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">10 July 2020</td>
 <td style="text-align: left;">Reliability indicator introduced<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2021</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">26 March 2021</td>
@@ -173,14 +181,18 @@ Publication timeline
 <td style="text-align: left;">JBC update published methodology</td>
 </tr>
 <tr class="even">
+<td style="text-align: left;">2022</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
 <td style="text-align: left;">1 April 2022</td>
 <td style="text-align: left;">UKHSA publish statement of voluntary compliance with the Code of Practice for Statistics<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">7 December 2022</td>
 <td style="text-align: left;">Historical estimates of R and growth rate published as single download</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">23 December 2022</td>
 <td style="text-align: left;">Cease publication of both R and growth rate</td>
 </tr>
@@ -191,151 +203,163 @@ Publication timeline
 </div>
 <section id="consensus-estimates" class="level2">
 <h2 class="anchored" data-anchor-id="consensus-estimates">Consensus estimates</h2>
-<p>R and growth rate estimates were published in real time from May 2020. A final dataset was published 7 December 2022<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>. These estimates are:</p>
-<blockquote class="blockquote">
-<p>a time series of contemporary estimates, which were calculated using the data available at the time and do not necessarily represent the current understanding of R and growth rates for those dates. Estimates have not been revised to include new data.<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a></p>
-</blockquote>
-<p>Published data tables include lower and upper bound estimates for R and the growth rate per day (90% Confidence Interval), for England and the seven NHS England regions. Data were downloaded and lightly pre-processed.</p>
+<p>R and growth rate estimates were published in real time from May 2020. Between 3-12 modelling groups provided R estimates each week, considered in group discussion, and combined in a simple average. This was the “consensus estimate”.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Data preview
+SPI-M-O R estimates
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="fu">here</span>(<span class="st">"R"</span>, <span class="st">"process-r-gr.R"</span>))</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>r_gr <span class="ot">&lt;-</span> <span class="fu">process_r_gr</span>()</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="fu">head</span>(r_gr))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
-<colgroup>
-<col style="width: 13%">
-<col style="width: 20%">
-<col style="width: 15%">
-<col style="width: 15%">
-<col style="width: 13%">
-<col style="width: 21%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">date</th>
-<th style="text-align: left;">region</th>
-<th style="text-align: right;">value_lower</th>
-<th style="text-align: right;">value_upper</th>
-<th style="text-align: left;">value_type</th>
-<th style="text-align: left;">value_unreliable</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">2020-05-29</td>
-<td style="text-align: left;">UK</td>
-<td style="text-align: right;">0.7</td>
-<td style="text-align: right;">0.9</td>
-<td style="text-align: left;">R</td>
-<td style="text-align: left;">NA</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">2020-05-29</td>
-<td style="text-align: left;">UK</td>
-<td style="text-align: right;">0.7</td>
-<td style="text-align: right;">0.9</td>
-<td style="text-align: left;">R</td>
-<td style="text-align: left;">NA</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">2020-05-29</td>
-<td style="text-align: left;">England</td>
-<td style="text-align: right;">0.7</td>
-<td style="text-align: right;">0.9</td>
-<td style="text-align: left;">R</td>
-<td style="text-align: left;">NA</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">2020-05-29</td>
-<td style="text-align: left;">England</td>
-<td style="text-align: right;">0.7</td>
-<td style="text-align: right;">0.9</td>
-<td style="text-align: left;">R</td>
-<td style="text-align: left;">NA</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">2020-05-29</td>
-<td style="text-align: left;">East of England</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: left;">R</td>
-<td style="text-align: left;">NA</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">2020-05-29</td>
-<td style="text-align: left;">East of England</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: left;">R</td>
-<td style="text-align: left;">NA</td>
-</tr>
-</tbody>
-</table>
+<p>Each modelling group produced estimates of R and the growth rate, before discussing and comparing across their estimates each week. All the estimates were combined as the mean average, and rounded to one decimal place.</p>
+<blockquote class="blockquote">
+<p>From around May 2020, SPI-M-O began to combine these nowcasts using a statistical approach across a minimum of 3, but often more than 10, models to provide a consensus range… all models have been weighted equally when estimating R</p>
+</blockquote>
+<p>Producing something each week that looked like this:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../figures/2020-09-17-eng-r.png" class="img-fluid figure-img"></p>
+<figcaption>SPI-M consensus statement of 17 September 2020, showing 90% range of modelled estimates of R for England from groups and consensus (grey)</figcaption>
+</figure>
 </div>
-</div>
+<p>A final dataset of all the weekly consensus estimates was published in 2022<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>, as:</p>
+<blockquote class="blockquote">
+<p>a time series of contemporary estimates, which were calculated using the data available at the time and do not necessarily represent the current understanding of R and growth rates for those dates. Estimates have not been revised to include new data.<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a></p>
+</blockquote>
+<p>Published data include lower and upper bound estimates for R and the growth rate per day (90% Confidence Interval), for England and the seven NHS England regions. Here, data were downloaded and lightly <a href="../R/process-r-gr.R">pre-processed</a>.</p>
 </div>
 </div>
 </div>
 <p>Looking at just the R and growth rate estimates for England:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>plot_estimates <span class="ot">&lt;-</span> <span class="cf">function</span>(region, data) {</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    data <span class="sc">|&gt;</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(region <span class="sc">==</span> {{region}}) <span class="sc">|&gt;</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">mutate</span>(<span class="at">reference =</span> <span class="fu">ifelse</span>(value_type <span class="sc">==</span> <span class="st">"R"</span>, <span class="dv">1</span>, <span class="dv">0</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">col =</span> model, <span class="at">fill =</span> model)) <span class="sc">+</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">y =</span> value_lower), <span class="at">alpha =</span> <span class="fl">0.4</span>) <span class="sc">+</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">y =</span> value_upper), <span class="at">alpha =</span> <span class="fl">0.4</span>) <span class="sc">+</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_ribbon</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> value_lower, <span class="at">ymax =</span> value_upper), <span class="at">alpha =</span> <span class="fl">0.3</span>) <span class="sc">+</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">y =</span> reference), <span class="at">lty=</span><span class="dv">2</span>) <span class="sc">+</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="fu">facet_wrap</span>(<span class="sc">~</span>value_type, <span class="at">ncol=</span><span class="dv">1</span>, <span class="at">scales =</span> <span class="st">"free_y"</span>) <span class="sc">+</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="fu">labs</span>(<span class="at">x =</span> <span class="cn">NULL</span>, <span class="at">y =</span> <span class="st">"Weekly estimate (90% CI)"</span>,</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="at">title =</span> <span class="fu">paste</span>({{region}}, <span class="st">"COVID-19 epidemic indicators"</span>), <span class="at">subtitle =</span> <span class="st">"UK government public estimates of R and growth rate"</span>) <span class="sc">+</span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>)</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>r_gr <span class="ot">&lt;-</span> <span class="fu">mutate</span>(r_gr, <span class="at">model =</span> <span class="st">"Consensus"</span>)</span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_estimates</span>(<span class="st">"England"</span>, r_gr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>r_gr <span class="ot">&lt;-</span> <span class="fu">process_r_gr</span>()</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>r_gr <span class="ot">&lt;-</span> <span class="fu">mutate</span>(r_gr, <span class="at">model =</span> <span class="st">"Weekly consensus"</span>,</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="at">production =</span> <span class="fu">ifelse</span>(date <span class="sc">&lt;</span> <span class="fu">as.Date</span>(<span class="st">"2021-07-21"</span>), <span class="st">"SPI-M"</span>, <span class="st">"JCB"</span>))</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>plot_estimates <span class="ot">&lt;-</span> <span class="cf">function</span>(region, data, <span class="at">value_type =</span> <span class="st">"R"</span>) {</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    data <span class="sc">|&gt;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(region <span class="sc">==</span> {{region}}) <span class="sc">|&gt;</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(value_type <span class="sc">%in%</span> {{value_type}}) <span class="sc">|&gt;</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">mutate</span>(<span class="at">reference =</span> <span class="fu">ifelse</span>(value_type <span class="sc">==</span> <span class="st">"R"</span>, <span class="dv">1</span>, <span class="dv">0</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">col =</span> production, <span class="at">fill =</span> production)) <span class="sc">+</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_linerange</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> value_lower, <span class="at">ymax =</span> value_upper), <span class="at">alpha =</span> <span class="fl">0.4</span>, <span class="at">lwd=</span><span class="dv">1</span>, <span class="at">col =</span> <span class="st">"#af8dc3"</span>) <span class="sc">+</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">y =</span> reference), <span class="at">lty=</span><span class="dv">2</span>, <span class="at">col=</span><span class="st">"grey50"</span>) <span class="sc">+</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu">facet_wrap</span>(<span class="sc">~</span>value_type, <span class="at">ncol=</span><span class="dv">1</span>, <span class="at">scales =</span> <span class="st">"free_y"</span>) <span class="sc">+</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fu">labs</span>(<span class="at">x =</span> <span class="cn">NULL</span>, <span class="at">y =</span> <span class="st">"Estimate (90% CI)"</span>,</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="at">title =</span> <span class="fu">paste</span>({{region}}, <span class="st">"COVID-19 epidemic indicators"</span>)) <span class="sc">+</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_estimates</span>(<span class="st">"England"</span>, r_gr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="explore-r-gr_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="explore-r-gr_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
-<section id="regional-estimates" class="level3">
-<h3 class="anchored" data-anchor-id="regional-estimates">Regional estimates</h3>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>regions <span class="ot">&lt;-</span> <span class="fu">unique</span>(r_gr<span class="sc">$</span>region)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> regions) {</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cat</span>(<span class="st">"</span><span class="sc">\n</span><span class="st">::: {.callout-note collapse=</span><span class="sc">\"</span><span class="st">true</span><span class="sc">\"</span><span class="st">}"</span>)</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cat</span>(<span class="st">"</span><span class="sc">\n</span><span class="st">####"</span>, i, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="fu">plot_estimates</span>(i, r_gr))</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cat</span>(<span class="st">"</span><span class="sc">\n</span><span class="st">:::</span><span class="sc">\n</span><span class="st">"</span>)</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="retrospective-comparison" class="level2">
+<h2 class="anchored" data-anchor-id="retrospective-comparison">Retrospective comparison</h2>
+<p>We don’t typically collect data on R directly (as it is an average of transmission chains). This makes it difficult to evaluate. However, we can compare these real-time estimates against a retrospective “best estimate”. Plotting directly against consensus estimates, using Rt and growth rate from inc2prev:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>i2p <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://github.com/epiforecasts/inc2prev/raw/refs/heads/main/outputs/estimates_national.csv"</span>) </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>i2p <span class="ot">&lt;-</span> i2p <span class="sc">|&gt;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(variable <span class="sc">==</span> <span class="st">"England"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">select</span>(date, <span class="at">region =</span> variable, <span class="at">value_type =</span> name, <span class="at">value_lower =</span> q10, <span class="at">value_upper =</span> q90) <span class="sc">|&gt;</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(value_type <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"R"</span>, <span class="st">"r"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">mutate</span>(<span class="at">value_lower =</span> <span class="fu">ifelse</span>(value_lower <span class="sc">==</span> <span class="st">"r"</span>, value_lower<span class="sc">*</span><span class="dv">100</span>, value_lower),</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="at">value_upper =</span> <span class="fu">ifelse</span>(value_upper <span class="sc">==</span> <span class="st">"r"</span>, value_upper<span class="sc">*</span><span class="dv">100</span>, value_upper),</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="at">value_type =</span> <span class="fu">ifelse</span>(value_type <span class="sc">==</span> <span class="st">"r"</span>, <span class="st">"growth rate"</span>, <span class="st">"R"</span>),</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="at">model =</span> <span class="st">"inc2prev"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>r_gr2 <span class="ot">&lt;-</span> r_gr <span class="sc">|&gt;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rename</span>(<span class="at">value_lower_consensus =</span> value_lower,</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="at">value_upper_consensus =</span> value_upper)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>comp <span class="ot">&lt;-</span> <span class="fu">left_join</span>(i2p, r_gr2, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"date"</span>, <span class="st">"region"</span>, <span class="st">"value_type"</span>))</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>plot_estimates_comp <span class="ot">&lt;-</span> <span class="cf">function</span>(region, data, <span class="at">value_type =</span> <span class="st">"R"</span>) {</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    data <span class="sc">|&gt;</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(region <span class="sc">==</span> {{region}}) <span class="sc">|&gt;</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(value_type <span class="sc">%in%</span> {{value_type}}) <span class="sc">|&gt;</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="fu">mutate</span>(<span class="at">reference =</span> <span class="fu">ifelse</span>(value_type <span class="sc">==</span> <span class="st">"R"</span>, <span class="dv">1</span>, <span class="dv">0</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> date)) <span class="sc">+</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_linerange</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> value_lower_consensus, <span class="at">ymax =</span> value_upper_consensus), <span class="at">alpha =</span> <span class="fl">0.4</span>, <span class="at">lwd=</span><span class="dv">1</span>, <span class="at">col =</span> <span class="st">"#af8dc3"</span>) <span class="sc">+</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_ribbon</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> value_lower, <span class="at">ymax =</span> value_upper), <span class="at">alpha =</span> <span class="fl">0.3</span>, <span class="at">col =</span> <span class="st">"#7fbf7b"</span>, <span class="at">fill =</span> <span class="st">"#7fbf7b"</span>) <span class="sc">+</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">y =</span> reference), <span class="at">lty=</span><span class="dv">2</span>, <span class="at">col=</span><span class="st">"grey50"</span>) <span class="sc">+</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="fu">facet_wrap</span>(<span class="sc">~</span>value_type, <span class="at">ncol=</span><span class="dv">1</span>, <span class="at">scales =</span> <span class="st">"free_y"</span>) <span class="sc">+</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="fu">labs</span>(<span class="at">x =</span> <span class="cn">NULL</span>, <span class="at">y =</span> <span class="st">"Estimate (90% CI)"</span>,</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="at">title =</span> <span class="fu">paste</span>({{region}}, <span class="st">"COVID-19 epidemic indicators"</span>)) <span class="sc">+</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>)</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_estimates_comp</span>(<span class="st">"England"</span>, <span class="at">data =</span> comp, <span class="at">value_type =</span> <span class="st">"R"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="explore-r-gr_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>But inc2prev is calculated daily, to 4 d.p. To make it a fairer comparison, we can round inc2prev estimates to 1 d.p. and keep only the days that overlap with the consensus.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>comp_trunc <span class="ot">&lt;-</span> comp <span class="sc">|&gt;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mutate</span>(</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">#across(c(value_lower, value_upper), ~ zoo::rollmean(.x, k=7)),</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">across</span>(<span class="fu">c</span>(value_lower, value_upper), <span class="sc">~</span> <span class="fu">round</span>(.x, <span class="at">digits =</span> <span class="dv">1</span>))) <span class="sc">|&gt;</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(date <span class="sc">%in%</span> r_gr<span class="sc">$</span>date)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_estimates_comp</span>(<span class="st">"England"</span>, <span class="at">data =</span> comp_trunc, <span class="at">value_type =</span> <span class="st">"R"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="explore-r-gr_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="evaluation" class="level2">
+<h2 class="anchored" data-anchor-id="evaluation">Evaluation</h2>
+<p>CMO Report on COVID-19<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a>:</p>
+<blockquote class="blockquote">
+<p>…all models have been weighted equally when estimating R, but other methods of statistical combination might be more appropriate in the future.</p>
+</blockquote>
+</section>
+<section id="future-work" class="level2">
+<h2 class="anchored" data-anchor-id="future-work">Future work</h2>
+<ul>
+<li>Comparison with retrospectively calculated R and GR using latest available methodology and data
+<ul>
+<li>recalculate weekly, on diff sources</li>
+</ul></li>
+<li>Comparison with contemporary estimates contributing to the ensemble presented above (e.g.&nbsp;via requesting accesss to CrystalCast)</li>
+<li>Text analysis of interpretation presented in consensus statements from SPI-M and EMRG<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a></li>
+</ul>
+</section>
+<section id="appendix" class="level2">
+<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-UK
+Reading
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><img src="explore-r-gr_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="672"></p>
+<p>CMO Report on COVID-19<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a></p>
 </div>
 </div>
 </div>
@@ -345,236 +369,11 @@ UK
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-England
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p><img src="explore-r-gr_files/figure-html/unnamed-chunk-3-2.png" class="img-fluid" width="672"></p>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-East of England
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p><img src="explore-r-gr_files/figure-html/unnamed-chunk-3-3.png" class="img-fluid" width="672"></p>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-London
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p><img src="explore-r-gr_files/figure-html/unnamed-chunk-3-4.png" class="img-fluid" width="672"></p>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Midlands
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-7" class="callout-7-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p><img src="explore-r-gr_files/figure-html/unnamed-chunk-3-5.png" class="img-fluid" width="672"></p>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-North East and Yorkshire
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-8" class="callout-8-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p><img src="explore-r-gr_files/figure-html/unnamed-chunk-3-6.png" class="img-fluid" width="672"></p>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-North West
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-9" class="callout-9-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p><img src="explore-r-gr_files/figure-html/unnamed-chunk-3-7.png" class="img-fluid" width="672"></p>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-South East
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-10" class="callout-10-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p><img src="explore-r-gr_files/figure-html/unnamed-chunk-3-8.png" class="img-fluid" width="672"></p>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-South West
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-11" class="callout-11-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p><img src="explore-r-gr_files/figure-html/unnamed-chunk-3-9.png" class="img-fluid" width="672"></p>
-</div>
-</div>
-</div>
-</section>
-</section>
-<section id="retrospective-comparison" class="level2">
-<h2 class="anchored" data-anchor-id="retrospective-comparison">Retrospective comparison</h2>
-<p>Using Rt and growth rate from inc2prev.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>i2p_nation <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://github.com/epiforecasts/inc2prev/raw/refs/heads/main/outputs/estimates_national.csv"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(variable <span class="sc">==</span> <span class="st">"England"</span>)</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>i2p_region <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://raw.githubusercontent.com/epiforecasts/inc2prev/refs/heads/main/outputs/estimates_regional.csv"</span>)</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>i2p <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(i2p_nation, i2p_region) <span class="sc">|&gt;</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="fu">select</span>(date, <span class="at">region =</span> variable, <span class="at">value_type =</span> name, <span class="at">value_lower =</span> q10, <span class="at">value_upper =</span> q90) <span class="sc">|&gt;</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(value_type <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"R"</span>, <span class="st">"r"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="fu">mutate</span>(<span class="at">value_type =</span> <span class="fu">ifelse</span>(value_type <span class="sc">==</span> <span class="st">"r"</span>, <span class="st">"growth rate"</span>, <span class="st">"R"</span>))</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="fu">head</span>(i2p))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
-<thead>
-<tr class="header">
-<th style="text-align: left;">date</th>
-<th style="text-align: left;">region</th>
-<th style="text-align: left;">value_type</th>
-<th style="text-align: right;">value_lower</th>
-<th style="text-align: right;">value_upper</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">2020-04-26</td>
-<td style="text-align: left;">England</td>
-<td style="text-align: left;">R</td>
-<td style="text-align: right;">0.7149192</td>
-<td style="text-align: right;">0.8401357</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">2020-04-27</td>
-<td style="text-align: left;">England</td>
-<td style="text-align: left;">R</td>
-<td style="text-align: right;">0.7160244</td>
-<td style="text-align: right;">0.8372134</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">2020-04-28</td>
-<td style="text-align: left;">England</td>
-<td style="text-align: left;">R</td>
-<td style="text-align: right;">0.7178725</td>
-<td style="text-align: right;">0.8312919</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">2020-04-29</td>
-<td style="text-align: left;">England</td>
-<td style="text-align: left;">R</td>
-<td style="text-align: right;">0.7206224</td>
-<td style="text-align: right;">0.8258249</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">2020-04-30</td>
-<td style="text-align: left;">England</td>
-<td style="text-align: left;">R</td>
-<td style="text-align: right;">0.7231379</td>
-<td style="text-align: right;">0.8255561</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">2020-05-01</td>
-<td style="text-align: left;">England</td>
-<td style="text-align: left;">R</td>
-<td style="text-align: right;">0.7254647</td>
-<td style="text-align: right;">0.8251462</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<p>Plotting against consensus estimates.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>i2p <span class="ot">&lt;-</span> <span class="fu">mutate</span>(i2p, <span class="at">model =</span> <span class="st">"i2p"</span>)</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>comp <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(i2p, r_gr)</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_estimates</span>(<span class="st">"England"</span>, comp)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="explore-r-gr_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="future-work" class="level2">
-<h2 class="anchored" data-anchor-id="future-work">Future work</h2>
-<ul>
-<li>Comparison with retrospectively calculated R and GR using latest available methodology and data</li>
-<li>Comparison with contemporary estimates contributing to the ensemble presented above (e.g.&nbsp;via requesting accesss to CrystalCast)</li>
-<li>Text analysis of interpretation presented in consensus statements from SPI-M and EMRG<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a></li>
-</ul>
-</section>
-<section id="appendix" class="level2">
-<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
 Source data notes
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><em>Copied from the published data tables</em></p>
 <section id="general-notes" class="level4">
@@ -622,7 +421,9 @@ Tables 1 and 2 provide a time series of contemporary estimates, which were calcu
 <li id="fn4"><p>https://www.gov.uk/government/publications/r-value-and-growth-rate-statement-of-voluntary-compliance-with-the-code-of-practice-for-statistics/reproduction-number-r-and-growth-rate-statement-of-voluntary-compliance-with-the-code-of-practice-for-statistics<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn5"><p>https://www.gov.uk/government/publications/reproduction-number-r-and-growth-rate-methodology<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn6"><p>Timeseries of R and Growth Rate, Note 4<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn7"><p>https://www.gov.uk/government/publications/consensus-statements-on-covid-19<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn7"><p>https://www.gov.uk/government/publications/technical-report-on-the-covid-19-pandemic-in-the-uk/chapter-5-modelling<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn8"><p>https://www.gov.uk/government/publications/consensus-statements-on-covid-19<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn9"><p>https://www.gov.uk/government/publications/technical-report-on-the-covid-19-pandemic-in-the-uk/chapter-5-modelling<a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main>
 <!-- /main column -->
