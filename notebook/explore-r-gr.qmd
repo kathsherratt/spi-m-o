@@ -1,71 +1,93 @@
 ---
-title: "SPI-M: COVID-19 R and growth rate estimates in England"
+title: "COVID-19 R and growth rate estimates in England"
 date: today
 author: Kath Sherratt
-format: html
+format:
+  html:
+    code-fold: true
+    toc: true
 execute:
   echo: true
   warning: false
   message: false
   cache: false
-  code-fold: true
 ---
+
 ```{r}
 #| label: setup
 #| include: false
-pacman::p_load(here, readr, dplyr, ggplot2)
+
+pacman::p_load(here, readr, dplyr, ggplot2, knitr, kableExtra)
 source(here("R", "process-r-gr.r"))
 theme_set(theme_minimal())
 ```
 
+R and growth rate are fundamental summaries of how an epidemic is spreading^[https://plus.maths.org/epidemic-growth-rate].
+During COVID-19, R in particular was used directly to inform national and subnational political action.
+In the UK, national government published R and growth rate estimates for the UK, nations, and subnational regions.
+Esimates were published weekly from May 2020, to December 2022.
+
+### The consensus model
+
+To produce these estimates, the government requested multiple teams of academics to contribute to a scientific advisory group, SPI-M.
+The different estimates these teams produced were combined and published as a single "consensus estimate".
+
 ::: {.callout-note collapse="true"}
 
-## Publication timeline
+#### SPI-M
 
-| Date | Event |
-| :--- | :--- |
-| 2020 | |
-| 29 May 2020 | Government begin publishing the R value on a weekly basis |
-| 12 June 2020 | Additional publication of growth rate |
-| 10 July 2020 | Reliability indicator introduced^[The reliability indicator showed where estimates were "insufficiently robust to inform policy decisions alone" (Timeseries of R and Growth Rate, Table 1, Note 2). It was based on "daily deaths in a region averaged over a 10-day period... to determine whether it was based on very few cases in a particular area. (Timeseries of R and Growth Rate, Notes and Definitions, Note 7)] |
-| 2021 | |
-| 26 March 2021 | Update methodology for combining the R values and growth rate: modelling groups now submit a time series of estimates and a given date across all models is used, rather than their most recent estimates |
-| 2 April 2021 | Cease estimates for whole- UK R value and growth rate |
-| 30 April 2021 | Updated methodology for the reliability indicator^[Updated to: "the number of individuals admitted to hospital with COVID-19 and inpatients newly diagnosed with COVID-19"] |
-| 30 April 2021 | Methodology published^[https://www.gov.uk/government/publications/reproduction-number-r-and-growth-rate-methodology] |
-| 21 July 2021 | JBC take on responsibility for R and growth rate estimates |
-| 6 September 2021 | JBC update published methodology |
-| 2022 | |
-| 1 April 2022 | UKHSA publish statement of voluntary compliance with the Code of Practice for Statistics^[https://www.gov.uk/government/publications/r-value-and-growth-rate-statement-of-voluntary-compliance-with-the-code-of-practice-for-statistics/reproduction-number-r-and-growth-rate-statement-of-voluntary-compliance-with-the-code-of-practice-for-statistics] |
-| 7 December 2022 | Historical estimates of R and growth rate published as single download |
-| 23 December 2022 | Cease publication of both R and growth rate |
+> From around May 2020, SPI-M-O began to combine these nowcasts using a statistical approach across a minimum of 3, but often more than 10, models to provide a consensus range...
+>
+> CMO Report on COVID-19^[https://www.gov.uk/government/publications/technical-report-on-the-covid-19-pandemic-in-the-uk/chapter-5-modelling]
+
+SPI-M is a voluntary group of academic modellers, with membership recruited for by its chairs.
+During 2020-2022, SPI-M (Operational) met as a group once or twice a week.
+It was co-chaired by one academic and one civil servant.
+Various civil servants, politicians, and advisors also joined.
+
+Each week, between 3-12 modelling teams provided independent estimates of R and growth rate.
+Each team operates independently, using their own processes and methods to generate quantitative results.
+Each estimate was discussed and compared among the SPI-M-O group.
+Each team was represented in this discussion, but not all members of each team joined the group.
+
+All the estimates were then combined equally in an arithmetic mean.
+This was reported as a range of 90% confidence.
+Estimates were rounded to one decimal place.
+
+This produced something each week that looked like this:
+
+![SPI-M consensus statement of 17 September 2020, showing 90% range of modelled estimates of R for England from: each team (coloured); and consensus (grey)](./figures/2020-09-17-eng-r.png)
+
+In July 2021, responsibility for this process was partly taken in-house by the UK government.
+SPI-M-O participants still produced their own estimates, but a different team took over production of the combined single estimate.
+
 :::
 
-## Consensus estimates
+::: {.callout-note collapse="true"}
 
-R and growth rate estimates were published in real time from May 2020.
-Between 3-12 modelling groups provided R estimates each week, considered in group discussion, and combined in a simple average.
-This was the "consensus estimate".
+#### Production timeline
 
-:::  {.callout-note collapse="true"}
+```{r}
+timeline <- read_csv(here("data", "r-growth-values", "timeline.csv"))
+timeline |>
+    select(-Note) |>
+    kable()
+```
 
-### SPI-M-O R estimates
+:::
 
-Each modelling group produced estimates of R and the growth rate, before discussing and comparing across their estimates each week.
-All the estimates were combined as the mean average, and rounded to one decimal place. 
+::: {.callout-note collapse="true"}
 
-> From around May 2020, SPI-M-O began to combine these nowcasts using a statistical approach across a minimum of 3, but often more than 10, models to provide a consensus range... all models have been weighted equally when estimating R
-> 
-
-Producing something each week that looked like this: 
-
-![SPI-M consensus statement of 17 September 2020, showing 90% range of modelled estimates of R for England from groups and consensus (grey)](../figures/2020-09-17-eng-r.png)
+#### Data
 
 A final dataset of all the weekly consensus estimates was published in 2022^[https://www.gov.uk/government/publications/reproduction-number-r-and-growth-rate-methodology], as:
 
-> a time series of contemporary estimates, which were calculated using the data available at the time and do not necessarily represent the current understanding of R and growth rates for those dates. Estimates have not been revised to include new data.^[Timeseries of R and Growth Rate, Note 4]
+> a time series of contemporary estimates, which were calculated using the data available at the time and do not necessarily represent the current understanding of R and growth rates for those dates.
+> Estimates have not been revised to include new data.^[Timeseries of R and Growth Rate, Note 4]
 
-Published data include lower and upper bound estimates for R and the growth rate per day (90% Confidence Interval), for England and the seven NHS England regions. Here, data were downloaded and lightly [pre-processed](../R/process-r-gr.R).
+Published data include lower and upper bound estimates for R and the growth rate per day (90% Confidence Interval), for England and the seven NHS England regions.
+For the fully caveated notes on this data, see Appendix below.
+Here, data were downloaded and lightly [pre-processed](../R/process-r-gr.R).
 
 :::
 
@@ -84,20 +106,39 @@ mutate(reference = ifelse(value_type == "R", 1, 0)) |>
 ggplot(aes(x = date, col = production, fill = production)) +
 geom_linerange(aes(ymin = value_lower, ymax = value_upper), alpha = 0.4, lwd=1, col = "#af8dc3") +
 geom_line(aes(y = reference), lty=2, col="grey50") +
+geom_vline(aes(xintercept = as.Date("2021-07-21")), lty=2, col="grey50") +
 facet_wrap(~value_type, ncol=1, scales = "free_y") +
 labs(x = NULL, y = "Estimate (90% CI)",
-title = paste({{region}}, "COVID-19 epidemic indicators")) +
+title = paste({{region}}, "COVID-19 epidemic indicators"), caption = "SPI-M-O consensus range (bars); responsibility assumed by JBC, 21 July 2021") +
 theme(legend.position = "bottom")
 }
 plot_estimates("England", r_gr)
 ```
 
-## Retrospective comparison
+## Evaluation
 
-We don't typically collect data on R directly (as it is an average of transmission chains). 
-This makes it difficult to evaluate. 
-However, we can compare these real-time estimates against a retrospective "best estimate".
-Plotting directly against consensus estimates, using Rt and growth rate from inc2prev:
+We don't typically collect data on R directly (as it is an average of transmission chains).
+This makes it difficult to evaluate.
+
+::: {.callout-note collapse="true"}
+### Previous work
+
+Descriptively, Medley 2022 reports the consensus process of SPI-M-O.
+Both Maishman et al 2022 and Park et al 2023 report methods for combining R and growth rate estimates after it was taken on by DSTL/JBC/UKHSA.
+
+Work by McCabe et al 2024 models the calibration of modelled estimates from ONS-CIS data, to the published consensus model estimates.
+
+:::
+
+However, we can compare these real-time estimates against a retrospective "best estimate" as a comparator.
+This method uses the best available data on the prevalence of infections in the population to calculate the ongoing R and growth rate.
+
+::: {.callout-note collapse="true"}
+
+### Data
+
+R and growth rate were estimated with the inc2prev package (Abbott & Funk 2021)^[https://github.com/epiforecasts/inc2prev].
+This uses prevalence estimated by the ONS Community Infection Survey to calculate underlying ongoing transmission.
 
 ```{r}
 i2p <- read_csv("https://github.com/epiforecasts/inc2prev/raw/refs/heads/main/outputs/estimates_national.csv") 
@@ -111,6 +152,8 @@ value_upper = ifelse(value_upper == "r", value_upper*100, value_upper),
 value_type = ifelse(value_type == "r", "growth rate", "R"),
 model = "inc2prev")
 ```
+
+Naively plotting this directly against the consensus model estimates:
 
 ```{r}
 r_gr2 <- r_gr |>
@@ -128,6 +171,7 @@ ggplot(aes(x = date)) +
 geom_linerange(aes(ymin = value_lower_consensus, ymax = value_upper_consensus), alpha = 0.4, lwd=1, col = "#af8dc3") +
 geom_ribbon(aes(ymin = value_lower, ymax = value_upper), alpha = 0.3, col = "#7fbf7b", fill = "#7fbf7b") +
 geom_line(aes(y = reference), lty=2, col="grey50") +
+geom_vline(aes(xintercept = as.Date("2021-07-21")), lty=2, col="grey50") +
 facet_wrap(~value_type, ncol=1, scales = "free_y") +
 labs(x = NULL, y = "Estimate (90% CI)", caption = "SPI-M-O consensus (bars) and retrospective estimate from infection survey (inc2prev)",
 title = paste({{region}}, "COVID-19 epidemic indicators")) +
@@ -136,8 +180,11 @@ theme(legend.position = "bottom")
 plot_estimates_comp("England", data = comp, value_type = "R")
 ```
 
-But inc2prev is calculated daily, to 4 d.p. 
-To make it a fairer comparison, we can round inc2prev estimates to 1 d.p. and keep only the days that overlap with the consensus.
+But inc2prev is calculated daily, to 4 d.p. To make it a fairer comparison, we can round inc2prev estimates to 1 d.p. and keep only the days that overlap with the consensus.
+
+:::
+
+Plotting this comparison directly against the consensus range:
 
 ```{r, eval="false"}
 comp_trunc <- comp |>
@@ -149,18 +196,93 @@ mutate(
 plot_estimates_comp("England", data = comp_trunc, value_type = "R")
 ```
 
-## Evaluation
+We will also need to think about lags between these two sources.
+(Maybe a 7-day rolling average on inc2prev to reflect the 7-day cadence of SPI-M?).
 
-CMO Report on COVID-19^[https://www.gov.uk/government/publications/technical-report-on-the-covid-19-pandemic-in-the-uk/chapter-5-modelling]:
+## Further work
 
-> ...all models have been weighted equally when estimating R, but other methods of statistical combination might be more appropriate in the future.
+::: {.callout-note collapse="true"}
+### Comparison with McCabe et al 2024
 
-## Future work
+McCabe et al assess the potential of the ONS-CIS study to recover the consensus estimate.
+This is the opposite approach to that I've taken above.
+The authors model R and growth rate from the ONS-CIS data using a smooth spline.
+They then use the consensus estimates as a predictor for their ONS-CIS based R value.
+They also add a lag/lead time of ±20 days on the timeseries of consensus estimates; and keep only the consensus timeseries for "the time lag and knot value under which R^2 is maximised".
 
-- Comparison with retrospectively calculated R and GR using latest available methodology and data
-    - recalculate weekly, on diff sources
-- Comparison with contemporary estimates contributing to the ensemble presented above (e.g. via requesting accesss to CrystalCast)
-- Text analysis of interpretation presented in consensus statements from SPI-M and EMRG^[https://www.gov.uk/government/publications/consensus-statements-on-covid-19]
+They evaluate against three metrics: R^2 from linear regression; Spearman rank correlation; and "agreement proportion", whether the consensus/comparator point estimate agreed on the direction of growth (i.e. estimate against threshold of 1 for R, 0 for growth rate).
+Overall results are reported as:
+
+> Depending on nation and parameter, up to 77% of the variance in the government-published estimates can be explained by the ONS-based estimates, providing evidence of the suitability of this singular data stream to track the epidemic
+
+For example, for England, they use an -8 day lagged timeseries of the consensus estimate to predict their ONS-CIS based R value.
+They report a "maximum" R^2 of 0.71, Spearman correlation 0.85, agreement proportion 0.81.
+
+::::: {.callout-tip collapse="false"}
+#### Why might we treat the consensus model as 'better' than ONS-CIS models?
+
+The ONS-CIS survey didn't sample in closed care settings: care homes, hospitals.
+However, these settings have their own particular transmission patterns.
+This is important because the national R is intended to summarise across all transmission patterns.
+So when these closed settings had very high levels of transmission, their specific (and unusual) pattern could be driving national level epidemic dynamics.
+The ONS-CIS study would miss this effect.
+
+So, if one or more of the modellers contributing to the consensus can calibrate their estimate to reflect these different settings, then the consensus model might well be a better single summary statistic.
+
+It's a bit of a stretch to me.
+Still, we could read McCabe's work as showing how far the ONS-CIS survey is still useful in this scenario.
+:::::
+
+My motivation is the reverse: was the consensus estimate any good, relative to a best estimate of R/growth rate.
+
+As an alternative framing... consider McCabe et al's agreement proportion for England (0.81).
+This might suggest that even in the best possible scenario for the consensus model (fit to as much of the comparator model as possible, with any amount of time lag or spline knots) - still, 19% of the consensus estimates didn't even represent the correct direction of the epidemic trend (growth/decline).
+
+My hypothesis is that the consensus is much more prone to bias and error given the method of taking a simple average across very variable inputs.
+By comparison, a single model using a consistent single data stream (ONS-CIS) should be less biased.
+
+:::
+
+Three suggestions for evaluation:
+
+*Observational*
+
+1. Comparison
+
+- Similar to McCabe et al 2024:
+  - using inc2prev for the comparator
+  - Using the interval score for the 90% CI range, instead of the R^2, to get at both sharpness/calibration
+  - Estimates of value of information and translating to decision impact (i.e. effect of lockdown timing on health)
+- Comparison with contemporary estimates contributing to the ensemble presented above (e.g. rerunning code or via CrystalCast)
+
+2. Combination
+
+- Estimates were reported to 1 d.p; were estimates from each group rounded before or after combination?
+  (Even such a small method point creates an impact...)
+- What was the effect of consensus discussion; did calibration differ pre/post the handover to JBC^[The JBC approach was based on "meta-analysis" so worth checking what exactly went into that; reference: Manley et al 2022]?
+- Alternative combinations based on harmony of assumptions of e.g. generation time
+  - include only those with similar assumptions (within some range)
+  - use all, but weight by similarity
+  - use all, but weight by retrospective calibration: suggesting what could happen if we had *some* idea of the best model, but weren't sure; I think this might get at something like Bayesian model averaging
+
+*Experimental*
+
+3. Elicitating evaluation
+
+- Judgements of quality
+  - Participants
+    - those who produced the estimates
+    - those who used them
+    - public aware of them
+  - Show time-series of consensus estimates with light explanation
+  - Ask for confidence in estimate by e.g.
+    - overall judgement of quality, trust
+    - calibration of weekly point / 90% CI (eg interactive)
+  - Multifactorial conditions: show one or more data streams from
+    - estimated infection incidence
+    - accurate case, death data
+    - real-time case, death data
+  - Compare against 'observed' accuracy as above
 
 ## Appendix
 
@@ -168,40 +290,101 @@ CMO Report on COVID-19^[https://www.gov.uk/government/publications/technical-rep
 
 ### Reading
 
-CMO Report on COVID-19^[https://www.gov.uk/government/publications/technical-report-on-the-covid-19-pandemic-in-the-uk/chapter-5-modelling]
+Reproduction number (R) and growth rate: Methodology.
+Gov.uk; 2021.
+https://www.gov.uk/government/publications/reproduction-number-r-and-growth-rate-methodology/reproduction-number-r-and-growth-rate-methodology
+
+CMO Report on COVID-19.
+Gov.uk; 2022.
+https://www.gov.uk/government/publications/technical-report-on-the-covid-19-pandemic-in-the-uk/chapter-5-modelling
+
+Medley, Graham F.
+2022.
+"A Consensus of Evidence: The Role of SPI-M-O in the UK COVID-19 Response."
+Advances in Biological Regulation 86 (December): 100918.
+doi:10.1016/j.jbior.2022.100918.
+
+Park J., Bevan L., Sanchez-Marroquin A., Danelian G., Bayley T., Manley H., et al.
+Combining models to generate a consensus effective reproduction number R for the COVID-19 epidemic status in England.
+medRxiv.
+2023 doi: 10.1101/2023.02.27.23286501.
+
+Maishman T., Schaap S., Silk D.S., Nevitt S.J., Woods D.C., Bowman V.E. Statistical methods used to combine the effective reproduction number, R(t), and other related measures of COVID-19 in the UK.
+Statistical Methods in Medical Research.
+2022;31(9):1757--1777.
+doi: 10.1177/09622802221109506
+
+Abbott S., Funk S.
+Estimating epidemiological quantities from repeated cross-sectional prevalence measurements.
+medRxiv.
+2022 doi: 10.1101/2022.03.29.22273101
+
+McCabe R, Danelian G, Panovska-Griffiths J, Donnelly CA.
+Inferring community transmission of SARS-CoV-2 in the United Kingdom using the ONS COVID-19 Infection Survey.
+Infect Dis Model.
+2024 Jan 30;9(2):299-313.
+doi: 10.1016/j.idm.2024.01.011.
+PMID: 38371874; PMCID: PMC10867655.
 
 :::
 
 ::: {.callout-note collapse="true"}
 
 ### Source data notes
-_Copied from the published data tables_
 
-#### General notes
-Estimates for R and growth rates are shown as a range, and the true values are likely to lie within this range.		
-Tables 1 and 2 provide a time series of contemporary estimates, which were calculated using the data available at the time and do not necessarily represent the current understanding of R and growth rates for those dates. Estimates have not been revised to include new data.  		
-		
-From 2 April 2021, UK estimates for the R value and growth rate are no longer produced. Given the increasingly localised approach to managing the epidemic, particularly between nations, UK level estimates are less meaningful than previously, and are more easily biased by the models combined in their calculation. SPI-M considers estimates of the R value and growth rates for the four nations and NHS England regions to be more robust and useful metrics than those for the whole UK.		
-		
-As of 26 March 2021, the approach to combining the R values and growth rate has been normalised, so that modelling groups now submit a time series of estimates and a given date across all models is used, rather than their most recent estimates. This makes the estimation more consistent and robust, with little to no difference to the range.		
-		
-When the numbers of cases or deaths are at low levels and/or there is a high degree of variability in transmission across a region, then care should be taken when interpreting estimates of R and the growth rate. For example, a significant amount of variability across a region due to a local outbreak may mean that a single average value does not accurately reflect the way infections are changing throughout that region.		
-		
-R and growth rates are not the only important measures of the epidemic, and should be considered alongside other measures of the spread of disease. In particular, the number of new cases of the disease identified during a specified time period (incidence), and the proportion of the population with the disease at a given point in time (prevalence). If R equals 1 with 100,000 people currently infected, it is a very different situation to R equals 1 with 1,000 people currently infected. 		
-		
-As of 30 April 2021, the reliability indicator for estimates has changed. Prior to this date, daily deaths in a region averaged over a 10-day period were used when calculating an estimate's reliability score, to determine whether it was based on very few cases in a particular area. These data were agreed to be the most reliable data stream when the indicator was developed in summer 2020. Over recent months, the number of deaths has been driven down to very low levels due to lockdown and the impact of the COVID-19 vaccination programme, consequently reducing reliability scores for many regions. As a result, the number of individuals admitted to hospital with COVID-19 and inpatients newly diagnosed with COVID-19 have replaced deaths as an indicator for whether the estimate is based on very few cases in a region.
+*Copied from the published data tables*
+
+Estimates for R and growth rates are shown as a range, and the true values are likely to lie within this range.
+Tables 1 and 2 provide a time series of contemporary estimates, which were calculated using the data available at the time and do not necessarily represent the current understanding of R and growth rates for those dates.
+Estimates have not been revised to include new data.
+
+From 2 April 2021, UK estimates for the R value and growth rate are no longer produced.
+Given the increasingly localised approach to managing the epidemic, particularly between nations, UK level estimates are less meaningful than previously, and are more easily biased by the models combined in their calculation.
+SPI-M considers estimates of the R value and growth rates for the four nations and NHS England regions to be more robust and useful metrics than those for the whole UK.
+
+As of 26 March 2021, the approach to combining the R values and growth rate has been normalised, so that modelling groups now submit a time series of estimates and a given date across all models is used, rather than their most recent estimates.
+This makes the estimation more consistent and robust, with little to no difference to the range.
+
+When the numbers of cases or deaths are at low levels and/or there is a high degree of variability in transmission across a region, then care should be taken when interpreting estimates of R and the growth rate.
+For example, a significant amount of variability across a region due to a local outbreak may mean that a single average value does not accurately reflect the way infections are changing throughout that region.
+
+R and growth rates are not the only important measures of the epidemic, and should be considered alongside other measures of the spread of disease.
+In particular, the number of new cases of the disease identified during a specified time period (incidence), and the proportion of the population with the disease at a given point in time (prevalence).
+If R equals 1 with 100,000 people currently infected, it is a very different situation to R equals 1 with 1,000 people currently infected.
+
+As of 30 April 2021, the reliability indicator for estimates has changed.
+Prior to this date, daily deaths in a region averaged over a 10-day period were used when calculating an estimate's reliability score, to determine whether it was based on very few cases in a particular area.
+These data were agreed to be the most reliable data stream when the indicator was developed in summer 2020.
+Over recent months, the number of deaths has been driven down to very low levels due to lockdown and the impact of the COVID-19 vaccination programme, consequently reducing reliability scores for many regions.
+As a result, the number of individuals admitted to hospital with COVID-19 and inpatients newly diagnosed with COVID-19 have replaced deaths as an indicator for whether the estimate is based on very few cases in a region.
 
 #### Data table notes
+
 1. Estimates for R and growth rates are shown as a range, and the true values are likely to lie within this range.
-2. Estimates in red do not meet certainty criteria. Particular care should be taken when interpreting these estimates as they are based on low numbers of cases or deaths and / or dominated by clustered outbreaks. These estimates are insufficiently robust to inform policy decisions alone (applied from 10 July 2020). From 30 April 2021, the methodology for the reliability indicator has changed. Please see point 7 in Notes_and_defintions.
-3. * denotes weeks in which estimates may be based on fewer days or lower quality data than usual, due to increased reporting delays and disruption to data streams during bank holidays and the festive period.
+2. Estimates in red do not meet certainty criteria.
+   Particular care should be taken when interpreting these estimates as they are based on low numbers of cases or deaths and / or dominated by clustered outbreaks.
+   These estimates are insufficiently robust to inform policy decisions alone (applied from 10 July 2020).
+   From 30 April 2021, the methodology for the reliability indicator has changed.
+   Please see point 7 in Notes_and_defintions.
+3. \* denotes weeks in which estimates may be based on fewer days or lower quality data than usual, due to increased reporting delays and disruption to data streams during bank holidays and the festive period.
 4. Dates provided refer to the date of publication
-5. Tables 1 and 2 provide a time series of contemporary estimates, which were calculated using the data available at the time and do not necessarily represent the current understanding of R and growth rates for those dates. Estimates have not been revised to include new data.  
-6. From 2 April 2021, UK estimates for the R value and growth rate are no longer produced. Given the increasingly localised approach to managing the epidemic, particularly between nations, UK level estimates are less meaningful than previously, and are more easily biased by the models combined in their calculation. SPI-M considers estimates of the R value and growth rates for the four nations and NHS England regions to be more robust and useful metrics than those for the whole UK.
-7. As of 26 March 2021, the approach to combining the R values and growth rate has been normalised, so that modelling groups now submit a time series of estimates and a given date across all models is used, rather than their most recent estimates. This makes the estimation more consistent and robust, with little to no difference to the range.
-8. When the numbers of cases or deaths are at low levels and/or there is a high degree of variability in transmission across a region, then care should be taken when interpreting estimates of R and the growth rate. For example, a significant amount of variability across a region due to a local outbreak may mean that a single average value does not accurately reflect the way infections are changing throughout that region.
-9. R and growth rates are not the only important measures of the epidemic, and should be considered alongside other measures of the spread of disease. In particular, the number of new cases of the disease identified during a specified time period (incidence), and the proportion of the population with the disease at a given point in time (prevalence). If R equals 1 with 100,000 people currently infected, it is a very different situation to R equals 1 with 1,000 people currently infected. 
+5. Tables 1 and 2 provide a time series of contemporary estimates, which were calculated using the data available at the time and do not necessarily represent the current understanding of R and growth rates for those dates.
+   Estimates have not been revised to include new data.\
+6. From 2 April 2021, UK estimates for the R value and growth rate are no longer produced.
+   Given the increasingly localised approach to managing the epidemic, particularly between nations, UK level estimates are less meaningful than previously, and are more easily biased by the models combined in their calculation.
+   SPI-M considers estimates of the R value and growth rates for the four nations and NHS England regions to be more robust and useful metrics than those for the whole UK.
+7. As of 26 March 2021, the approach to combining the R values and growth rate has been normalised, so that modelling groups now submit a time series of estimates and a given date across all models is used, rather than their most recent estimates.
+   This makes the estimation more consistent and robust, with little to no difference to the range.
+8. When the numbers of cases or deaths are at low levels and/or there is a high degree of variability in transmission across a region, then care should be taken when interpreting estimates of R and the growth rate.
+   For example, a significant amount of variability across a region due to a local outbreak may mean that a single average value does not accurately reflect the way infections are changing throughout that region.
+9. R and growth rates are not the only important measures of the epidemic, and should be considered alongside other measures of the spread of disease.
+   In particular, the number of new cases of the disease identified during a specified time period (incidence), and the proportion of the population with the disease at a given point in time (prevalence).
+   If R equals 1 with 100,000 people currently infected, it is a very different situation to R equals 1 with 1,000 people currently infected.
 10. On 22 October, the regional estimates of R and growth rate were paused until we gain a full understanding of the impact of the reported incident of false negative results on estimates in the South West, South East and London
-11. On 27 October regional estimates of R and growth rate resumed for all regions except the South West. This is following confidence that the impact of the incorrect negatives is unlikely to materially impact the estimates for regions outside of the South West. Estimates for the South West will remain paused until we gain a full understanding of the impact of the reported incident (the incorrect negative PCR test results) on estimates in this region. However, the UKHSA is confident that R is above 1 in the South West and that the epidemic is growing in this region.
-12. On 5 November, the regional estimate of R and growth rate resumed for the South West.  This is following confidence that the incorrect PCR test results are unlikely to have materially impacted on the estimates for this region.
-:::	
+11. On 27 October regional estimates of R and growth rate resumed for all regions except the South West.
+    This is following confidence that the impact of the incorrect negatives is unlikely to materially impact the estimates for regions outside of the South West.
+    Estimates for the South West will remain paused until we gain a full understanding of the impact of the reported incident (the incorrect negative PCR test results) on estimates in this region.
+    However, the UKHSA is confident that R is above 1 in the South West and that the epidemic is growing in this region.
+12. On 5 November, the regional estimate of R and growth rate resumed for the South West.
+    This is following confidence that the incorrect PCR test results are unlikely to have materially impacted on the estimates for this region.
+:::

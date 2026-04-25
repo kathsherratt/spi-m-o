@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Kath Sherratt">
-<meta name="dcterms.date" content="2026-04-23">
+<meta name="dcterms.date" content="2026-04-25">
 
-<title>SPI-M: COVID-19 R and growth rate estimates in England</title>
+<title>COVID-19 R and growth rate estimates in England</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -75,15 +75,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </head>
 
-<body class="fullcontent quarto-light">
+<body class="quarto-light">
 
 <div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
-
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#the-consensus-model" id="toc-the-consensus-model" class="nav-link active" data-scroll-target="#the-consensus-model">The consensus model</a></li>
+  <li><a href="#evaluation" id="toc-evaluation" class="nav-link" data-scroll-target="#evaluation">Evaluation</a></li>
+  <li><a href="#further-work" id="toc-further-work" class="nav-link" data-scroll-target="#further-work">Further work</a></li>
+  <li><a href="#appendix" id="toc-appendix" class="nav-link" data-scroll-target="#appendix">Appendix</a></li>
+  </ul>
+</nav>
+</div>
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">SPI-M: COVID-19 R and growth rate estimates in England</h1>
+<h1 class="title">COVID-19 R and growth rate estimates in England</h1>
 </div>
 
 
@@ -100,7 +111,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">April 23, 2026</p>
+      <p class="date">April 25, 2026</p>
     </div>
   </div>
   
@@ -112,22 +123,65 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
+<p>R and growth rate are fundamental summaries of how an epidemic is spreading<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. During COVID-19, R in particular was used directly to inform national and subnational political action. In the UK, national government published R and growth rate estimates for the UK, nations, and subnational regions. Esimates were published weekly from May 2020, to December 2022.</p>
+<section id="the-consensus-model" class="level3">
+<h3 class="anchored" data-anchor-id="the-consensus-model">The consensus model</h3>
+<p>To produce these estimates, the government requested multiple teams of academics to contribute to a scientific advisory group, SPI-M. The different estimates these teams produced were combined and published as a single “consensus estimate”.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Publication timeline
+SPI-M
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<table class="caption-top table">
+<blockquote class="blockquote">
+<p>From around May 2020, SPI-M-O began to combine these nowcasts using a statistical approach across a minimum of 3, but often more than 10, models to provide a consensus range…</p>
+<p>CMO Report on COVID-19<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+</blockquote>
+<p>SPI-M is a voluntary group of academic modellers, with membership recruited for by its chairs. During 2020-2022, SPI-M (Operational) met as a group once or twice a week. It was co-chaired by one academic and one civil servant. Various civil servants, politicians, and advisors also joined.</p>
+<p>Each week, between 3-12 modelling teams provided independent estimates of R and growth rate. Each team operates independently, using their own processes and methods to generate quantitative results. Each estimate was discussed and compared among the SPI-M-O group. Each team was represented in this discussion, but not all members of each team joined the group.</p>
+<p>All the estimates were then combined equally in an arithmetic mean. This was reported as a range of 90% confidence. Estimates were rounded to one decimal place.</p>
+<p>This produced something each week that looked like this:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./figures/2020-09-17-eng-r.png" class="img-fluid figure-img"></p>
+<figcaption>SPI-M consensus statement of 17 September 2020, showing 90% range of modelled estimates of R for England from: each team (coloured); and consensus (grey)</figcaption>
+</figure>
+</div>
+<p>In July 2021, responsibility for this process was partly taken in-house by the UK government. SPI-M-O participants still produced their own estimates, but a different team took over production of the combined single estimate.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Production timeline
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>timeline <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"r-growth-values"</span>, <span class="st">"timeline.csv"</span>))</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>timeline <span class="sc">|&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(<span class="sc">-</span>Note) <span class="sc">|&gt;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">kable</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
 <colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
+<col style="width: 4%">
+<col style="width: 95%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -137,187 +191,189 @@ Publication timeline
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">2020</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">29 May 2020</td>
+<td style="text-align: left;">29-May-20</td>
 <td style="text-align: left;">Government begin publishing the R value on a weekly basis</td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;">12 June 2020</td>
+<tr class="even">
+<td style="text-align: left;">12-Jun-20</td>
 <td style="text-align: left;">Additional publication of growth rate</td>
 </tr>
-<tr class="even">
-<td style="text-align: left;">10 July 2020</td>
-<td style="text-align: left;">Reliability indicator introduced<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></td>
-</tr>
 <tr class="odd">
-<td style="text-align: left;">2021</td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">10-Jul-20</td>
+<td style="text-align: left;">Reliability indicator introduced</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">26 March 2021</td>
+<td style="text-align: left;">26-Mar-21</td>
 <td style="text-align: left;">Update methodology for combining the R values and growth rate: modelling groups now submit a time series of estimates and a given date across all models is used, rather than their most recent estimates</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">2 April 2021</td>
+<td style="text-align: left;">02-Apr-21</td>
 <td style="text-align: left;">Cease estimates for whole- UK R value and growth rate</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">30 April 2021</td>
-<td style="text-align: left;">Updated methodology for the reliability indicator<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></td>
+<td style="text-align: left;">30-Apr-21</td>
+<td style="text-align: left;">Updated methodology for the reliability indicator</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">30 April 2021</td>
-<td style="text-align: left;">Methodology published<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></td>
+<td style="text-align: left;">30-Apr-21</td>
+<td style="text-align: left;">Methodology published</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">21 July 2021</td>
+<td style="text-align: left;">21-Jul-21</td>
 <td style="text-align: left;">JBC take on responsibility for R and growth rate estimates</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">6 September 2021</td>
+<td style="text-align: left;">06-Sep-21</td>
 <td style="text-align: left;">JBC update published methodology</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">2022</td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">01-Apr-22</td>
+<td style="text-align: left;">UKHSA publish statement of voluntary compliance with the Code of Practice for Statistics</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">1 April 2022</td>
-<td style="text-align: left;">UKHSA publish statement of voluntary compliance with the Code of Practice for Statistics<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">7 December 2022</td>
+<td style="text-align: left;">07-Dec-22</td>
 <td style="text-align: left;">Historical estimates of R and growth rate published as single download</td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;">23 December 2022</td>
-<td style="text-align: left;">Cease publication of both R and growth rate</td>
+<tr class="even">
+<td style="text-align: left;">23-Dec-22</td>
+<td style="text-align: left;">Ceased publication of both R and growth rate</td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
 </div>
-<section id="consensus-estimates" class="level2">
-<h2 class="anchored" data-anchor-id="consensus-estimates">Consensus estimates</h2>
-<p>R and growth rate estimates were published in real time from May 2020. Between 3-12 modelling groups provided R estimates each week, considered in group discussion, and combined in a simple average. This was the “consensus estimate”.</p>
+</div>
+</div>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-SPI-M-O R estimates
+Data
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Each modelling group produced estimates of R and the growth rate, before discussing and comparing across their estimates each week. All the estimates were combined as the mean average, and rounded to one decimal place.</p>
+<p>A final dataset of all the weekly consensus estimates was published in 2022<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>, as:</p>
 <blockquote class="blockquote">
-<p>From around May 2020, SPI-M-O began to combine these nowcasts using a statistical approach across a minimum of 3, but often more than 10, models to provide a consensus range… all models have been weighted equally when estimating R</p>
+<p>a time series of contemporary estimates, which were calculated using the data available at the time and do not necessarily represent the current understanding of R and growth rates for those dates. Estimates have not been revised to include new data.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
 </blockquote>
-<p>Producing something each week that looked like this:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../figures/2020-09-17-eng-r.png" class="img-fluid figure-img"></p>
-<figcaption>SPI-M consensus statement of 17 September 2020, showing 90% range of modelled estimates of R for England from groups and consensus (grey)</figcaption>
-</figure>
-</div>
-<p>A final dataset of all the weekly consensus estimates was published in 2022<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>, as:</p>
-<blockquote class="blockquote">
-<p>a time series of contemporary estimates, which were calculated using the data available at the time and do not necessarily represent the current understanding of R and growth rates for those dates. Estimates have not been revised to include new data.<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a></p>
-</blockquote>
-<p>Published data include lower and upper bound estimates for R and the growth rate per day (90% Confidence Interval), for England and the seven NHS England regions. Here, data were downloaded and lightly <a href="../R/process-r-gr.R">pre-processed</a>.</p>
+<p>Published data include lower and upper bound estimates for R and the growth rate per day (90% Confidence Interval), for England and the seven NHS England regions. For the fully caveated notes on this data, see Appendix below. Here, data were downloaded and lightly <a href="../R/process-r-gr.R">pre-processed</a>.</p>
 </div>
 </div>
 </div>
 <p>Looking at just the R and growth rate estimates for England:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>r_gr <span class="ot">&lt;-</span> <span class="fu">process_r_gr</span>()</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>r_gr <span class="ot">&lt;-</span> <span class="fu">mutate</span>(r_gr, <span class="at">model =</span> <span class="st">"Weekly consensus"</span>,</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="at">production =</span> <span class="fu">ifelse</span>(date <span class="sc">&lt;</span> <span class="fu">as.Date</span>(<span class="st">"2021-07-21"</span>), <span class="st">"SPI-M"</span>, <span class="st">"JCB"</span>))</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>plot_estimates <span class="ot">&lt;-</span> <span class="cf">function</span>(region, data, <span class="at">value_type =</span> <span class="st">"R"</span>) {</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    data <span class="sc">|&gt;</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(region <span class="sc">==</span> {{region}}) <span class="sc">|&gt;</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(value_type <span class="sc">%in%</span> {{value_type}}) <span class="sc">|&gt;</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">mutate</span>(<span class="at">reference =</span> <span class="fu">ifelse</span>(value_type <span class="sc">==</span> <span class="st">"R"</span>, <span class="dv">1</span>, <span class="dv">0</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">col =</span> production, <span class="at">fill =</span> production)) <span class="sc">+</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_linerange</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> value_lower, <span class="at">ymax =</span> value_upper), <span class="at">alpha =</span> <span class="fl">0.4</span>, <span class="at">lwd=</span><span class="dv">1</span>, <span class="at">col =</span> <span class="st">"#af8dc3"</span>) <span class="sc">+</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">y =</span> reference), <span class="at">lty=</span><span class="dv">2</span>, <span class="at">col=</span><span class="st">"grey50"</span>) <span class="sc">+</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu">facet_wrap</span>(<span class="sc">~</span>value_type, <span class="at">ncol=</span><span class="dv">1</span>, <span class="at">scales =</span> <span class="st">"free_y"</span>) <span class="sc">+</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fu">labs</span>(<span class="at">x =</span> <span class="cn">NULL</span>, <span class="at">y =</span> <span class="st">"Estimate (90% CI)"</span>,</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="at">title =</span> <span class="fu">paste</span>({{region}}, <span class="st">"COVID-19 epidemic indicators"</span>)) <span class="sc">+</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>)</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_estimates</span>(<span class="st">"England"</span>, r_gr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>r_gr <span class="ot">&lt;-</span> <span class="fu">process_r_gr</span>()</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>r_gr <span class="ot">&lt;-</span> <span class="fu">mutate</span>(r_gr, <span class="at">model =</span> <span class="st">"Weekly consensus"</span>,</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="at">production =</span> <span class="fu">ifelse</span>(date <span class="sc">&lt;</span> <span class="fu">as.Date</span>(<span class="st">"2021-07-21"</span>), <span class="st">"SPI-M"</span>, <span class="st">"JCB"</span>))</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>plot_estimates <span class="ot">&lt;-</span> <span class="cf">function</span>(region, data, <span class="at">value_type =</span> <span class="st">"R"</span>) {</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    data <span class="sc">|&gt;</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(region <span class="sc">==</span> {{region}}) <span class="sc">|&gt;</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(value_type <span class="sc">%in%</span> {{value_type}}) <span class="sc">|&gt;</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="fu">mutate</span>(<span class="at">reference =</span> <span class="fu">ifelse</span>(value_type <span class="sc">==</span> <span class="st">"R"</span>, <span class="dv">1</span>, <span class="dv">0</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">col =</span> production, <span class="at">fill =</span> production)) <span class="sc">+</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_linerange</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> value_lower, <span class="at">ymax =</span> value_upper), <span class="at">alpha =</span> <span class="fl">0.4</span>, <span class="at">lwd=</span><span class="dv">1</span>, <span class="at">col =</span> <span class="st">"#af8dc3"</span>) <span class="sc">+</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">y =</span> reference), <span class="at">lty=</span><span class="dv">2</span>, <span class="at">col=</span><span class="st">"grey50"</span>) <span class="sc">+</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_vline</span>(<span class="fu">aes</span>(<span class="at">xintercept =</span> <span class="fu">as.Date</span>(<span class="st">"2021-07-21"</span>)), <span class="at">lty=</span><span class="dv">2</span>, <span class="at">col=</span><span class="st">"grey50"</span>) <span class="sc">+</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="fu">facet_wrap</span>(<span class="sc">~</span>value_type, <span class="at">ncol=</span><span class="dv">1</span>, <span class="at">scales =</span> <span class="st">"free_y"</span>) <span class="sc">+</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="fu">labs</span>(<span class="at">x =</span> <span class="cn">NULL</span>, <span class="at">y =</span> <span class="st">"Estimate (90% CI)"</span>,</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="at">title =</span> <span class="fu">paste</span>({{region}}, <span class="st">"COVID-19 epidemic indicators"</span>), <span class="at">caption =</span> <span class="st">"SPI-M-O consensus range (bars); responsibility assumed by JBC, 21 July 2021"</span>) <span class="sc">+</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>)</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_estimates</span>(<span class="st">"England"</span>, r_gr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="explore-r-gr_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="explore-r-gr_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
 </section>
-<section id="retrospective-comparison" class="level2">
-<h2 class="anchored" data-anchor-id="retrospective-comparison">Retrospective comparison</h2>
-<p>We don’t typically collect data on R directly (as it is an average of transmission chains). This makes it difficult to evaluate. However, we can compare these real-time estimates against a retrospective “best estimate”. Plotting directly against consensus estimates, using Rt and growth rate from inc2prev:</p>
+<section id="evaluation" class="level2">
+<h2 class="anchored" data-anchor-id="evaluation">Evaluation</h2>
+<p>We don’t typically collect data on R directly (as it is an average of transmission chains). This makes it difficult to evaluate.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Previous work
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Descriptively, Medley 2022 reports the consensus process of SPI-M-O. Both Maishman et al 2022 and Park et al 2023 report methods for combining R and growth rate estimates after it was taken on by DSTL/JBC/UKHSA.</p>
+<p>Work by McCabe et al 2024 models the calibration of modelled estimates from ONS-CIS data, to the published consensus model estimates.</p>
+</div>
+</div>
+</div>
+<p>However, we can compare these real-time estimates against a retrospective “best estimate” as a comparator. This method uses the best available data on the prevalence of infections in the population to calculate the ongoing R and growth rate.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Data
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>R and growth rate were estimated with the inc2prev package (Abbott &amp; Funk 2021)<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>. This uses prevalence estimated by the ONS Community Infection Survey to calculate underlying ongoing transmission.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>i2p <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://github.com/epiforecasts/inc2prev/raw/refs/heads/main/outputs/estimates_national.csv"</span>) </span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>i2p <span class="ot">&lt;-</span> i2p <span class="sc">|&gt;</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(variable <span class="sc">==</span> <span class="st">"England"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">select</span>(date, <span class="at">region =</span> variable, <span class="at">value_type =</span> name, <span class="at">value_lower =</span> q10, <span class="at">value_upper =</span> q90) <span class="sc">|&gt;</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(value_type <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"R"</span>, <span class="st">"r"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">mutate</span>(<span class="at">value_lower =</span> <span class="fu">ifelse</span>(value_lower <span class="sc">==</span> <span class="st">"r"</span>, value_lower<span class="sc">*</span><span class="dv">100</span>, value_lower),</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="at">value_upper =</span> <span class="fu">ifelse</span>(value_upper <span class="sc">==</span> <span class="st">"r"</span>, value_upper<span class="sc">*</span><span class="dv">100</span>, value_upper),</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="at">value_type =</span> <span class="fu">ifelse</span>(value_type <span class="sc">==</span> <span class="st">"r"</span>, <span class="st">"growth rate"</span>, <span class="st">"R"</span>),</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="at">model =</span> <span class="st">"inc2prev"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>i2p <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://github.com/epiforecasts/inc2prev/raw/refs/heads/main/outputs/estimates_national.csv"</span>) </span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>i2p <span class="ot">&lt;-</span> i2p <span class="sc">|&gt;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(variable <span class="sc">==</span> <span class="st">"England"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">select</span>(date, <span class="at">region =</span> variable, <span class="at">value_type =</span> name, <span class="at">value_lower =</span> q10, <span class="at">value_upper =</span> q90) <span class="sc">|&gt;</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(value_type <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"R"</span>, <span class="st">"r"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="fu">mutate</span>(<span class="at">value_lower =</span> <span class="fu">ifelse</span>(value_lower <span class="sc">==</span> <span class="st">"r"</span>, value_lower<span class="sc">*</span><span class="dv">100</span>, value_lower),</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="at">value_upper =</span> <span class="fu">ifelse</span>(value_upper <span class="sc">==</span> <span class="st">"r"</span>, value_upper<span class="sc">*</span><span class="dv">100</span>, value_upper),</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="at">value_type =</span> <span class="fu">ifelse</span>(value_type <span class="sc">==</span> <span class="st">"r"</span>, <span class="st">"growth rate"</span>, <span class="st">"R"</span>),</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="at">model =</span> <span class="st">"inc2prev"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
+<p>Naively plotting this directly against the consensus model estimates:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>r_gr2 <span class="ot">&lt;-</span> r_gr <span class="sc">|&gt;</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rename</span>(<span class="at">value_lower_consensus =</span> value_lower,</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="at">value_upper_consensus =</span> value_upper)</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>comp <span class="ot">&lt;-</span> <span class="fu">left_join</span>(i2p, r_gr2, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"date"</span>, <span class="st">"region"</span>, <span class="st">"value_type"</span>))</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>plot_estimates_comp <span class="ot">&lt;-</span> <span class="cf">function</span>(region, data, <span class="at">value_type =</span> <span class="st">"R"</span>) {</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    data <span class="sc">|&gt;</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(region <span class="sc">==</span> {{region}}) <span class="sc">|&gt;</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(value_type <span class="sc">%in%</span> {{value_type}}) <span class="sc">|&gt;</span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="fu">mutate</span>(<span class="at">reference =</span> <span class="fu">ifelse</span>(value_type <span class="sc">==</span> <span class="st">"R"</span>, <span class="dv">1</span>, <span class="dv">0</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> date)) <span class="sc">+</span></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_linerange</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> value_lower_consensus, <span class="at">ymax =</span> value_upper_consensus), <span class="at">alpha =</span> <span class="fl">0.4</span>, <span class="at">lwd=</span><span class="dv">1</span>, <span class="at">col =</span> <span class="st">"#af8dc3"</span>) <span class="sc">+</span></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_ribbon</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> value_lower, <span class="at">ymax =</span> value_upper), <span class="at">alpha =</span> <span class="fl">0.3</span>, <span class="at">col =</span> <span class="st">"#7fbf7b"</span>, <span class="at">fill =</span> <span class="st">"#7fbf7b"</span>) <span class="sc">+</span></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">y =</span> reference), <span class="at">lty=</span><span class="dv">2</span>, <span class="at">col=</span><span class="st">"grey50"</span>) <span class="sc">+</span></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="fu">facet_wrap</span>(<span class="sc">~</span>value_type, <span class="at">ncol=</span><span class="dv">1</span>, <span class="at">scales =</span> <span class="st">"free_y"</span>) <span class="sc">+</span></span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="fu">labs</span>(<span class="at">x =</span> <span class="cn">NULL</span>, <span class="at">y =</span> <span class="st">"Estimate (90% CI)"</span>, <span class="at">caption =</span> <span class="st">"SPI-M-O consensus (bars) and retrospective estimate from infection survey (inc2prev)"</span>,</span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="at">title =</span> <span class="fu">paste</span>({{region}}, <span class="st">"COVID-19 epidemic indicators"</span>)) <span class="sc">+</span></span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>)</span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_estimates_comp</span>(<span class="st">"England"</span>, <span class="at">data =</span> comp, <span class="at">value_type =</span> <span class="st">"R"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="explore-r-gr_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>But inc2prev is calculated daily, to 4 d.p. To make it a fairer comparison, we can round inc2prev estimates to 1 d.p. and keep only the days that overlap with the consensus.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>comp_trunc <span class="ot">&lt;-</span> comp <span class="sc">|&gt;</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mutate</span>(</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">#across(c(value_lower, value_upper), ~ zoo::rollmean(.x, k=7)),</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">across</span>(<span class="fu">c</span>(value_lower, value_upper), <span class="sc">~</span> <span class="fu">round</span>(.x, <span class="at">digits =</span> <span class="dv">1</span>))) <span class="sc">|&gt;</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(date <span class="sc">%in%</span> r_gr<span class="sc">$</span>date)</span>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>r_gr2 <span class="ot">&lt;-</span> r_gr <span class="sc">|&gt;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rename</span>(<span class="at">value_lower_consensus =</span> value_lower,</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="at">value_upper_consensus =</span> value_upper)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>comp <span class="ot">&lt;-</span> <span class="fu">left_join</span>(i2p, r_gr2, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"date"</span>, <span class="st">"region"</span>, <span class="st">"value_type"</span>))</span>
 <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_estimates_comp</span>(<span class="st">"England"</span>, <span class="at">data =</span> comp_trunc, <span class="at">value_type =</span> <span class="st">"R"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>plot_estimates_comp <span class="ot">&lt;-</span> <span class="cf">function</span>(region, data, <span class="at">value_type =</span> <span class="st">"R"</span>) {</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    data <span class="sc">|&gt;</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(region <span class="sc">==</span> {{region}}) <span class="sc">|&gt;</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(value_type <span class="sc">%in%</span> {{value_type}}) <span class="sc">|&gt;</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="fu">mutate</span>(<span class="at">reference =</span> <span class="fu">ifelse</span>(value_type <span class="sc">==</span> <span class="st">"R"</span>, <span class="dv">1</span>, <span class="dv">0</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> date)) <span class="sc">+</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_linerange</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> value_lower_consensus, <span class="at">ymax =</span> value_upper_consensus), <span class="at">alpha =</span> <span class="fl">0.4</span>, <span class="at">lwd=</span><span class="dv">1</span>, <span class="at">col =</span> <span class="st">"#af8dc3"</span>) <span class="sc">+</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_ribbon</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> value_lower, <span class="at">ymax =</span> value_upper), <span class="at">alpha =</span> <span class="fl">0.3</span>, <span class="at">col =</span> <span class="st">"#7fbf7b"</span>, <span class="at">fill =</span> <span class="st">"#7fbf7b"</span>) <span class="sc">+</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">y =</span> reference), <span class="at">lty=</span><span class="dv">2</span>, <span class="at">col=</span><span class="st">"grey50"</span>) <span class="sc">+</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_vline</span>(<span class="fu">aes</span>(<span class="at">xintercept =</span> <span class="fu">as.Date</span>(<span class="st">"2021-07-21"</span>)), <span class="at">lty=</span><span class="dv">2</span>, <span class="at">col=</span><span class="st">"grey50"</span>) <span class="sc">+</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="fu">facet_wrap</span>(<span class="sc">~</span>value_type, <span class="at">ncol=</span><span class="dv">1</span>, <span class="at">scales =</span> <span class="st">"free_y"</span>) <span class="sc">+</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="fu">labs</span>(<span class="at">x =</span> <span class="cn">NULL</span>, <span class="at">y =</span> <span class="st">"Estimate (90% CI)"</span>, <span class="at">caption =</span> <span class="st">"SPI-M-O consensus (bars) and retrospective estimate from infection survey (inc2prev)"</span>,</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="at">title =</span> <span class="fu">paste</span>({{region}}, <span class="st">"COVID-19 epidemic indicators"</span>)) <span class="sc">+</span></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a><span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>)</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_estimates_comp</span>(<span class="st">"England"</span>, <span class="at">data =</span> comp, <span class="at">value_type =</span> <span class="st">"R"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -326,29 +382,136 @@ SPI-M-O R estimates
 </div>
 </div>
 </div>
+<p>But inc2prev is calculated daily, to 4 d.p. To make it a fairer comparison, we can round inc2prev estimates to 1 d.p. and keep only the days that overlap with the consensus.</p>
+</div>
+</div>
+</div>
+<p>Plotting this comparison directly against the consensus range:</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>comp_trunc <span class="ot">&lt;-</span> comp <span class="sc">|&gt;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mutate</span>(</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">#across(c(value_lower, value_upper), ~ zoo::rollmean(.x, k=7)),</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">across</span>(<span class="fu">c</span>(value_lower, value_upper), <span class="sc">~</span> <span class="fu">round</span>(.x, <span class="at">digits =</span> <span class="dv">1</span>))) <span class="sc">|&gt;</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(date <span class="sc">%in%</span> r_gr<span class="sc">$</span>date)</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_estimates_comp</span>(<span class="st">"England"</span>, <span class="at">data =</span> comp_trunc, <span class="at">value_type =</span> <span class="st">"R"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="explore-r-gr_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>We will also need to think about lags between these two sources. (Maybe a 7-day rolling average on inc2prev to reflect the 7-day cadence of SPI-M?).</p>
 </section>
-<section id="evaluation" class="level2">
-<h2 class="anchored" data-anchor-id="evaluation">Evaluation</h2>
-<p>CMO Report on COVID-19<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a>:</p>
+<section id="further-work" class="level2">
+<h2 class="anchored" data-anchor-id="further-work">Further work</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Comparison with McCabe et al 2024
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>McCabe et al assess the potential of the ONS-CIS study to recover the consensus estimate. This is the opposite approach to that I’ve taken above. The authors model R and growth rate from the ONS-CIS data using a smooth spline. They then use the consensus estimates as a predictor for their ONS-CIS based R value. They also add a lag/lead time of ±20 days on the timeseries of consensus estimates; and keep only the consensus timeseries for “the time lag and knot value under which R^2 is maximised”.</p>
+<p>They evaluate against three metrics: R^2 from linear regression; Spearman rank correlation; and “agreement proportion”, whether the consensus/comparator point estimate agreed on the direction of growth (i.e.&nbsp;estimate against threshold of 1 for R, 0 for growth rate). Overall results are reported as:</p>
 <blockquote class="blockquote">
-<p>…all models have been weighted equally when estimating R, but other methods of statistical combination might be more appropriate in the future.</p>
+<p>Depending on nation and parameter, up to 77% of the variance in the government-published estimates can be explained by the ONS-based estimates, providing evidence of the suitability of this singular data stream to track the epidemic</p>
 </blockquote>
-</section>
-<section id="future-work" class="level2">
-<h2 class="anchored" data-anchor-id="future-work">Future work</h2>
+<p>For example, for England, they use an -8 day lagged timeseries of the consensus estimate to predict their ONS-CIS based R value. They report a “maximum” R^2 of 0.71, Spearman correlation 0.85, agreement proportion 0.81.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Why might we treat the consensus model as ‘better’ than ONS-CIS models?
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>The ONS-CIS survey didn’t sample in closed care settings: care homes, hospitals. However, these settings have their own particular transmission patterns. This is important because the national R is intended to summarise across all transmission patterns. So when these closed settings had very high levels of transmission, their specific (and unusual) pattern could be driving national level epidemic dynamics. The ONS-CIS study would miss this effect.</p>
+<p>So, if one or more of the modellers contributing to the consensus can calibrate their estimate to reflect these different settings, then the consensus model might well be a better single summary statistic.</p>
+<p>It’s a bit of a stretch to me. Still, we could read McCabe’s work as showing how far the ONS-CIS survey is still useful in this scenario.</p>
+</div>
+</div>
+</div>
+<p>My motivation is the reverse: was the consensus estimate any good, relative to a best estimate of R/growth rate.</p>
+<p>As an alternative framing… consider McCabe et al’s agreement proportion for England (0.81). This might suggest that even in the best possible scenario for the consensus model (fit to as much of the comparator model as possible, with any amount of time lag or spline knots) - still, 19% of the consensus estimates didn’t even represent the correct direction of the epidemic trend (growth/decline).</p>
+<p>My hypothesis is that the consensus is much more prone to bias and error given the method of taking a simple average across very variable inputs. By comparison, a single model using a consistent single data stream (ONS-CIS) should be less biased.</p>
+</div>
+</div>
+</div>
+<p>Three suggestions for evaluation:</p>
+<p><em>Observational</em></p>
+<ol type="1">
+<li>Comparison</li>
+</ol>
 <ul>
-<li>Comparison with retrospectively calculated R and GR using latest available methodology and data
+<li>Similar to McCabe et al 2024:
 <ul>
-<li>recalculate weekly, on diff sources</li>
+<li>using inc2prev for the comparator</li>
+<li>Using the interval score for the 90% CI range, instead of the R^2, to get at both sharpness/calibration</li>
+<li>Estimates of value of information and translating to decision impact (i.e.&nbsp;effect of lockdown timing on health)</li>
 </ul></li>
-<li>Comparison with contemporary estimates contributing to the ensemble presented above (e.g.&nbsp;via requesting accesss to CrystalCast)</li>
-<li>Text analysis of interpretation presented in consensus statements from SPI-M and EMRG<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a></li>
+<li>Comparison with contemporary estimates contributing to the ensemble presented above (e.g.&nbsp;rerunning code or via CrystalCast)</li>
+</ul>
+<ol start="2" type="1">
+<li>Combination</li>
+</ol>
+<ul>
+<li>Estimates were reported to 1 d.p; were estimates from each group rounded before or after combination? (Even such a small method point creates an impact…)</li>
+<li>What was the effect of consensus discussion; did calibration differ pre/post the handover to JBC<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>?</li>
+<li>Alternative combinations based on harmony of assumptions of e.g.&nbsp;generation time
+<ul>
+<li>include only those with similar assumptions (within some range)</li>
+<li>use all, but weight by similarity</li>
+<li>use all, but weight by retrospective calibration: suggesting what could happen if we had <em>some</em> idea of the best model, but weren’t sure; I think this might get at something like Bayesian model averaging</li>
+</ul></li>
+</ul>
+<p><em>Experimental</em></p>
+<ol start="3" type="1">
+<li>Elicitating evaluation</li>
+</ol>
+<ul>
+<li>Judgements of quality
+<ul>
+<li>Participants
+<ul>
+<li>those who produced the estimates</li>
+<li>those who used them</li>
+<li>public aware of them</li>
+</ul></li>
+<li>Show time-series of consensus estimates with light explanation</li>
+<li>Ask for confidence in estimate by e.g.
+<ul>
+<li>overall judgement of quality, trust</li>
+<li>calibration of weekly point / 90% CI (eg interactive)</li>
+</ul></li>
+<li>Multifactorial conditions: show one or more data streams from
+<ul>
+<li>estimated infection incidence</li>
+<li>accurate case, death data</li>
+<li>real-time case, death data</li>
+</ul></li>
+<li>Compare against ‘observed’ accuracy as above</li>
+</ul></li>
 </ul>
 </section>
 <section id="appendix" class="level2">
 <h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -357,14 +520,20 @@ Reading
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>CMO Report on COVID-19<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a></p>
+<p>Reproduction number (R) and growth rate: Methodology. Gov.uk; 2021. https://www.gov.uk/government/publications/reproduction-number-r-and-growth-rate-methodology/reproduction-number-r-and-growth-rate-methodology</p>
+<p>CMO Report on COVID-19. Gov.uk; 2022. https://www.gov.uk/government/publications/technical-report-on-the-covid-19-pandemic-in-the-uk/chapter-5-modelling</p>
+<p>Medley, Graham F. 2022. “A Consensus of Evidence: The Role of SPI-M-O in the UK COVID-19 Response.” Advances in Biological Regulation 86 (December): 100918. doi:10.1016/j.jbior.2022.100918.</p>
+<p>Park J., Bevan L., Sanchez-Marroquin A., Danelian G., Bayley T., Manley H., et al. Combining models to generate a consensus effective reproduction number R for the COVID-19 epidemic status in England. medRxiv. 2023 doi: 10.1101/2023.02.27.23286501.</p>
+<p>Maishman T., Schaap S., Silk D.S., Nevitt S.J., Woods D.C., Bowman V.E. Statistical methods used to combine the effective reproduction number, R(t), and other related measures of COVID-19 in the UK. Statistical Methods in Medical Research. 2022;31(9):1757–1777. doi: 10.1177/09622802221109506</p>
+<p>Abbott S., Funk S. Estimating epidemiological quantities from repeated cross-sectional prevalence measurements. medRxiv. 2022 doi: 10.1101/2022.03.29.22273101</p>
+<p>McCabe R, Danelian G, Panovska-Griffiths J, Donnelly CA. Inferring community transmission of SARS-CoV-2 in the United Kingdom using the ONS COVID-19 Infection Survey. Infect Dis Model. 2024 Jan 30;9(2):299-313. doi: 10.1016/j.idm.2024.01.011. PMID: 38371874; PMCID: PMC10867655.</p>
 </div>
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -373,27 +542,21 @@ Source data notes
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><em>Copied from the published data tables</em></p>
-<section id="general-notes" class="level4">
-<h4 class="anchored" data-anchor-id="general-notes">General notes</h4>
-<p>Estimates for R and growth rates are shown as a range, and the true values are likely to lie within this range.<br>
-Tables 1 and 2 provide a time series of contemporary estimates, which were calculated using the data available at the time and do not necessarily represent the current understanding of R and growth rates for those dates. Estimates have not been revised to include new data.</p>
+<p>Estimates for R and growth rates are shown as a range, and the true values are likely to lie within this range. Tables 1 and 2 provide a time series of contemporary estimates, which were calculated using the data available at the time and do not necessarily represent the current understanding of R and growth rates for those dates. Estimates have not been revised to include new data.</p>
 <p>From 2 April 2021, UK estimates for the R value and growth rate are no longer produced. Given the increasingly localised approach to managing the epidemic, particularly between nations, UK level estimates are less meaningful than previously, and are more easily biased by the models combined in their calculation. SPI-M considers estimates of the R value and growth rates for the four nations and NHS England regions to be more robust and useful metrics than those for the whole UK.</p>
 <p>As of 26 March 2021, the approach to combining the R values and growth rate has been normalised, so that modelling groups now submit a time series of estimates and a given date across all models is used, rather than their most recent estimates. This makes the estimation more consistent and robust, with little to no difference to the range.</p>
 <p>When the numbers of cases or deaths are at low levels and/or there is a high degree of variability in transmission across a region, then care should be taken when interpreting estimates of R and the growth rate. For example, a significant amount of variability across a region due to a local outbreak may mean that a single average value does not accurately reflect the way infections are changing throughout that region.</p>
 <p>R and growth rates are not the only important measures of the epidemic, and should be considered alongside other measures of the spread of disease. In particular, the number of new cases of the disease identified during a specified time period (incidence), and the proportion of the population with the disease at a given point in time (prevalence). If R equals 1 with 100,000 people currently infected, it is a very different situation to R equals 1 with 1,000 people currently infected.</p>
 <p>As of 30 April 2021, the reliability indicator for estimates has changed. Prior to this date, daily deaths in a region averaged over a 10-day period were used when calculating an estimate’s reliability score, to determine whether it was based on very few cases in a particular area. These data were agreed to be the most reliable data stream when the indicator was developed in summer 2020. Over recent months, the number of deaths has been driven down to very low levels due to lockdown and the impact of the COVID-19 vaccination programme, consequently reducing reliability scores for many regions. As a result, the number of individuals admitted to hospital with COVID-19 and inpatients newly diagnosed with COVID-19 have replaced deaths as an indicator for whether the estimate is based on very few cases in a region.</p>
-</section>
 <section id="data-table-notes" class="level4">
 <h4 class="anchored" data-anchor-id="data-table-notes">Data table notes</h4>
 <ol type="1">
 <li>Estimates for R and growth rates are shown as a range, and the true values are likely to lie within this range.</li>
 <li>Estimates in red do not meet certainty criteria. Particular care should be taken when interpreting these estimates as they are based on low numbers of cases or deaths and / or dominated by clustered outbreaks. These estimates are insufficiently robust to inform policy decisions alone (applied from 10 July 2020). From 30 April 2021, the methodology for the reliability indicator has changed. Please see point 7 in Notes_and_defintions.</li>
-<li><ul>
-<li>denotes weeks in which estimates may be based on fewer days or lower quality data than usual, due to increased reporting delays and disruption to data streams during bank holidays and the festive period.</li>
-</ul></li>
+<li>* denotes weeks in which estimates may be based on fewer days or lower quality data than usual, due to increased reporting delays and disruption to data streams during bank holidays and the festive period.</li>
 <li>Dates provided refer to the date of publication</li>
 <li>Tables 1 and 2 provide a time series of contemporary estimates, which were calculated using the data available at the time and do not necessarily represent the current understanding of R and growth rates for those dates. Estimates have not been revised to include new data.<br>
 </li>
@@ -415,15 +578,12 @@ Tables 1 and 2 provide a time series of contemporary estimates, which were calcu
 <div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
-<li id="fn1"><p>The reliability indicator showed where estimates were “insufficiently robust to inform policy decisions alone” (Timeseries of R and Growth Rate, Table 1, Note 2). It was based on “daily deaths in a region averaged over a 10-day period… to determine whether it was based on very few cases in a particular area. (Timeseries of R and Growth Rate, Notes and Definitions, Note 7)<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>Updated to: “the number of individuals admitted to hospital with COVID-19 and inpatients newly diagnosed with COVID-19”<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>https://plus.maths.org/epidemic-growth-rate<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>https://www.gov.uk/government/publications/technical-report-on-the-covid-19-pandemic-in-the-uk/chapter-5-modelling<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn3"><p>https://www.gov.uk/government/publications/reproduction-number-r-and-growth-rate-methodology<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn4"><p>https://www.gov.uk/government/publications/r-value-and-growth-rate-statement-of-voluntary-compliance-with-the-code-of-practice-for-statistics/reproduction-number-r-and-growth-rate-statement-of-voluntary-compliance-with-the-code-of-practice-for-statistics<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn5"><p>https://www.gov.uk/government/publications/reproduction-number-r-and-growth-rate-methodology<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn6"><p>Timeseries of R and Growth Rate, Note 4<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn7"><p>https://www.gov.uk/government/publications/technical-report-on-the-covid-19-pandemic-in-the-uk/chapter-5-modelling<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn8"><p>https://www.gov.uk/government/publications/consensus-statements-on-covid-19<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn9"><p>https://www.gov.uk/government/publications/technical-report-on-the-covid-19-pandemic-in-the-uk/chapter-5-modelling<a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>Timeseries of R and Growth Rate, Note 4<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>https://github.com/epiforecasts/inc2prev<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>The JBC approach was based on “meta-analysis” so worth checking what exactly went into that; reference: Manley et al 2022<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main>
 <!-- /main column -->
