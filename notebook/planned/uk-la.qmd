@@ -1,0 +1,80 @@
+## Developing a workflow for reducing bias in real-time UK surveillance data management
+
+Inspired by: https://www.epinowcast.org/GuideToSTLTReportingDelays/
+
+Rationale: "surveillance is the first line of defence" - is it fit for purpose?
+
+Proposal:
+Audit routine UK surveillance data relevant to outbreak response
+Guide to surveillance data biases & workflow for handling
+
+## Capability, opportunity, and motivation to improve outbreak analytics in routine public health intelligence in UK local authorities
+
+Context
+
+- Real-time outbreak analysis requires specific methods and is very sensitive to methodological error  
+- We have good links with national level PH intelligence in UKHSA & have had success collaborating to co-create / integrate methodological advances & tools   
+- Since much of public health was devolved to local authorities, much public health intelligence that informs decision-making is now conducted at an LA level  
+- Ideally this would use best-practice methods, but (1) we don’t know what analysis is currently conducted or (2) what capacity there is for improving this or (3) what decisions these inform in practice  
+- Similar work:  
+  - NHS England have made efforts to assess workforce skills in UK public health intelligence
+  - WHO recently launched a PH intelligence evaluation framework  
+  - NIHR applied research collaborations are a good model for integrating local research centres with public health practice
+
+Proposal
+
+- Adopt approach from behavioural/implementation science to assess the role of outbreak analytics in local authority PH intelligence teams 
+- Survey based on “Capability, opportunity, motivation” for real-time analysis methods  
+  - Capability - what data sources and methods do intelligence teams currently use?  
+  - Opportunity - how much scope for professional development & new tool use?  
+  - Motivation - how would improving outbreak estimation support public health functions? Interest in joining a community of practice?  
+  - Alternative frameworks - Acceptability, feasibility, appropriateness ; Knowledge, Attitudes, Practice (used in healthcare)
+- Recruitment - LA PH intelligence teams, from UK gov/NHS/UKHSA  
+- Pilot - ukhsa? sample  
+- Compare with 
+
+Key references
+
+- [Identifying public health policymakers’ sources of information: comparing survey and network analyses](https://doi.org/10.1093/eurpub/ckv083) 
+
+## Eliciting policy preferences for evaluating forecasts
+
+What makes a “good” outbreak forecast in routine public health intelligence?
+
+Population: 
+
+- Public health intelligence workforce
+
+Pilot study: decision context 
+
+- What decisions are made using forecasts?  
+- What outbreak characteristics matter?
+
+Full study: Discrete choice experiment to demonstrate preferences for forecast performance
+
+Set of alternative models - variation across
+
+- Model characteristics  
+  - Performance   
+  - Mechanistic interpretability  
+  - Context specificity (disease, location)  
+  - Known past performance  
+- Modeller characteristics  
+  - Trust in team producing  
+  - Access to team producing (in house, external \- collaborator, external \- unknown)  
+  - Ability to modify with additional data or alter assumptions  
+  - …? identify from policy work  
+- Outbreak characteristics  
+  - Timing relative to peak  
+  - Expected / unanticipated  
+  - Population vulnerability
+
+Preferences / beliefs about:
+
+- Accuracy  
+- Interpretability  
+- Usefulness 
+
+How much better would a single model have to be, to be chosen above human judgement / the ensemble?
+
+

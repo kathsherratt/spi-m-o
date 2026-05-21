@@ -1,0 +1,8 @@
+# Application to Pegasus
+
+##
+
+Aim: apply methods developed for analysis of SPI-MO Covid to Ex Pegasus Approach: access simulated "truth" data and (3?)
+consensus statements.
+Compare with individual models & modeller experiences; principle being that the individual models are more readily available, being more recent.
+Qualitative documentation of SPI-MO participation among most recent participants to explore similarity/differences since COVID.

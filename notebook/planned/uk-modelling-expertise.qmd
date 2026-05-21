@@ -1,0 +1,72 @@
+## Analysis of UK infectious disease modelling network
+### RCT  
+- [https://trestlelink.org/models/research-to-policy-collaboration/](https://trestlelink.org/models/research-to-policy-collaboration/)   
+- [https://www.pnas.org/doi/10.1073/pnas.2012955118](https://www.pnas.org/doi/10.1073/pnas.2012955118)  
+
+### Dynamics of UK outbreak modelling expertise
+
+What is the shape of UK outbreak modelling?
+- Social network analysis
+
+Rationale:
+
+_Operational interest_
+In a short term crisis, we need to mobilist expertise quickly
+A core critique of the UK's advisory infrastructure was groupthink: access to a wider pool of expertise would help address this
+However modelling expertise is difficult to identify: modellers are traditionally methodological contributors to a domain team and data on modelling work is not specifically/sensitively indexed in e.g. MeSH subheadings
+- RQ1: test the sensitivity and specificity of citation network analysis as a tool for identifying the population of UK academic outbreak modelling work
+- RQ2: identify blind spots / hot spots in UK modelling (vs outsourcing expertise?) against potential future response needs (eg national risk register). How does UK modelling expertise align with priorities?
+
+_Scientific interest_
+Infectious disease epi is shaped by crisis response; expert advisors are shaped by the crisis they respond to
+Qualitatively strong survivor bias in oubtreak response expertise (cumulative interest in the citations of early response papers, disproportionate early exits / persistent players in the field)
+First outbreak response also forms the anchor of future work and a template for how they respond in future which may be more or less appropriate
+Specifically the public health response to an outbreak is not typically within the advisor's control, but still shapes their expectations of future advice
+Example outbreaks: HIV, FMD, SARS, H1N1, Ebola
+- RQ3: test for the "matthew effect" (cumulative power): early response disproportionately increasing weight/centrality in the network
+- RQ4: identify how the patterns of one oubtreak influenced response to subsequent
+
+#### Methods
+
+_Data collection_
+- Identify citation network
+  - Start with COVID as single event all modelling authors will likely have interacted with
+  - Population: papers modelling COVID with at least one author with UK institutional affiliation
+  - Citation network: backward (who they trained with) and forward (who they are training)
+- Map papers to time, outbreak response, modelling method
+_Data analysis_
+RQ1: 
+- Identify clusters of domain/method/author
+- Follow up verification via survey across entire network
+RQ2: 
+- Compare clusters against national priorities
+RQ3: 
+- Stratify authors by working on one vs multiple outbreaks
+- look at some kind of expected vs observed citation count based on adjusted for timing during outbreak; see if this carries through into later work
+- (stratified) random sample for survey/interview follow up
+
+Limitations:
+- Doesn't capture outbreak modellers who chose not to interact with COVID
+- Less likely to capture outbreak modellers of non-human pathogens
+
+#### Results
+
+Outputs: 
+- density/dispersion of network
+  - persistence
+- waves of domain expertise over time
+  - average across network
+  - moving across institutions
+
+#### Interpretation
+
+Outcomes:
+- understand how landscape of expertise is shaped by crisis events
+- 
+
+### Further ideas
+Altmetrics
+- using rAltmetrics package
+```{r}
+
+```
