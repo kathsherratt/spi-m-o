@@ -239,7 +239,7 @@ As an alternative framing... consider McCabe et al's agreement proportion for En
 This might suggest that even in the best possible scenario for the consensus model (fit to as much of the comparator model as possible, with any amount of time lag or spline knots) - still, 19% of the consensus estimates didn't even represent the correct direction of the epidemic trend (growth/decline).
 
 My hypothesis is that the consensus is much more prone to bias and error given the method of taking a simple average across very variable inputs.
-By comparison, a single model using a consistent single data stream (ONS-CIS) should be less biased.
+By comparison, a single model using a consistent single data stream should be less biased.
 
 :::
 
@@ -265,8 +265,6 @@ Three suggestions for evaluation:
   - use all, but weight by similarity
   - use all, but weight by retrospective calibration: suggesting what could happen if we had *some* idea of the best model, but weren't sure; I think this might get at something like Bayesian model averaging
 
-*Experimental*
-
 3. Elicitating evaluation
 
 - Judgements of quality
@@ -283,6 +281,33 @@ Three suggestions for evaluation:
     - accurate case, death data
     - real-time case, death data
   - Compare against 'observed' accuracy as above
+
+Questions:
+
+Parametric uncertainty
+
+- How does accuracy of the consensus change over time, what predicts and explains this, and which of those factors can be changed? 
+  - if accuracy changed over time, what external factors gave rise to more or less accurate estimates
+  - approach: model this simple (logistic or gam)
+  - Availability of each data stream
+  - Reliability of each data stream: data revisions
+  - Number of models
+  - Quality of group discussion
+  - Production owner for the consensus estimate
+
+Triangulate with qualitative interviews to assess model credibility at each stage of model evaluation.
+
+Structural uncertainty
+
+- How does the uncertainty from equally-weighted quantitative combination compare with narrative expression of uncertainty in the accompanying consensus statement? 
+  - all model estimates were combined equally regardless of confidence in individual model quality or accuracy
+  - hypothesis that narrative was used to express this confidence around this structural uncertainty
+  - is there a way to create a narrative-adjusted credible interval to account for this
+  - and then compare accuracy of weighted or unweighted interval
+  - with the interpretation: how accurate was the real-time qualitative evaluation of the consensus 
+  - getting towards the question: is the group well-calibrated to its own accuracy;
+  - and the broader question: what are the risks/rewards of the facilitated group vs independent contributions
+
 
 ## Appendix
 
