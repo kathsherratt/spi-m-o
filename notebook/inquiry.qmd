@@ -1,0 +1,23 @@
+---
+title: Quotes from the Inquiry
+format: html
+---
+
+[All recommendations](https://covid19.public-inquiry.uk/inquiry-recommendations/)
+
+
+## [Module 1](https://covid19.public-inquiry.uk/reports/module-1-report-the-resilience-and-preparedness-of-the-united-kingdom/#section_13_appendix-4-list-of-recommendations-made-in-this-report)
+
+> Recommendation 5: Data and research for future pandemics. The UK government, working with the devolved administrations, should establish mechanisms for the timely collection, analysis, secure sharing and use of reliable data for informing emergency responses, in advance of future pandemics. Data systems should be tested in pandemic exercises.
+> The UK government should also commission a wider range of research projects ready to commence in the event of a future pandemic. These could be ‘hibernated’ studies or existing studies that are designed to be rapidly adapted to a new outbreak. Better working with international partners should be encouraged. This should include projects to:
+> understand the prevalence of a new virus; measure the effectiveness of a range of different public health measures; and identify which groups of vulnerable people are hardest hit by the pandemic and why
+
+## Module 2
+
+### [Module 2, Vol. II](https://covid19.public-inquiry.uk/reports/modules-2-2a-2b-2c-core-decision-making-and-political-governance-volume-ii/)
+
+> Recommendation 3: Register of experts: The Government Office for Science (GO-Science) should develop and maintain a register of experts... willing to participate in scientific advisory groups, covering a broad range of potential civil emergencies. The register should be regularly refreshed through open calls for applications.
+
+> 9.150 In advance of any future pandemic, the UK government and devolved administrations should develop a focused training module describing core scientific and modelling concepts that could be delivered to relevant decision-makers and officials (including those responsible for communications) at the outset of an emergency.
+
+> Recommendation 5: Support to participants in advisory groups. The Government Office for Science (GO-Science), the Scottish Government, the Welsh Government and the Department of Health (Northern Ireland) should each develop standard terms of appointment for all participants in scientific advisory groups. These terms should include: clarity around the nature of an individual’s role and the extent of their responsibility, as well as the likely time commitment; payment where their time commitment means that they have to spend time away from their substantive role; access to support services; and access to advice on personal and online security, with procedures for escalating specific concerns.
