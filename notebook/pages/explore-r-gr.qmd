@@ -18,7 +18,7 @@ execute:
 #| include: false
 
 pacman::p_load(here, readr, dplyr, ggplot2, knitr, kableExtra)
-source(here("R", "process-r-gr.r"))
+source(here("R", "process-r-gr.R"))
 theme_set(theme_minimal())
 ```
 
