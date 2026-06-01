@@ -12,6 +12,6 @@ Notes on evaluating the UK government's COVID-19 scientific advisory process, fo
 
 ## Context
 
-General overview of my current thinking:
+General overview / current thinking:
 
 <iframe src="notebook/consensus-modelling.pdf" width="100%" height="800px"></iframe>
