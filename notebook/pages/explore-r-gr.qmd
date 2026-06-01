@@ -33,7 +33,6 @@ To produce these estimates, the government requested multiple teams of academics
 The different estimates these teams produced were combined and published as a single "consensus estimate".
 
 ::: {.callout-note collapse="true"}
-
 #### SPI-M
 
 > From around May 2020, SPI-M-O began to combine these nowcasts using a statistical approach across a minimum of 3, but often more than 10, models to provide a consensus range...
@@ -60,25 +59,18 @@ This produced something each week that looked like this:
 
 In July 2021, responsibility for this process was partly taken in-house by the UK government.
 SPI-M-O participants still produced their own estimates, but a different team took over production of the combined single estimate.
-
 :::
 
 ::: {.callout-note collapse="true"}
-
 #### Production timeline
 
 ```{r}
-timeline <- read_csv(here("data", "r-growth-values", "timeline.csv"))
+timeline <- read_csv(here("data", "2020-sars-cov-2", "r-growth-values", "timeline.csv"))
 timeline |>
     select(-Note) |>
     kable()
 ```
-
 :::
-
-::: {.callout-note collapse="true"}
-
-#### Data
 
 A final dataset of all the weekly consensus estimates was published in 2022^[https://www.gov.uk/government/publications/reproduction-number-r-and-growth-rate-methodology], as:
 
@@ -89,9 +81,7 @@ Published data include lower and upper bound estimates for R and the growth rate
 For the fully caveated notes on this data, see Appendix below.
 Here, data were downloaded and lightly [pre-processed](../R/process-r-gr.R).
 
-:::
-
-Looking at just the R and growth rate estimates for England:
+Looking at just the R estimates for England:
 
 ```{r}
 r_gr <- process_r_gr()
@@ -103,9 +93,11 @@ plot_estimates <- function(region, data, value_type = "R") {
 filter(region == {{region}}) |>
 filter(value_type %in% {{value_type}}) |>
 mutate(reference = ifelse(value_type == "R", 1, 0)) |>
-ggplot(aes(x = date, col = production, fill = production)) +
-geom_linerange(aes(ymin = value_lower, ymax = value_upper), alpha = 0.4, lwd=1, col = "#af8dc3") +
-geom_line(aes(y = reference), lty=2, col="grey50") +
+ggplot(aes(x = date)) +
+geom_linerange(aes(ymin = value_lower, ymax = value_upper), alpha = 0.4, lwd=0.5, col = "#af8dc3") +
+geom_point(aes(y=value_upper), size = 0.5, col = "#af8dc3") +
+geom_point(aes(y=value_lower), size = 0.5, col = "#af8dc3") +
+geom_line(aes(y = reference), lty=1, col="grey50") +
 geom_vline(aes(xintercept = as.Date("2021-07-21")), lty=2, col="grey50") +
 facet_wrap(~value_type, ncol=1, scales = "free_y") +
 labs(x = NULL, y = "Estimate (90% CI)",
@@ -115,10 +107,15 @@ theme(legend.position = "bottom")
 plot_estimates("England", r_gr)
 ```
 
-## Evaluation
+## How accurate was the consensus?
 
-We don't typically collect data on R directly (as it is an average of transmission chains).
-This makes it difficult to evaluate.
+We don't typically collect data on R directly, as it is an average of transmission chains.
+This makes it difficult to evaluate how accurate any estimate truly is.
+
+However, retrospectively, we can compare these real-time estimates against a "best" (ex post) estimate of the same quantity.
+This uses prevalence estimated by the ONS Community Infection Survey to calculate underlying ongoing transmission.
+This is the "gold standard" because the CIS was designed to represent the full population in a random sample (in a pre-established protocol designed specifically to collect this kind of data).
+R/growth rate were estimated with the `inc2prev` model (Abbott & Funk 2021)^[https://github.com/epiforecasts/inc2prev].
 
 ::: {.callout-note collapse="true"}
 ### Previous work
@@ -127,79 +124,19 @@ Descriptively, Medley 2022 reports the consensus process of SPI-M-O.
 Both Maishman et al 2022 and Park et al 2023 report methods for combining R and growth rate estimates after it was taken on by DSTL/JBC/UKHSA.
 
 Work by McCabe et al 2024 models the calibration of modelled estimates from ONS-CIS data, to the published consensus model estimates.
-
 :::
 
-However, we can compare these real-time estimates against a retrospective "best estimate" as a comparator.
-This method uses the best available data on the prevalence of infections in the population to calculate the ongoing R and growth rate.
+::: {.callout-tip collapse="false"}
+#### When might the consensus model be 'better' than the gold standard estimate?
 
-::: {.callout-note collapse="true"}
+The ONS-CIS survey didn't sample in closed care settings: care homes, hospitals.
+However, these settings have their own particular transmission patterns.
+This is important because the national R is intended to summarise across all transmission patterns.
+So when these closed settings had very high levels of transmission, their specific (and unusual) pattern could be driving national level epidemic dynamics.
+The ONS-CIS study would miss this effect.
 
-### Data
-
-R and growth rate were estimated with the inc2prev package (Abbott & Funk 2021)^[https://github.com/epiforecasts/inc2prev].
-This uses prevalence estimated by the ONS Community Infection Survey to calculate underlying ongoing transmission.
-
-```{r}
-i2p <- read_csv("https://github.com/epiforecasts/inc2prev/raw/refs/heads/main/outputs/estimates_national.csv") 
-
-i2p <- i2p |>
-filter(variable == "England") |>
-select(date, region = variable, value_type = name, value_lower = q10, value_upper = q90) |>
-filter(value_type %in% c("R", "r")) |>
-mutate(value_lower = ifelse(value_lower == "r", value_lower*100, value_lower),
-value_upper = ifelse(value_upper == "r", value_upper*100, value_upper),
-value_type = ifelse(value_type == "r", "growth rate", "R"),
-model = "inc2prev")
-```
-
-Naively plotting this directly against the consensus model estimates:
-
-```{r}
-r_gr2 <- r_gr |>
-rename(value_lower_consensus = value_lower,
-value_upper_consensus = value_upper)
-
-comp <- left_join(i2p, r_gr2, by = c("date", "region", "value_type"))
-
-plot_estimates_comp <- function(region, data, value_type = "R") {
-    data |>
-filter(region == {{region}}) |>
-filter(value_type %in% {{value_type}}) |>
-mutate(reference = ifelse(value_type == "R", 1, 0)) |>
-ggplot(aes(x = date)) +
-geom_linerange(aes(ymin = value_lower_consensus, ymax = value_upper_consensus), alpha = 0.4, lwd=1, col = "#af8dc3") +
-geom_ribbon(aes(ymin = value_lower, ymax = value_upper), alpha = 0.3, col = "#7fbf7b", fill = "#7fbf7b") +
-geom_line(aes(y = reference), lty=2, col="grey50") +
-geom_vline(aes(xintercept = as.Date("2021-07-21")), lty=2, col="grey50") +
-facet_wrap(~value_type, ncol=1, scales = "free_y") +
-labs(x = NULL, y = "Estimate (90% CI)", caption = "SPI-M-O consensus (bars) and retrospective estimate from infection survey (inc2prev)",
-title = paste({{region}}, "COVID-19 epidemic indicators")) +
-theme(legend.position = "bottom")
-}
-plot_estimates_comp("England", data = comp, value_type = "R")
-```
-
-But inc2prev is calculated daily, to 4 d.p. To make it a fairer comparison, we can round inc2prev estimates to 1 d.p. and keep only the days that overlap with the consensus.
-
+So, if one or more of the modellers contributing to the consensus can calibrate their estimate to reflect these different settings, then the consensus model might well be a better single summary statistic.
 :::
-
-Plotting this comparison directly against the consensus range:
-
-```{r, eval="false"}
-comp_trunc <- comp |>
-mutate(
-    #across(c(value_lower, value_upper), ~ zoo::rollmean(.x, k=7)),
-    across(c(value_lower, value_upper), ~ round(.x, digits = 1))) |>
-    filter(date %in% r_gr$date)
-
-plot_estimates_comp("England", data = comp_trunc, value_type = "R")
-```
-
-We will also need to think about lags between these two sources.
-(Maybe a 7-day rolling average on inc2prev to reflect the 7-day cadence of SPI-M?).
-
-## Further work
 
 ::: {.callout-note collapse="true"}
 ### Comparison with McCabe et al 2024
@@ -218,32 +155,132 @@ Overall results are reported as:
 For example, for England, they use an -8 day lagged timeseries of the consensus estimate to predict their ONS-CIS based R value.
 They report a "maximum" R^2 of 0.71, Spearman correlation 0.85, agreement proportion 0.81.
 
-::::: {.callout-tip collapse="false"}
-#### Why might we treat the consensus model as 'better' than ONS-CIS models?
-
-The ONS-CIS survey didn't sample in closed care settings: care homes, hospitals.
-However, these settings have their own particular transmission patterns.
-This is important because the national R is intended to summarise across all transmission patterns.
-So when these closed settings had very high levels of transmission, their specific (and unusual) pattern could be driving national level epidemic dynamics.
-The ONS-CIS study would miss this effect.
-
-So, if one or more of the modellers contributing to the consensus can calibrate their estimate to reflect these different settings, then the consensus model might well be a better single summary statistic.
-
-It's a bit of a stretch to me.
-Still, we could read McCabe's work as showing how far the ONS-CIS survey is still useful in this scenario.
-:::::
-
-My motivation is the reverse: was the consensus estimate any good, relative to a best estimate of R/growth rate.
+In contrast, my motivation is the reverse: was the consensus estimate any good, relative to a best estimate of R/growth rate.
 
 As an alternative framing... consider McCabe et al's agreement proportion for England (0.81).
 This might suggest that even in the best possible scenario for the consensus model (fit to as much of the comparator model as possible, with any amount of time lag or spline knots) - still, 19% of the consensus estimates didn't even represent the correct direction of the epidemic trend (growth/decline).
 
 My hypothesis is that the consensus is much more prone to bias and error given the method of taking a simple average across very variable inputs.
 By comparison, a single model using a consistent single data stream should be less biased.
-
 :::
 
-Three suggestions for evaluation:
+### Ex post comparison
+
+```{r}
+i2p <- read_csv("https://github.com/epiforecasts/inc2prev/raw/refs/heads/main/outputs/estimates_national.csv") 
+
+i2p <- i2p |>
+filter(variable == "England") |>
+select(date, region = variable, value_type = name, value_lower = q10, value_upper = q90) |>
+filter(value_type %in% c("R", "r")) |>
+mutate(value_lower = ifelse(value_lower == "r", value_lower*100, value_lower),
+value_upper = ifelse(value_upper == "r", value_upper*100, value_upper),
+value_type = ifelse(value_type == "r", "growth rate", "R"),
+model = "inc2prev")
+```
+
+Let's compare.
+
+The inc2prev estimate is calculated daily, to 4 d.p. Naively plotting this directly against the consensus model estimates:
+
+```{r}
+r_gr2 <- r_gr |>
+rename(value_lower_consensus = value_lower,
+value_upper_consensus = value_upper)
+
+comp <- left_join(i2p, r_gr2, by = c("date", "region", "value_type"))
+
+plot_estimates_comp <- function(region, data, value_type = "R") {
+    data |>
+filter(region == {{region}}) |>
+filter(value_type %in% {{value_type}}) |>
+mutate(reference = ifelse(value_type == "R", 1, 0)) |>
+ggplot(aes(x = date)) +
+geom_linerange(aes(ymin = value_lower_consensus, ymax = value_upper_consensus), alpha = 0.4, lwd=0.3, col = "#af8dc3") +
+geom_point(aes(y=value_upper_consensus), size = 0.3, col = "#af8dc3") +
+geom_point(aes(y=value_lower_consensus), size = 0.3, col = "#af8dc3") +
+geom_ribbon(aes(ymin = value_lower, ymax = value_upper), alpha = 0.2, col = "grey50", fill = "grey50") +
+geom_line(aes(y = reference), lty=1, col="grey50") +
+geom_vline(aes(xintercept = as.Date("2021-07-21")), lty=2, col="grey50") +
+facet_wrap(~value_type, ncol=1, scales = "free_y") +
+labs(x = NULL, y = "Estimate (90% CI)", caption = "SPI-M-O consensus (bars) and retrospective estimate from infection survey (inc2prev)",
+title = paste({{region}}, "COVID-19 epidemic indicators")) +
+theme(legend.position = "bottom")
+}
+plot_estimates_comp("England", data = comp, value_type = "R")
+```
+
+To make it a fairer comparison with the weekly consensus statements, we can round inc2prev estimates to 1 d.p. and keep only the days that overlap with the consensus.
+
+Plotting this comparison directly against the consensus range:
+
+```{r, eval="false"}
+comp_trunc <- comp |>
+mutate(
+    #across(c(value_lower, value_upper), ~ zoo::rollmean(.x, k=7)),
+    across(c(value_lower, value_upper), ~ round(.x, digits = 1))) |>
+    filter(date %in% r_gr$date)
+
+plot_estimates_comp("England", data = comp_trunc, value_type = "R")
+```
+
+## Further work
+
+### Next steps
+
+The next thing to do will be to assess calibration using proper scoring rules.
+
+To do this we will need to
+
+- decide on one or more metrics, and score
+  - consider whether to assess only the 90% CI, or the implied point estimate
+  - think about lags between the two sources (maybe a 7-day rolling average on inc2prev to reflect the 7-day cadence of SPI-M?)
+  - consider appropriate stratification/summarisation
+- explore language of the narrative consensus statements to assess
+  - internal consistency: are narrative claims like "we are confident that Rt is..." consistent with the quantitative estimate each week?
+  - external calibration: do such claims
+    - (1) use the formal language of uncertainty at all, and
+    - (2) how well calibrated are they, if so?
+
+### Some other ideas
+
+#### Parametric uncertainty
+
+How does accuracy of the consensus change over time, what predicts and explains this, and which of those factors can be changed?
+
+Approach: model the error as a combination of factors -
+
+- Data: Availability of each data stream; reliability of each data stream (data revisions)
+- Epidemiology: trend, variants, restrictions
+
+plus
+
+- Number of models
+- Sources of individual models
+- Quality of group discussion
+
+plus
+
+- Decision critical time-points
+- Responsible owner for the consensus estimate
+
+... and triangulate with qualitative interviews, to assess model credibility at each stage of model evaluation.
+
+#### Structural uncertainty
+
+What are the risks/rewards of the facilitated group, vs independent contributions?
+After 2021, Rt estimates were sent directly to JBC for aggregation, and formed much less of the SPI-M-O group discussion.
+This could suggest a 'natural experiment' design to look at accuracy with/without responsibility for aggregation.
+
+Could look at:
+
+- individual models vs consensus vs ex post
+- alternative combinations vs equal weighting
+- narrative expression of uncertainty created with discussion (pre-JBC) and without discussion (post-JBC)
+
+### Some more ideas
+
+Three more involved suggestions for evaluation:
 
 *Observational*
 
@@ -282,37 +319,9 @@ Three suggestions for evaluation:
     - real-time case, death data
   - Compare against 'observed' accuracy as above
 
-Questions:
-
-Parametric uncertainty
-
-- How does accuracy of the consensus change over time, what predicts and explains this, and which of those factors can be changed? 
-  - if accuracy changed over time, what external factors gave rise to more or less accurate estimates
-  - approach: model this simple (logistic or gam)
-  - Availability of each data stream
-  - Reliability of each data stream: data revisions
-  - Number of models
-  - Quality of group discussion
-  - Production owner for the consensus estimate
-
-Triangulate with qualitative interviews to assess model credibility at each stage of model evaluation.
-
-Structural uncertainty
-
-- How does the uncertainty from equally-weighted quantitative combination compare with narrative expression of uncertainty in the accompanying consensus statement? 
-  - all model estimates were combined equally regardless of confidence in individual model quality or accuracy
-  - hypothesis that narrative was used to express this confidence around this structural uncertainty
-  - is there a way to create a narrative-adjusted credible interval to account for this
-  - and then compare accuracy of weighted or unweighted interval
-  - with the interpretation: how accurate was the real-time qualitative evaluation of the consensus 
-  - getting towards the question: is the group well-calibrated to its own accuracy;
-  - and the broader question: what are the risks/rewards of the facilitated group vs independent contributions
-
-
 ## Appendix
 
 ::: {.callout-note collapse="true"}
-
 ### Reading
 
 Reproduction number (R) and growth rate: Methodology.
@@ -350,12 +359,10 @@ Infect Dis Model.
 2024 Jan 30;9(2):299-313.
 doi: 10.1016/j.idm.2024.01.011.
 PMID: 38371874; PMCID: PMC10867655.
-
 :::
 
 ::: {.callout-note collapse="true"}
-
-### Source data notes
+### Notes from source data
 
 *Copied from the published data tables*
 

@@ -2,16 +2,27 @@
 title: "SPI-M-O research notebook"
 ---
 
-Notes on evaluating the UK government's COVID-19 scientific advisory process, focusing on SPI-M-O (Scientific Pandemic Influenza group on Modelling, Operational subgroup).
+Notebook looking at the UK government's COVID-19 scientific advisory process, specifically SPI-M-O (Scientific Pandemic Influenza group on Modelling, Operational subgroup).
 
 ## Pages
 
-- A [potted history](notebook/pages/history.qmd)
-- Some [sources of evidence](notebook/pages/sources.qmd) for evaluation work
+Some analysis in development
+
 - A brief review of [R and growth rate](notebook/pages/explore-r-gr.qmd): analysis of the weekly consensus R and growth rate estimates for England, 2020-2022, with ideas for further work
+
+And some scattered notes
+
+- [Potted history of SPI-M-O](notebook/pages/history.qmd)
+- [Some sources of evidence](notebook/pages/sources.qmd) for evaluation work
+
+And some questions with some purely opinionated thoughts
+
+- [Where does modelling sit within risk governance?](notebook/pages/risk.qmd)
+- [How did the Inquiry prevent scientific evaluation?](notebook/pages/inquiry-evaluation.qmd)
+- [What is the UK's ethical infrastructure for emergency research?](notebook/pages/ethics.qmd)
 
 ## Context
 
-General overview / current thinking:
+General overview / current thinking presented in April 2026
 
 <iframe src="notebook/consensus-modelling.pdf" width="100%" height="800px"></iframe>

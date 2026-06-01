@@ -1,0 +1,15 @@
+---
+title: "Ethical integration of research in public health emergencies"
+---
+
+The government has previously published guidance on [ethical research in emergencies](https://www.gov.uk/government/publications/ethical-integration-of-research-in-publ[…]-in-public-health-emergencies-preparation-response-and-recovery).
+
+It would be useful to reflect on how these apply to SPI-M.
+
+Specifically:
+
+> Responsibilities that arise for policy-makers include support for emergency preparedness encompassing...
+>
+> - sustainable support for, and enablement of, the infrastructure required to conduct that research, including multi-institution research platforms, priority-setting mechanisms, community engagement plans, and data sharing arrangements
+> - a minimum commitment to ensuring that evidence is generated during or after policy implementation, and that well-designed studies begin as soon as possible after the start of the emergency, addressing evidence gaps that have been prioritised in a transparent and accountable manner
+> - transparency with respect to how emerging evidence has been incorporated into decisions (including decisions not to act), and what underlying values have steered policy and operational choices

@@ -1,0 +1,28 @@
+---
+title: "Modelling, risk, and SPI-M-O"
+---
+
+I've been reading the [Orange Book](https://www.gov.uk/government/publications/orange-book) on risk management in government.
+It is prompting some parallels with SPI-M-O.
+
+Firstly: where does SPI-M-O sit among the "Three Lines"?
+
+This is a framework of "three lines [of defence]" for allocating responsibility for risk management across government:
+
+1. Operational risk management (i.e. government department)
+2. Internal review and oversight (internal audit)
+3. Independent review
+
+My suspicion is that SPI-M-O is "supposed" to be (3); was in practice closer to (2); occasionally went so far as (1), in the case of directly setting policy via R estimates.
+I would be curious to hear how that aligns with the perception of SPI-M participants, intepreters, users, and the public.
+
+Second: What is the purpose of SPI-M-O consensus statements - and what happens if we look at them against principles of "risk reporting"?
+
+My current working hypothesis is that each statement is interpreted as a report on risk.
+But this might not be how they are produced.
+It might be interesting to contrast the statement text against standards for
+
+1. Expert elicitation protocols (production perspective)
+2. Risk reporting guidelines (user interpretation perspective), e.g. those in the Orange Book
+
+Full reference: [Orange Book (pdf)](https://assets.publishing.service.gov.uk/media/611642cfe90e070541075731/Good_Practice_Guide_Risk_Reporting_Final.pdf)

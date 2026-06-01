@@ -1,6 +1,0 @@
-# Expressing uncertainty
-
-- Handling of uncertainty vs risk
-  - Language of consensus statements: where/when is language of uncertainty used?
-    - statements are full of phrases around estimates: "best estimate", "there is evidence that", "there is uncertainty in X region"
-    - how often are statements about uncertain quantities framed using language of uncertainty?
