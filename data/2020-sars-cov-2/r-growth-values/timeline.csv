@@ -1,0 +1,13 @@
+﻿Date,Event,Note
+29-May-20,Government begin publishing the R value on a weekly basis,
+12-Jun-20,Additional publication of growth rate,
+10-Jul-20,Reliability indicator introduced,"The reliability indicator showed where estimates were “insufficiently robust to inform policy decisions alone” (Timeseries of R and Growth Rate, Table 1, Note 2). It was based on “daily deaths in a region averaged over a 10-day period… to determine whether it was based on very few cases in a particular area. (Timeseries of R and Growth Rate, Notes and Definitions, Note 7)"
+26-Mar-21,"Update methodology for combining the R values and growth rate: modelling groups now submit a time series of estimates and a given date across all models is used, rather than their most recent estimates",
+02-Apr-21,Cease estimates for whole- UK R value and growth rate,
+30-Apr-21,Updated methodology for the reliability indicator,Updated to: “the number of individuals admitted to hospital with COVID-19 and inpatients newly diagnosed with COVID-19”
+30-Apr-21,Methodology published,https://www.gov.uk/government/publications/reproduction-number-r-and-growth-rate-methodology
+21-Jul-21,JBC take on responsibility for R and growth rate estimates,
+06-Sep-21,JBC update published methodology,
+01-Apr-22,UKHSA publish statement of voluntary compliance with the Code of Practice for Statistics,https://www.gov.uk/government/publications/r-value-and-growth-rate-statement-of-voluntary-compliance-with-the-code-of-practice-for-statistics/reproduction-number-r-and-growth-rate-statement-of-voluntary-compliance-with-the-code-of-practice-for-statistics
+07-Dec-22,Historical estimates of R and growth rate published as single download,
+23-Dec-22,Ceased publication of both R and growth rate,

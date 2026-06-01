@@ -1,0 +1,193 @@
+# Recommendations
+
+https://covid19.public-inquiry.uk/inquiry-recommendations/
+
+## Module 1
+
+The Inquiry published its first report and recommendations following its investigation into the UK's 'Resilience and preparedness (Module 1)' on Thursday 18 July 2024.
+
+It examines the state of the UK's central structures and procedures for pandemic emergency preparedness, resilience and response.
+
+### Recommendation
+
+1 A simplified structure for whole-system civil emergency preparedness and resilience
+
+2 Cabinet Office leadership for whole-system civil emergencies in the UK
+
+3 A better approach to risk assessment - The UK government and devolved administrations should work together on developing a new approach to risk assessment that moves away from a reliance on single reasonable worst-case scenarios towards an approach that:
+
+- assesses a wider range of scenarios representative of the different risks and the range of each kind of risk;
+- considers the prevention and mitigation of an emergency in addition to dealing with its consequences;
+- provides a full analysis of the ways in which the combined impacts of different risks may complicate or worsen an emergency;
+- assesses long-term risks in addition to short-term risks and considers how they may interact with each other;
+- undertakes an assessment of the impact of each risk on vulnerable people; and
+- takes into account the capacity and capabilities of the UK.
+
+In doing so, the UK government and devolved administrations should perform risk assessments that reflect the circumstances and characteristics particular to England, Wales, Scotland, Northern Ireland and the UK as a whole.
+
+4 A UK-wide whole-system civil emergency strategy
+
+- The UK government and devolved administrations should together introduce a UK-wide whole-system civil emergency strategy (which includes pandemics) to prevent each emergency and also to reduce, control and mitigate its effects.
+
+- As a minimum, the strategy should:
+
+- be adaptable;
+
+- include sections dedicated to each potential whole-system civil emergency -- for example, one on pandemics with a clear explanation of the roles and responsibilities of the UK government, devolved administrations and their departments/directorates as well as local responders;
+
+- consider a wide range of potential scenarios for each type of emergency;
+
+- identify the key issues and set out a range of potential responses;
+
+- identify how the strategy is to be applied to ensure that any potential responses are proportionate to the particular circumstances of the emergency;
+
+- include an assessment in the short, medium and long term, based on published modelling, of the potential health, social and economic impacts of the emergency and of potential responses to the emergency on the population and, in particular, on vulnerable people; and
+
+- include an assessment of the infrastructure, technology and skills the UK needs to respond effectively to the emergency and how those needs might change for different scenarios.
+
+- The strategy should be subject to a substantive reassessment at least every three years to ensure that it is up to date and effective, incorporating lessons learned between reassessments.
+
+5 Data and research for future pandemics
+
+- The UK government, working with the devolved administrations, should establish mechanisms for the timely collection, analysis, secure sharing and use of reliable data for informing emergency responses, in advance of future pandemics.
+
+- Data systems should be tested in pandemic exercises.
+
+- The UK government should also commission a wider range of research projects ready to commence in the event of a future pandemic.
+
+- These could be 'hibernated' studies or existing studies that are designed to be rapidly adapted to a new outbreak.
+
+- Better working with international partners should be encouraged.
+
+- This should include projects to:
+
+  - understand the prevalence of a new virus
+  - measure the effectiveness of a range of different public health measures; and
+  - identify which groups of vulnerable people are hardest hit by the pandemic and why.
+
+6 A regular UK-wide pandemic response exercise
+
+7 Publication of findings and lessons from civil emergency exercises
+
+8 Published reports on whole-system civil emergency preparedness and resilience
+
+9 Regular use of red teams
+
+10 A UK-wide independent statutory body for whole-system civil emergency preparedness and resilience
+
+## Module 2
+
+The Inquiry published its second report and recommendations following its investigation into the UK's 'Core decision-making and political governance (Module 2, 2A, 2B, 2C)' on Thursday 20 November 2025.
+
+It examines the initial response, central government decision making, political and civil service performance as well as the effectiveness of relationships with governments in the devolved administrations and local and voluntary sectors.
+
+### Recommendation
+
+1 Chief Medical Officer for Northern Ireland
+
+2 Attendance of the devolved administrations at SAGE meetings
+
+3 Register of experts
+
+- The Government Office for Science (GO-Science) should develop and maintain a register of experts across the four nations of the UK who would be willing to participate in scientific advisory groups, covering a broad range of potential civil emergencies.
+
+4 Publication of technical advice
+
+5 Support to participants in advisory groups
+
+- The Government Office for Science (GO-Science), the Scottish Government, the Welsh Government and the Department of Health (Northern Ireland) should each develop standard terms of appointment for all participants in scientific advisory groups.
+  These terms should include:
+
+- clarity around the nature of an individual's role and the extent of their responsibility, as well as the likely time commitment;
+
+- payment where their time commitment means that they have to spend time away from their substantive role;
+
+- access to support services; and access to advice on personal and online security, with procedures for escalating specific concerns.
+
+6 Implementing a socio-economic duty
+
+7 Placing child rights impact assessments on a statutory footing
+
+8 A framework for considering those at risk in an emergency
+
+- The UK government, Scottish Government, Welsh Government and Northern Ireland Executive should each agree a framework that identifies people who would be most at risk of becoming infected by and dying from a disease and those who are most likely to be negatively impacted by any steps taken to respond to a future pandemic.
+  The framework should set out the specific steps that could be taken to mitigate the risks to these people.
+
+- Equality impact assessments should form part of this framework.
+  Where they cannot be undertaken in a national crisis, they should be reinstated as soon as possible.
+
+- Each government should agree and publish in its response to this Report how it will ensure that this framework is embedded into emergency decision-making and who will be responsible for ensuring these issues remain under consideration throughout a national crisis.
+
+9 Delegated powers in Northern Ireland in an emergency
+
+10 Civil emergency decision-making structures
+
+11 Contingency arrangements for key individuals
+
+12 Taskforces
+
+- The response to a future whole-system civil emergency should be coordinated via central taskforces in each of the UK, Scotland, Wales and Northern Ireland, with responsibility for the commissioning and synthesis of advice, coordination of a single data picture and facilitation of decision-making processes.
+  In preparation, the UK government and the devolved administrations should each design the operating procedures for these taskforces, including, but not limited to, identifying the key roles needed to run the taskforces and how those roles would be appointed.
+- The UK government should also identify the role of its taskforce in supporting decision-making procedures within the strategy and operational decision-making structures.
+- These arrangements should be incorporated into future pandemic preparedness strategies (see the Inquiry's Module 1 Report, Recommendation 4).
+
+13 Amendment of the Ministerial Code in Northern Ireland
+
+14 Plans for accessible communications
+
+15 Scrutiny of emergency powers
+
+16 Review the applicability of the Civil Contingencies Act 2004 for future civil emergencies
+
+17 A central repository for restrictions and guidance
+
+18 Attendance at meetings of COBR by representatives of the devolved administrations
+
+19 Intergovernmental structure and relations
+
+## Module 3
+
+The Inquiry published its third report and recommendations following its investigation into the impact of the Covid-19 pandemic on the healthcare systems of the United Kingdom on Thursday 19 March 2026.
+
+It examines the governmental and societal response to Covid-19 as well as dissecting the impact that the pandemic had on healthcare systems, patients and healthcare workers.
+
+### Recommendation
+
+1 Ensure that decision-making on infection prevention and control is underpinned by clear structures and a cautious approach to transmission risk
+
+2 Guidance for visiting restrictions
+
+3 Better preparation for fit-testing
+
+4 Improve data systems to identify individuals at high risk during a pandemic
+
+5 Prepare to scale up urgent and emergency care capacity
+
+6 Prepare for and test the ability to scale up hospital capacity
+
+7 A framework to guide the allocation of intensive care resources in the extreme event of saturation
+
+8 Systematically recording and publishing healthcare worker deaths
+
+9 A standardised process for advance care planning across the UK
+
+10 Psychological and emotional support for healthcare workers
+
+## Module 4
+
+The Inquiry published its fourth report and recommendations following its investigation into vaccines and therapeutics on Thursday 16 April 2026.
+
+It examines issues relating to the development of Covid-19 vaccines and the implementation of the vaccine rollout programme in England, Wales, Scotland and Northern Ireland.
+Issues relating to the treatment of Covid-19 through both existing and new medications were examined in parallel.
+
+# Recommendation
+
+1 Establish a pharmaceutical expert advisory panel
+
+2 Formalise work with communities about vaccine equity strategies
+
+3 Improve monitoring and evaluation of vaccine uptake and delivery
+
+4 Proportionate access to linked healthcare records for use in the assessment of safety signals
+
+5 Reform the Vaccine Damage Payment Scheme 5 Reform the Vaccine Damage Payment Scheme
