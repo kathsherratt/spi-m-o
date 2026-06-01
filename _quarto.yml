@@ -1,0 +1,27 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - index.qmd
+    - notebook/pages/*.qmd
+
+website:
+  title: "SPI-M-O"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: notebook/pages/history.qmd
+        text: Potted history
+      - href: notebook/pages/sources.qmd
+        text: Evidence sources
+      - href: notebook/pages/explore-r-gr.qmd
+        text: R and growth rate
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+
+execute:
+  freeze: false

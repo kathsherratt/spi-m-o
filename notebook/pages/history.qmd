@@ -1,0 +1,76 @@
+---
+title: "Potted history"
+date: today
+author: Kath Sherratt
+format:
+  html:
+    code-fold: true
+    toc: true
+---
+
+## Background
+
+SPI-M-O is called in response to national emergencies, at which point it becomes a formal subcommittee of SAGE.
+Its mandate is to have two co-chairs (one academic, one policy) and voluntary contribution from academics recruited and invited by those chairs.
+
+This structure grew out of the ad hoc modelling support provided during the 2001 foot and mouth disease outbreak, when groups from Imperial, Cambridge, and Edinburgh were informally asked to assist.
+Those same groups, and others, were then formally convened under SAGE for the 2009 H1N1 pandemic.
+The public inquiry that followed (the Hine Review, 2012) recommended that modelling should more clearly demarcate evidence from advice, and better integrate with SPI-B.
+
+After 2009, SPI-M became a standing group attached to the Department of Health, maintaining a network of modellers and keeping preparedness models under review.
+It was operationalised again for 2014 Ebola, 2016 Zika, and the 2018 simulation Exercise Cygnus, before the sustained activation of 2020-2022.
+
+::: {.callout-note collapse="false"}
+### Potted history of SPI-M-O
+
+---UNEDITED: checked for sense but not sources---
+
+**2001: Foot and mouth disease**
+
+The 2001 FMD outbreak was one of the first times mathematical models were used in real time to directly inform disease control policy in the UK.
+Three independent modelling groups (Imperial, Cambridge, Edinburgh) produced competing models that informed the controversial contiguous culling policy.
+The experience was formative but contentious: a [retrospective assessment](https://royalsocietypublishing.org/doi/10.1098/rspb.2008.0006) found significant disagreements between them.
+There was no formal advisory structure equivalent to SPI-M at this point -- modellers were brought in ad hoc.
+The key lesson was that multiple models giving different answers required some mechanism for synthesis and arbitration.
+
+**2009: H1N1 (swine flu)**
+
+SPI-M-O was formally convened in 2009 for the H1N1 pandemic, as part of the SAGE advisory architecture.
+This appears to be the first time SPI-M operated as a named, structured body ([Medley, 2022](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9525209/)).
+It sat under SAGE alongside SPI-B (behaviour) and SPI-B&C (behaviour and communication).
+The [independent review of the UK's swine flu response](https://assets.publishing.service.gov.uk/media/5a7975f1ed915d0422068a10/the2009influenzapandemic-review.pdf) (the Hine Review) examined the advisory structures, and notably recommended modelling should more clearly demarcate evidence from advice and better integrate with SPI-B.
+Between pandemics, SPI-M became a standing group attached to the Department of Health, maintaining a network of modellers and keeping preparedness models under review.
+It published a [modelling summary for pandemic influenza](https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/756738/SPI-M_modelling_summary_final.pdf) in 2018 that codified planning assumptions (95% of cases over 9 weeks, 50% in a 3-week peak) used in subsequent exercises.
+
+**2014: Ebola**
+
+SAGE was activated for the West African Ebola outbreak, and [SPI-M-O was convened](https://pmc.ncbi.nlm.nih.gov/articles/PMC8165593/) alongside it.
+However, COBR convened in July 2014 but SAGE was not activated until October -- a three-month gap examined by a [Science and Technology Committee report](https://publications.parliament.uk/pa/cm201516/cmselect/cmsctech/469/46906.htm) on science in emergencies.
+Ebola also raised the question of SPI-M's scope: it was designed around pandemic influenza but was being asked to advise on a very different pathogen and epidemiological context.
+
+**2016: Zika**
+
+A "Precautionary SAGE" (Pre-SAGE) was activated for Zika, a lighter-touch mechanism for assessing emerging threats when COBR had not been formally convened.
+[SAGE minutes from the Zika response](https://www.gov.uk/government/publications/sage-minutes-zika-outbreak-2016) are published.
+
+**2016-2018: Exercise Cygnus**
+
+[Exercise Cygnus](https://www.gov.uk/government/publications/uk-pandemic-preparedness/exercise-cygnus-report-accessible-report) (2016) was a Tier 1 national pandemic preparedness exercise simulating an influenza pandemic.
+SPI-M modelling informed the scenario parameters (absenteeism levels of 30-35% based on SPI-M figures).
+A notable finding was a "[lack of clarity about where modelling data could be accessed from for planning purposes](https://www.gov.uk/government/publications/uk-pandemic-preparedness/exercise-cygnus-report-accessible-report)" -- local resilience forums didn't know how to get modelling support.
+The 2018 [SPI-M modelling summary](https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/756738/SPI-M_modelling_summary_final.pdf) was published after these exercises.
+
+**2020-2022: COVID-19**
+
+SPI-M-O was activated as a [formal sub-group of SAGE](https://www.gov.uk/government/organisations/scientific-advisory-group-for-emergencies/about) at the start of the pandemic -- its largest and most sustained activation.
+As [Medley (2022)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9525209/) describes, SPI-M-O operated as a committee of independent academics working with a government secretariat, producing weekly consensus statements addressing questions from policymakers, "largely written by civil servants" but drawing on modelling contributions from members.
+The R value and growth rate estimates became the group's signature product.
+Key developments during COVID included rapid expansion of membership; consensus statements produced at a pace and volume far beyond anything in previous activations; the "equal consensus" model where multiple independent analyses were combined; and growing tension between SPI-M's role as evidence synthesiser and as challenger of UKHSA's own analytical capacity.
+
+**2025: Exercise Pegasus**
+
+[Exercise Pegasus](https://www.england.nhs.uk/long-read/pandemic-preparedness-exercise-pegasus/) was a Tier 1 pandemic preparedness exercise led by DHSC with UKHSA, running September-November 2025.
+Pegasus shifted back toward a "champion/challenge" model where UKHSA produces primary estimates and the consensus process acts implicitly as peer review.
+This created confusion about SPI-M's function: producer of analysis, describer of planned analysis, or peer reviewer of UKHSA analysis.
+The updated [SPI-M terms of reference (January 2025)](https://assets.publishing.service.gov.uk/media/677feb016f01ae28ab5c0589/spi-m-terms-of-reference-january-2025.pdf) designate an executive chair from DHSC and a separate academic chair, formalising the dual accountability structure.
+:::

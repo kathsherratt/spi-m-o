@@ -1,0 +1,17 @@
+---
+title: "SPI-M-O research notebook"
+---
+
+Notes on evaluating the UK government's COVID-19 scientific advisory process, focusing on SPI-M-O (Scientific Pandemic Influenza group on Modelling, Operational subgroup).
+
+## Pages
+
+- A [potted history](notebook/pages/history.qmd)
+- Some [sources of evidence](notebook/pages/sources.qmd) for evaluation work
+- A brief review of [R and growth rate](notebook/pages/explore-r-gr.qmd): analysis of the weekly consensus R and growth rate estimates for England, 2020-2022, with ideas for further work
+
+## Context
+
+General overview of my current thinking:
+
+<iframe src="notebook/consensus-modelling.pdf" width="100%" height="800px"></iframe>

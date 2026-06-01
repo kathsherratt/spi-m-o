@@ -56,7 +56,7 @@ Estimates were rounded to one decimal place.
 
 This produced something each week that looked like this:
 
-![SPI-M consensus statement of 17 September 2020, showing 90% range of modelled estimates of R for England from: each team (coloured); and consensus (grey)](./figures/2020-09-17-eng-r.png)
+![SPI-M consensus statement of 17 September 2020, showing 90% range of modelled estimates of R for England from: each team (coloured); and consensus (grey)](../figures/2020-09-17-eng-r.png)
 
 In July 2021, responsibility for this process was partly taken in-house by the UK government.
 SPI-M-O participants still produced their own estimates, but a different team took over production of the combined single estimate.
