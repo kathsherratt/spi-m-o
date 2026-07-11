@@ -73,3 +73,45 @@ walk2(pdfs$url, pdfs$title, \(u, t) {
   dest <- here("download", paste0(gsub("[^A-Za-z0-9_-]+", "_", t), ".pdf"))
   download.file(u, dest, mode = "wb")
 })
+
+# ------
+# Search the gov.uk Search API for SPI-M-O publications, paging through all
+# results and returning a tidy tibble. Notes:
+#  - q= does a loose relevance match (total ~53k across COVID docs), so we
+#    filter to the SAGE organisation (total ~555) to make the page-through
+#    finite, keep the default relevance order (date order buries SPI-M-O docs
+#    deep in the corpus), and guard on the title as a final safety net.
+fetch_spimo_search <- function(q = "spi-m-o", count = 100L, max_results = Inf) {
+  fetch_page <- function(start) {
+    "https://www.gov.uk/api/search.json" |>
+      httr2::request() |>
+      httr2::req_url_query(
+        q = q,
+        count = count,
+        start = start,
+        fields = "title,link,public_timestamp,description,format",
+        filter_organisations = "scientific-advisory-group-for-emergencies"
+      ) |>
+      httr2::req_perform() |>
+      httr2::resp_body_json()
+  }
+
+  first <- fetch_page(0L)
+  total <- min(first$total, max_results)
+  starts <- seq(0L, max(total - 1L, 0L), by = count)
+
+  results <- map(starts, \(s) if (s == 0L) first$results else fetch_page(s)$results)
+
+  map_dfr(flatten(results), \(r) tibble(
+    title = r$title %||% NA_character_,
+    date = as.Date(r$public_timestamp %||% NA_character_),
+    url = paste0("https://www.gov.uk", r$link %||% ""),
+    format = r$format %||% NA_character_,
+    description = trimws(r$description %||% NA_character_)
+  )) |>
+    filter(grepl("SPI-M-O", title, ignore.case = TRUE)) |>
+    distinct(url, .keep_all = TRUE) |>
+    arrange(desc(date))
+}
+
+spimo <- fetch_spimo_search()
