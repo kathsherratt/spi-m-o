@@ -14,7 +14,7 @@ library(lubridate)
 # date, region, value_lower, value_upper, value_type, value_caveat
 
 process_r_gr <- function() {
-    data <- read_csv(here("data", "2020-sars-cov-2", "r-growth-values", "r-growth-rate.csv"))
+    data <- read_csv(here("data", "covid19", "r-growth-values", "r-growth-rate.csv"))
 
 # Pivot longer on metric, region, bound
 long_data <- data |>

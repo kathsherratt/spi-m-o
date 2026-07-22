@@ -65,7 +65,7 @@ SPI-M-O participants still produced their own estimates, but a different team to
 #### Production timeline
 
 ```{r}
-timeline <- read_csv(here("data", "2020-sars-cov-2", "r-growth-values", "timeline.csv"))
+timeline <- read_csv(here("data", "covid19", "r-growth-values", "timeline.csv"))
 timeline |>
     select(-Note) |>
     kable()
