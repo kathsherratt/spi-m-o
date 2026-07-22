@@ -1,7 +1,8 @@
 ---
 title: "COVID-19 R and growth rate estimates in England"
-date: today
 author: Kath Sherratt
+date: 2026-04-01
+categories: [Analysis]
 format:
   html:
     code-fold: true
@@ -332,8 +333,7 @@ CMO Report on COVID-19.
 Gov.uk; 2022.
 https://www.gov.uk/government/publications/technical-report-on-the-covid-19-pandemic-in-the-uk/chapter-5-modelling
 
-Medley, Graham F.
-2022.
+Medley, Graham F. 2022.
 "A Consensus of Evidence: The Role of SPI-M-O in the UK COVID-19 Response."
 Advances in Biological Regulation 86 (December): 100918.
 doi:10.1016/j.jbior.2022.100918.

@@ -1,68 +1,103 @@
 ---
-title: "Evaluation: structure & process"
-date: today
-author: Kath Sherratt
+title: "Evaluating SPI-M-O"
+date: 2026-03-01
+categories: [Notes]
 format:
   html:
     code-fold: true
     toc: true
 ---
 
-::: {.callout collapse="true"}
-### Why so little scientific evaluation of SPI-M-O?
+Graham Medley summarises SPI-M-O's consensus process as performing three "invaluable" functions:
 
-My suggestion is:
-
-- The COVID-19 Inquiry subsumed modelling into a politico-legal framework, which diverted effort and effectively inhibited scientific evaluation or reflection.
-
-- Without institutional structures for supporting and retaining emergency responders, institutional memory is lost through burn-out and rapid career turnover; made worse by the prevalence of short-term contracts in academia.
-:::
-
-## Covid-19: What actually happened
-
-Graham Medley [@medley] summarises SPI-M-O's consensus process as performing three invaluable functions:
-
-- peer review;
-- emphasis of uncertainty;
+- peer review
+- emphasis of uncertainty
 - shared responsibility
 
-I think these also hold risks:
+While Medley's view is strictly positive, I think each of these also hold risks as well as benefits.
+I also think these could in fact be evaluated, at least to some degree.
+These functions also prompts some quite specific questions for the design of new advisory structures.
 
-- peer review is perceived as decision-grade quality assurance
-- emphasising uncertainty became viewed as full risk assessment
-- shared responsibility did not come with accountability
+As a side note, and a rationale for using these three functions rather than some other: I think this three-part structure maps nicely to the "Quality", "Value", and "Trust" framework used for evaluating official statistics (see: Office for Statistics Regulation).
+(I'm aware SPI-M-O *certainly does not* produce official statistics.
+But I don't think that should stop us from holding the work up to the same level of scrutiny just to see what falls out.)
 
-**Peer review became quality assurance.** Within SPI-M-O, peer review meant independent teams each contributing estimates through their own methods, then comparing them in group discussion.
-Recruitment drew on existing academic networks; facilitation happened through co-chaired group meetings; synthesis produced an equal combination of estimates reported as a 90% range.
-What policymakers received, however, was a number with an implied institutional guarantee behind it.
-Even under the most favourable comparison, around 19% of consensus estimates did not correctly identify the direction of Rt (growth versus decline), relative to retrospective best-estimates using EpiEstim (McCabe 2024).
-Structured elicitation methods can mitigate some of the group-dynamic biases that peer review in this form is prone to; they have been used in other high-uncertainty, time-pressured settings including conflict and humanitarian crises, and the UK government already uses them in the GOS Foresight team.
+Here are some notes and sketches on how evaluation could proceed, based on the "after action review" format.
 
-**Emphasising uncertainty became risk assessment.** SPI-M-O synthesised expert estimates into a single consensus statement produced by a non-academic secretariat.
+## peer review
+
+### What was supposed to happen?
+
+SPI-M-O as a group is motivated by the idea that comparison from multiple sources of expertise both provides quality assurance and improves overall quality.
+This has changed form over multiple national crises that have leaned on modelling work.
+For example, during H1N1 SPI-M-O participants were tasked with critiquing a single model owned by the Health Protection Agency, rather than providing primary modelling work (see: history).
+
+This process also echoes structured elicitation methods, that are designed to provide multiple comparison while mitigating the biases that group dynamics are prone to (e.g. anchoring, halo effects).
+(Notably, the UK government already uses SEE protocols in the Government Office for Science Foresight team (the "Futures playbook").)
+
+Given the intended assurance and improvement of quality, policy audiences might reasonably expect that SPI-M-O work at least matches the quality standard expected of central government analysis (the "Aqua Book").
+
+### What actually happened?
+
+In practice, peer review meant independent teams each contributing estimates through their own methods, then comparing them in group discussion.
+The recruitment, contribution, facilitation, and synthesis of the group has been documented patchily across various retrospectives and the COVID-19 Inquiry.
+
+### What should happen?
+
+- What is the explicit function of SPI-M-O collaboration and/or review?
+  Is the group reviewing each other's work equally (peers), or reviewing a target analysis (champion/challenger)?
+  How is work compared?
+- Could/should formal expert elicitation protocols (which generally cover recruitment, facilitation, and synthesis) be adapted to the SPI-M-O context?
+
+## emphasis of uncertainty
+
+### What was supposed to happen?
+
+### What actually happened?
+
+SPI-M-O synthesised expert estimates into a single consensus statement produced by a non-academic secretariat.
 It reported only the range of Rt (a 90% CI of the mean of all contributing estimates), never a point estimate, which was a deliberate choice to convey uncertainty.
 
-The UK government's "three lines" framework for risk management assigns different functions to operational risk management, internal review, and independent review.
-SPI-M was nominally Line 3 (independent review); in practice it operated closer to Line 2, and at times moved toward Line 1 by directly guiding policy through the R estimates.
-The group was not designed for that role, and the mismatch was never formally acknowledged.
+- Comparison with retrospective best estimates.
+  For example: even under the most favourable comparison, around 19% of consensus estimates did not correctly identify the direction of Rt (growth versus decline), relative to retrospective best-estimates using EpiEstim (McCabe 2024).
 
-**Shared responsibility became a question of accountability.** Group advisory settings carry well-known hazards. Specifically here, the diffusion of responsibility, where no single actor is clearly accountable for the group output.
-SPI-M-O's consensus model distributed authorship across multiple teams and a government secretariat.
-This also gave the product a degree of collective legitimacy. No single modeller could be blamed for a wrong estimate.
+### What should happen?
 
---------------------------------------------------------------------------------
+- what are the most policy-relevant uncertainties, and how suited is the consensus process for addressing them?
+- how are estimates of likelihood versus estimates of impact (the two dimensions of risk) handled?
+- where does the group sit among the three lines of risk management, and is that position agreed, or assumed implictly?
 
-## What happens next
+## shared responsibility
 
-Institutional capacity for evaluation decays rapidly after an emergency.
-If it is not built in from the start, we cannot expect it to happen retrospectively, or rely on how things shook out to tell us what we actually want from the relationship between modelling and policy.
-The design questions for any new advisory structure follow directly from these three tensions.
+### What was supposed to happen?
 
-I think this needs evaluation and change.
+Let's consider the UK Government framework for allocating responsibility for risk management (the [Orange Book](https://www.gov.uk/government/publications/orange-book)).
+This is applied across the whole of government activity:
 
-- On quality: is the group reviewing each other's work equally, or reviewing a designated target analysis?
-  What norms govern that review, and how do they compare with formal expert elicitation protocols?
+1. Operational risk management (i.e. government department)
+2. Internal review and oversight (internal audit)
+3. Independent review
 
-- On value: what are the most policy-relevant uncertainties, and how well does the consensus process bound them?
+### What actually happened?
 
-- On trust: where does the group sit among the lines of risk management, and is that position agreed, or merely assumed?
-  What institutional support exists for members during and after operationalisation; and what accountability structures follow from the group's actual, rather than nominal, role?
+First, I would be curious to hear where SPI-M-O participants, intepreters, users, and the public would place SPI-M-O on the three lines.
+My own suspicion is that SPI-M is nominally Line 3 (independent review); when operationalised as SPI-M-O, in practice aligns closer to Line 2; and at times moved toward Line 1, by directly guiding policy (rhetorically, and in some cases actually) via the headline R estimates.
+
+Second, are the SPI-M consensus statements perceived as reporting on risk (overall, or specifically epidemiological risk)?
+If so, we could assess the statement text against standards for risk reporting, i.e. the [Orange Book: Good Practice Guide for Risk Reporting](https://assets.publishing.service.gov.uk/media/611642cfe90e070541075731/Good_Practice_Guide_Risk_Reporting_Final.pdf).
+
+### What should happen?
+
+- how should infrastructure and accountability change when SPI-M takes on the "SPI-M-O" operational role, rather than advisory?
+- Group advisory settings carry moral hazards, specifically the 'diffusion of responsibility' where no single actor is clearly accountable for the group output - how could this be protected against?
+- what institutional support exists for members during and after operationalisation?
+
+The government has also previously published guidance on [ethical research in emergencies](https://www.gov.uk/government/publications/ethical-integration-of-research-in-publ[…]-in-public-health-emergencies-preparation-response-and-recovery).
+It would be useful to reflect on how these apply to SPI-M-O.
+Specifically:
+
+> Responsibilities that arise for policy-makers include support for emergency preparedness encompassing...
+>
+> - sustainable support for, and enablement of, the infrastructure required to conduct that research, including multi-institution research platforms, priority-setting mechanisms, community engagement plans, and data sharing arrangements
+> - a minimum commitment to ensuring that evidence is generated during or after policy implementation, and that well-designed studies begin as soon as possible after the start of the emergency, addressing evidence gaps that have been prioritised in a transparent and accountable manner
+> - transparency with respect to how emerging evidence has been incorporated into decisions (including decisions not to act), and what underlying values have steered policy and operational choices

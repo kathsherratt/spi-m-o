@@ -1,8 +1,9 @@
 ---
 title: "Comment on the end of the COVID-19 Inquiry"
+date: 2026-06-01
+categories: [Opinion]
+format: html
 ---
-
-*Reposting from a comment on a blog*
 
 I think the Inquiry actively inhibited scientific evaluation of the work we produced during COVID-19.
 
@@ -34,6 +35,3 @@ Now the Inquiry is over I am still struggling to see where any scientific evalua
 
 (6) Those in academia who might have capacity, tend to be junior researchers - who are unlikely to have directly worked on the response.
     This would make it very difficult to build a strategy for evaluating across the pandemic work as a whole, not to mention intimidating from the perspective of critiquing the work of one's (new) colleagues in a small field
-
-I am personally very invested in attempting some meaningful evaluation of the modelling work that went into the COVID-19 response in the UK.
-But it's taken... four or five years to get comfortable with even writing that up into a research proposal (and I am still missing all my deadlines).

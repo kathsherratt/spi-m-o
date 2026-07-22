@@ -1,6 +1,7 @@
 ---
 title: "Potted history"
-date: today
+date: 2026-06-01
+categories: [Notes]
 author: Kath Sherratt
 format:
   html:

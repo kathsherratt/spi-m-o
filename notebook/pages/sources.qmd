@@ -1,5 +1,7 @@
 ---
 title: "Sources of evidence from which to evaluate SPI-M"
+date: 2026-04-23
+categories: [Notes]
 format: html
 ---
 

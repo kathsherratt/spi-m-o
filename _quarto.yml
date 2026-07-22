@@ -11,12 +11,6 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: notebook/pages/history.qmd
-        text: Potted history
-      - href: notebook/pages/sources.qmd
-        text: Evidence sources
-      - href: notebook/pages/explore-r-gr.qmd
-        text: R and growth rate
 
 format:
   html:

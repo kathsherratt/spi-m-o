@@ -1,0 +1,485 @@
+---
+title: "Draft proposal: UK Metascience Round 2 — SPI-M Consensus Evaluation"
+format: html
+---
+
+# UK Metascience Round 2 --- Application Draft
+
+**Theme:** Scientometric approaches **Project lead:** Katharine Sherratt, LSHTM **Working title:** Evaluating scientific consensus during emergencies: calibration and process of SPI-M-O estimates during COVID-19
+
+--------------------------------------------------------------------------------
+
+## 1. Summary (550 words max)
+
+When governments face complex decisions, they often rely on scientific consensus: the structured synthesis of independent expert analyses into a single, authoritative assessment.
+Typically, scientific advisory committees are formed to synthesise expert evidence into actionable guidance.
+Scientific consensus is a cornerstone of how research influences public life, from IPCC assessment reports to WHO advisory groups to food safety committees.
+
+This reliance intensifies dramatically during public emergencies, even while traditional processes of expert elicitation and consensus building must adapt to the pressures of greater speed and responsibility.
+In the UK, the Scientific Pandemic Infections group on Modelling (SPI-M) played a central role during COVID-19, producing consensus statements that informed decisions affecting the entire population.
+These statements, which synthesised independent epidemiological analyses into assessments of underlying transmission and epidemic trajectory, were among the most consequential scientific outputs of the pandemic, and SPI-M has since been heralded as a best-practice standard for emergency scientific advice.
+
+However, the scientific quality of these statements has not been systematically evaluated.
+The UK COVID-19 Inquiry examined governance, accountability, and process.
+It did not assess whether the scientific content of SPI-M's consensus was accurate, well-calibrated, or internally consistent.
+Meanwhile, the capacity for such evaluation has been eroded.
+Burnout, career attrition among pandemic responders, and the diversion of limited reflective capacity into the Inquiry itself have created a vacuum of relevant expertise capable of systematic scientific evaluation.
+
+This project fills that gap before the window closes further.
+We conduct the first systematic calibration analysis of SPI-M consensus statements from COVID-19, assessing the accuracy and calibration of probabilistic language against retrospective best estimates and observed outcomes.
+We then use targeted interviews and document analysis to understand how the consensus-forming process shaped the statements' content, identifying features associated with better or worse calibration.
+
+Our approach combines text-analytic methods from scientometrics with process evaluation ofs research structures and cultures.
+We assemble the full corpus of SPI-M consensus statements, extract and classify probabilistic claims against established uncertainty frameworks, and match evaluable claims against retrospective estimates or observed epidemiological data.
+We complement this quantitative analysis with qualitative investigation of the consensus process itself: how dissent was handled, how uncertainty was escalated, and how the transition from individual model outputs to consensus language occurred.
+
+The project produces three outputs.
+First, a calibration dataset: every extractable probabilistic claim from SPI-M consensus mapped to retrospective best estimates or observed outcomes, published as open data.
+Second, an empirical analysis of how process features relate to calibration quality.
+Third, a reusable "Consensus Audit Framework" combining output calibration and process assessment, designed for application to any scientific advisory body producing consensus statements, from IPCC assessment reports to WHO advisory groups to food safety committees.
+
+This research is timely for two reasons.
+The immediate reason is that institutional memory of SPI-M's COVID-19 operations is fading, and the interview and documentary evidence needed for process evaluation becomes less accessible each year.
+The broader reason is that scientific advisory committees worldwide face growing scrutiny about the reliability of their outputs, yet lack standardised methods for self-evaluation.
+Our framework provides those methods.
+
+--------------------------------------------------------------------------------
+
+## 2. Core team
+
+  | Name               | Role                       | Organisation      |
+  | ------------------ | -------------------------- | ----------------- |
+  | Katharine Sherratt | Project lead (PL)          | LSHTM             |
+  | Sebastian Funk     | Project co-lead (UK) (PcL) | LSHTM             |
+  | Erica Thompson     | Project co-lead (UK) (PcL) | UCL [TBC/confirm] |
+
+--------------------------------------------------------------------------------
+
+## 3. Vision (500 words max)
+
+Scientific advisory committees produce some of the most consequential outputs of the research system.
+When governments decide how to respond to disease outbreaks, the quality of expert consensus directly shapes the decisions that follow.
+Yet the scientific quality of advisory consensus is almost never evaluated.
+We typically have little observed data against which to assess whether the process of combining expert analyses into a single consensus assessment adds value, introduces bias, or loses information.
+
+SPI-M's COVID-19 consensus statements offer a rare opportunity to investigate this.
+This is a substantial corpus of scientific advisory output, produced under documented conditions, with observable outcomes against which accuracy and calibration can be assessed.
+The UK government published R value and growth rate estimates derived from SPI-M's work throughout the pandemic, alongside the consensus statements themselves.We can also retrospectively estimate these quantities using subsequently observed data and a single standardised methodology.
+This creates the unusual circumstance of a scientific advisory process whose outputs can be systematically evaluated against best estimates of what actually happened.
+
+Research on expert judgement has long identified systematic biases in group consensus processes: anchoring on early estimates, suppression of dissent, overweighting of salient evidence (Tversky & Kahneman, 1974; Janis, 1982).
+Structured elicitation methods can mitigate some of these biases (Cooke, 1991), but they are rarely used in time-pressured advisory settings.
+We do not know whether SPI-M's consensus process was well-calibrated, whether calibration varied across the pandemic, or what features of the process were associated with better or worse scientific outputs.
+
+This is the evaluation that should have happened but did not.
+The COVID-19 Inquiry consumed the limited capacity available for retrospective reflection and directed it toward legalistic and governance questions rather than systematic scientific assessment.
+
+Our objectives are to:
+
+1. Assess the calibration and accuracy of probabilistic language in SPI-M consensus statements against observed epidemiological outcomes
+2. Identify whether calibration varied systematically by epidemic phase, type of quantity, or level of inter-model agreement
+3. Investigate how the consensus-forming process shaped statement content, and what process features are associated with calibration quality
+4. Develop a reusable audit framework for evaluating scientific advisory consensus, applicable beyond SPI-M
+
+This work matters beyond the UK pandemic response.
+Every scientific advisory body that produces consensus statements, from IPCC working groups to WHO expert committees, faces the same fundamental question: does our process produce well-calibrated outputs?
+None of them has a standardised method for answering it.
+Our framework provides one.
+
+The project is feasible within the proposed timeline because the core data, consensus statements and observed outcomes, already exist and are largely publicly available.
+The research team combines direct experience of the SPI-M process, expertise in evaluation of collaborative scientific processes, and published work on the philosophy of expert judgement and model-based decision-making.
+
+--------------------------------------------------------------------------------
+
+## 4. Approach (2,500 words max)
+
+### Context and previous work
+
+Scientific consensus, the structured synthesis of independent expert assessments, is a cornerstone of evidence-informed policy.
+In fields from climate science to public health, groups of experts independently analyse available data and then combine their findings into a single assessment.
+The quality of this process matters enormously: it shapes government decisions affecting millions of people.
+
+During COVID-19, SPI-M (the Scientific Pandemic Infections group on Modelling) provided regular consensus statements to SAGE and through SAGE to government ministers.
+These statements synthesised analyses from multiple independent modelling groups into assessments of current epidemic trajectory, future scenarios, and the likely impact of interventions.
+SPI-M's consensus estimates of the reproduction number (R) and growth rate were published weekly and became central to public communication and policy decision-making.
+
+Research on expert judgement and group decision-making has identified systematic biases in consensus processes.
+Anchoring effects mean that early or prominent estimates disproportionately influence group conclusions (Tversky & Kahneman, 1974).
+Groupthink suppresses dissent (Janis, 1982).
+Availability bias leads groups to overweight recent or salient evidence (Sunstein & Hastie, 2015).
+Structured elicitation methods such as the Delphi method and SHELF can mitigate some biases (Cooke, 1991; O'Hagan et al., 2006), but these formal methods are rarely used in time-pressured scientific advisory settings where consensus must be produced weekly or even daily.
+
+The calibration of expert consensus, whether stated confidence levels match observed frequencies, has been studied in weather forecasting (Murphy & Winkler, 1984), intelligence analysis (Tetlock, 2005), and clinical prediction (Kahneman et al., 2021).
+In each field, systematic evaluation has led to improvements in practice.
+Yet no comparable evaluation exists for scientific advisory committees in public health, despite the enormous consequential weight of their outputs.
+
+The UK COVID-19 Inquiry (2021-2024) examined governance, accountability, and decision-making processes, but did not conduct systematic scientific evaluation of the accuracy or calibration of the advice itself.
+Several factors have inhibited independent evaluation: severe burnout among pandemic responders, rapid career turnover among junior contributors, the absence of professional incentives for retrospective evaluation work, and the Inquiry's consumption of limited reflective capacity (Sherratt et al., 2024 [responsible modelling paper if published]; SPI-M commentary).
+The result is that five years after the pandemic, the most consequential body of scientific advisory output in recent UK history has not been subjected to the kind of systematic evaluation routinely applied to weather forecasts, intelligence assessments, or clinical predictions.
+
+**Our contribution.** We conduct the first systematic calibration and process evaluation of SPI-M consensus statements.
+We combine text-analytic methods (corpus linguistics, uncertainty language classification) with structured process evaluation (document analysis, targeted interviews) to produce both an empirical assessment and a transferable methodological framework.
+
+### Data and corpus
+
+**Consensus statements.** SPI-M consensus statements were produced regularly throughout the COVID-19 pandemic, typically weekly during active epidemic phases.
+Many are publicly available through gov.uk publications of SAGE and SPI-M documents.
+We will assemble the most complete corpus possible, supplemented by FOI requests where needed.
+We estimate the corpus at 100-150 documents spanning May 2020 to spring 2022.
+
+**Observed outcomes.** We hold a parsed dataset of UK R value and growth rate estimates published by government from May 2020 to December 2022, including regional breakdown (9 regions), upper and lower bounds, and metadata on caveats and methodological changes.
+Additional observed outcomes (hospitalisations, deaths, variant prevalence) are available from UKHSA surveillance data.
+
+**Process documentation.** Meeting records, submission templates, and procedural guidance used by SPI-M.
+Availability to be confirmed with the SPI-M secretariat; Sebastian Funk's role as a SPI-M member facilitates access.
+
+### Study design
+
+The project has three work packages.
+
+**WP1: Calibration analysis (months 1-10)**
+
+This is the primary workstream.
+We conduct systematic text analysis of the full SPI-M consensus statement corpus.
+
+*Step 1: Corpus assembly and pilot coding (months 1-4).* We assemble all available consensus statements and develop a coding framework.
+The framework classifies:
+
+- Probabilistic language: expressions of likelihood, confidence, and uncertainty, mapped against established typologies including the IPCC calibrated uncertainty language framework (Mastrandrea et al., 2010) and Spiegelhalter's uncertainty ladder
+- Quantitative claims: specific numerical estimates or ranges (R values, growth rates, peak timing, hospitalisation projections)
+- Directional claims: statements about the direction of change (increasing, decreasing, stable)
+- Disagreement markers: language indicating divergence among contributing groups, minority views, or caveats
+- Evidence references: citations of supporting data or models
+
+We pilot the coding framework on 10-15 statements to assess feasibility, refine definitions, and establish inter-rater reliability.
+Two coders classify independently; disagreements are resolved through structured discussion and the framework is refined.
+
+*Step 2: Full corpus coding (months 4-8).* We apply the finalised framework to the full corpus.
+Each statement is coded by two independent raters.
+
+*Step 3: Calibration assessment (months 6-10).* We match coded claims against observed outcomes:
+
+- For quantitative claims: did the stated range contain the subsequently observed value?
+  We compute coverage rates analogous to prediction interval calibration.
+- For directional claims: did the stated direction match what occurred?
+  We compute directional accuracy rates.
+- For probabilistic language: did events described as "likely" occur more frequently than those described as "possible"?
+  We assess whether the graduated language corresponded to graduated frequencies, following the approach used in intelligence forecast calibration (Tetlock, 2005).
+- For confidence expressions: were high-confidence statements more accurate than low-confidence statements?
+  We assess calibration of meta-cognitive confidence.
+
+We stratify all calibration analyses by:
+
+- Variant phase (wildtype, Alpha, Delta, Omicron)
+- Pandemic stage (emergence, peak, decline)
+- Type of quantity (R value, growth rate, hospitalisations, other)
+- Degree of inter-model agreement (where identifiable from disagreement markers)
+
+We also assess temporal consistency: when successive statements address the same quantity, do revisions follow observed data appropriately, or is there evidence of anchoring to prior estimates?
+
+**WP2: Process contextualisation (months 6-14)**
+
+WP2 investigates the consensus-forming process to explain patterns identified in WP1.
+This is not a standalone qualitative study; it is structured specifically around WP1 findings.
+
+*Document analysis (months 6-10).* We analyse available process documentation: how submissions were structured, how meetings were run, how the transition from individual analyses to consensus language occurred.
+We look for changes over time in process design that may explain calibration variation.
+
+*Targeted interviews (months 8-14).* We conduct 8-10 semi-structured interviews with individuals involved in the SPI-M consensus process: chairs, secretariat members, and selected modellers.
+Interviews are structured around specific WP1 findings.
+For example: "We observed that calibration of directional claims changed during the Delta wave.
+What, if anything, changed about the consensus process during this period?"
+This grounds the interviews in empirical patterns rather than general reflections.
+
+Interviewees are purposively sampled to represent: (a) those who chaired or facilitated the consensus process; (b) the secretariat who managed information flow; (c) modellers who contributed analyses.
+We aim for diversity across career stage and duration of involvement.
+
+Interview data are analysed thematically, focusing on process features that interviewees identify as relevant to the calibration patterns found in WP1.
+
+**WP3: Framework and dissemination (months 12-18)**
+
+We synthesise WP1 and WP2 into a "Consensus Audit Framework": a structured methodology for evaluating the calibration and process of scientific advisory consensus.
+The framework specifies:
+
+- What to measure: categories of claims to extract and how to classify them
+- How to assess calibration: matching procedures for different claim types
+- How to investigate process: targeted methods for explaining calibration patterns
+- How to report findings: standardised reporting template
+
+We validate the framework through a stakeholder workshop (month 14-15) involving SPI-M participants, UKHSA colleagues, and representatives from other advisory bodies (IPCC, food safety, etc., invited as external perspectives).
+
+**Outputs:**
+
+1. Calibration dataset: every extractable claim from SPI-M consensus mapped to observed outcome.
+   Published as open data.
+2. Coding framework with documentation and inter-rater reliability scores.
+   Published as a reusable tool.
+3. Empirical paper on the calibration of SPI-M consensus during COVID-19.
+4. Methodological paper presenting the Consensus Audit Framework.
+5. Workshop report and stakeholder engagement summary.
+
+### Timeline and milestones
+
+  | Month | Activity                                        | Milestone                       |
+  | ----- | ----------------------------------------------- | ------------------------------- |
+  | 1-2   | Corpus assembly; FOI requests if needed         | Corpus scoped                   |
+  | 2-4   | Pilot coding framework; inter-rater reliability | Framework finalised             |
+  | 4-8   | Full corpus coding                              | Coded dataset complete          |
+  | 6-10  | Calibration assessment against observed data    | WP1 analysis complete           |
+  | 6-10  | WP2 document analysis                           | Process map produced            |
+  | 8-14  | WP2 interviews (8-10)                           | Interview analysis complete     |
+  | 12-15 | Framework synthesis                             | Draft Consensus Audit Framework |
+  | 14-15 | Stakeholder workshop                            | Framework validated             |
+  | 15-18 | Papers and dissemination                        | Submissions and open data       |
+
+### Risks and mitigation
+
+*Corpus smaller than expected.* Some consensus statements may not be publicly available.
+Mitigation: FOI requests planned from month 1; Sebastian Funk can facilitate access through SPI-M networks.
+Even a partial corpus (e.g. 60-80 statements) supports meaningful calibration analysis.
+
+*Few extractable quantitative claims.* If most statements are purely qualitative, the quantitative calibration component narrows.
+Mitigation: pilot coding in months 2-4 assesses feasibility before committing to full analysis.
+Directional and probabilistic language calibration remain viable even without numerical claims.
+
+*Interview access limited by political sensitivity.* Post-Inquiry fatigue or caution may reduce willingness to participate.
+Mitigation: Sebastian Funk provides trusted access; interviews are framed as professional scientific reflection, not accountability; anonymity offered.
+We require only 8-10 interviews; the project does not depend on universal participation.
+
+*Calibration assessment requires judgement calls.* Matching statements to outcomes involves interpretation (what counts as the "right" outcome for a given statement?).
+Mitigation: two independent assessors; disagreements documented and resolved through structured discussion; sensitivity analysis on borderline cases.
+
+### Research environment
+
+LSHTM's Centre for Mathematical Modelling of Infectious Diseases provides the methodological base.
+Sebastian Funk's membership of SPI-M and directorship of the NIHR Health Protection Research Unit in Health Analytics provides institutional access.
+Erica Thompson's work on models, uncertainty, and decision-making (Thompson, 2022) provides the conceptual framework for interpreting calibration in the context of advisory processes.
+[Confirm ET's institutional affiliation and access.]
+
+### Maximising impact
+
+The primary end-users are organisations that convene or rely on scientific advisory committees.
+UKHSA and the Government Office for Science are immediate UK users.
+Internationally, any body producing consensus assessments (IPCC, WHO, national academies) could apply the framework.
+We will engage the metascience community through UKRI cohort events and target publication in venues reaching both metascience and science policy audiences (Research Policy, Quantitative Science Studies, or similar).
+All data, code, and the Consensus Audit Framework will be published openly.
+
+[~2,350 words — room for ~150 more if needed]
+
+--------------------------------------------------------------------------------
+
+## 5. Applicant and team capability to deliver (1,650 words max)
+
+### R4RI modules (1,150 words)
+
+**Contributions to the generation of new ideas, tools, methodologies, or knowledge**
+
+Katharine Sherratt (PL) is a Research Fellow at LSHTM specialising in the evaluation of collaborative scientific processes.
+Her research focuses on how independent expert analyses are combined into reliable assessments, and how the quality of these processes can be measured.
+She has published on multi-model ensemble methods and evaluation frameworks (Sherratt et al., 2023), contributed evaluation methodology to international collaborative forecasting efforts involving 30+ research groups across Europe and the US, and is developing assessment criteria for the utility of scientific modelling in policy contexts.
+She has direct experience of studying how scientific consensus is constructed in government advisory settings through her work on the UK's SPI-M-O process, and is the originator of the research programme on SPI-M evaluation from which this project is drawn.
+[Add: specific prior work on text analysis or calibration if applicable.]
+
+Sebastian Funk (PcL) is Professor of Infectious Disease Dynamics at LSHTM and co-director of CMMID.
+He has developed widely-used analytical tools deployed operationally by public health agencies including UKHSA, WHO, and ECDC.
+He is a member of SPI-M-O, the UK government's scientific advisory committee during health emergencies, giving him direct, first-hand experience of the consensus process this project evaluates.
+He directs the NIHR Health Protection Research Unit in Health Analytics and Modelling, connecting the research to its primary policy audience.
+His dual position as both participant in and evaluator of the SPI-M process is a significant methodological strength: it provides authentic insider knowledge while the formal evaluation framework ensures critical distance.
+
+Erica Thompson [confirm availability] is [position] at [institution].
+Her published work on the relationship between scientific models and decision-making (Thompson, 2022, *Escape from Model Land*) provides the conceptual foundation for understanding what "calibration" means in the context of scientific advice.
+Her research addresses how uncertainty is communicated across the boundary between scientific analysis and policy use, directly relevant to interpreting what SPI-M consensus language was intended to convey and how it was received.
+[Expand with specific methodological contributions.]
+
+**The development of others and maintenance of effective working relationships**
+
+The team spans three career stages and two institutions, modelling a collaborative approach appropriate to the project's interdisciplinary character.
+Sherratt supervises PhD and MSc students in evaluation methodology.
+Funk leads a research group of 15+ researchers with a strong track record of developing early-career scientists through the COVID-19 response and beyond.
+Thompson [contributes to training and mentoring in philosophy of science and modelling — confirm].
+A research assistant on this project would gain experience in an emerging area of metascience, combining quantitative text analysis with qualitative process evaluation.
+
+**Contributions to the wider research and innovation community**
+
+The team maintains open-source analytical tools used by public health agencies worldwide.
+Sherratt contributed evaluation infrastructure to collaborative forecasting efforts spanning 30+ countries.
+Funk co-leads international efforts on real-time analytical methodology.
+Thompson engages broad audiences through public writing and policy engagement on the use and limits of scientific models.
+The team collectively represents a bridge between the technical modelling community and the science policy community, a position essential for this project's credibility with both audiences.
+
+**Contributions to broader research or innovation users and audiences and towards wider societal benefit**
+
+During COVID-19, the team's work directly informed UK government decisions, WHO response, and public understanding of the pandemic.
+This operational experience motivates the current project: having participated in the consensus process under extreme pressure, the team is uniquely positioned to evaluate it with both rigour and understanding.
+The Consensus Audit Framework produced by this project is designed for adoption by any organisation that needs to evaluate its own advisory processes, representing a direct societal contribution to the quality of evidence-informed governance.
+
+### Additions (500 words --- optional)
+
+[Reserved. Consider: the "missing middle" argument — why this evaluation has not been done, and why the team is positioned to do it now despite the barriers described in the SPI-M commentary.]
+
+--------------------------------------------------------------------------------
+
+## 6. Ethics and responsible research and innovation (500 words max)
+
+This project evaluates scientific advisory outputs and processes from a completed national emergency response.
+No pathogen data, patient data, or biological samples are involved.
+
+**Human participants.** The project involves: (a) text analysis of publicly available documents (no participant involvement); (b) semi-structured interviews with 8-10 individuals involved in the SPI-M consensus process.
+Interviewees are professionals reflecting on their professional practice.
+Participation is voluntary; informed consent will be obtained; anonymity offered in publications.
+We will obtain LSHTM ethics approval before interviews begin.
+
+**Political sensitivity.** Evaluating government scientific advice is inherently sensitive, particularly in the wake of the COVID-19 Inquiry.
+We mitigate this by: (i) framing the work as scientific evaluation, not accountability or blame; (ii) focusing on calibration of outputs rather than judgement of individuals; (iii) involving a SPI-M member (Funk) in the research team, signalling that the evaluation is conducted with rather than against the scientific community; (iv) offering anonymity to interviewees; (v) sharing findings with participants before publication.
+
+**Positionality.** Sebastian Funk's membership of SPI-M is both a strength (access, insider knowledge) and a potential source of bias.
+We address this through: formal evaluation frameworks that constrain subjective judgement; independent coding by researchers who were not SPI-M members; and transparent reporting of the team's relationship to the subject of study.
+
+**Responsible use of findings.** Calibration results could be misinterpreted as a verdict on the quality of pandemic decision-making.
+We will frame findings carefully: calibration of advisory language is one dimension of quality; it does not capture the full value of scientific advice, which also includes framing, scenario identification, and uncertainty characterisation that cannot be reduced to accuracy scores.
+The framework paper will explicitly address the limits of calibration as an evaluative measure.
+
+**Data protection.** Interview transcripts will be stored securely, anonymised for analysis, and retained in accordance with LSHTM's data retention policy.
+Consensus statements are public documents.
+The R value dataset contains no personal data.
+
+We will follow LSHTM's research governance framework and UKRI's Framework for Research Ethics throughout.
+
+[~370 words — room for expansion]
+
+--------------------------------------------------------------------------------
+
+## 7. Resources and cost justification (1,000 words max)
+
+[To be completed with LSHTM research office — outline below]
+
+**Project staff:**
+
+- Katharine Sherratt: 50% FTE for 18 months as PI, leading all work packages
+- Research assistant: 100% FTE for 12 months, supporting corpus coding (WP1), interview logistics and transcription (WP2), and framework development (WP3)
+- Sebastian Funk: \~10% FTE for 18 months as Co-I, contributing to study design, data access, interpretation, and stakeholder engagement
+- Erica Thompson: \~10% FTE for 18 months as Co-I, contributing to conceptual framework, uncertainty language classification, and interpretation [confirm]
+
+**Travel and subsistence:**
+
+- Stakeholder workshop (WP3, month 14-15): venue, catering, and participant travel for \~15 attendees including SPI-M participants, UKHSA colleagues, and invited external perspectives
+- UKRI Metascience cohort events: attendance for PI at annual events (as required by the call)
+- Project team meetings (if cross-institutional): \~4 meetings over 18 months
+
+**Other costs:**
+
+- Interview transcription services (8-10 interviews, \~1 hour each)
+- Open access publication charges (2 papers)
+- Software licences for text analysis tools if needed (likely minimal; open-source tools preferred)
+
+**Justification:** This is an analytical project whose primary costs are staff time.
+The core data (consensus statements and observed outcomes) already exist.
+The grant funds the systematic evaluation: assembling and coding the corpus, conducting calibration analysis, carrying out targeted interviews, and synthesising findings into a reusable framework.
+The RA is essential for establishing inter-rater reliability in the coding framework and for managing the interview logistics that enable WP2.
+Co-I time reflects genuine intellectual contribution to study design and interpretation, not nominal oversight.
+
+**Estimated FEC:** [To be calculated with research office — targeting within £250,000]
+
+--------------------------------------------------------------------------------
+
+## 8. Data management and sharing (500 words max)
+
+**Data generated:**
+
+1. Coded corpus: SPI-M consensus statements annotated with extracted probabilistic claims, uncertainty classifications, disagreement markers, and evidence references.
+   Published as open data (the coding layer; underlying statements are already public).
+2. Calibration dataset: every extractable claim matched to observed outcome with calibration scores.
+   Published openly via Zenodo and UK Data Service.
+3. Coding framework: classification scheme with definitions, examples, and inter-rater reliability scores.
+   Published as a reusable tool.
+4. Interview transcripts: anonymised.
+   Retained securely at LSHTM.
+   Excerpts published in papers with participant consent.
+5. Process documentation analysis: anonymised summaries.
+   Published as supplementary material.
+6. Consensus Audit Framework: the methodological framework itself, published openly.
+
+**Existing data used:**
+
+- SPI-M consensus statements: public documents published via gov.uk.
+- R value and growth rate estimates: parsed from publicly published government data (May 2020 - December 2022).
+  Already held by PI.
+- UKHSA surveillance data (hospitalisations, deaths, variant prevalence): publicly available.
+
+**Data management:**
+
+Data will be stored on LSHTM's secure research data infrastructure during the project.
+Analysis code will be version-controlled on GitHub throughout.
+At project end, all shareable data and code will be deposited with the UK Data Service and Zenodo under CC-BY and MIT licences.
+
+**Challenges to sharing:**
+
+Interview data contain professional reflections on a sensitive topic.
+We will offer participants the choice between full anonymisation and attributed quotation.
+Fully anonymised transcripts will be archived; attributed excerpts require explicit consent.
+The sensitivity of the topic means some participants may prefer that their contributions are reflected only in aggregate thematic analysis rather than direct quotation.
+
+We comply with ESRC's Research Data Policy and LSHTM's institutional data management requirements.
+
+[~310 words — room for expansion]
+
+--------------------------------------------------------------------------------
+
+## 9. Trusted Research and Innovation (100 words max)
+
+This project does not involve dual-use research, materials on the UK strategic export control list, or work relevant to the 17 areas of the UK National Security and Investment Act.
+No export control licence is required.
+The research evaluates publicly available scientific advisory documents and conducts interviews with UK-based professionals.
+All outputs will be published openly.
+
+--------------------------------------------------------------------------------
+
+## 10. International collaboration (100 words max)
+
+All funded project activities and personnel are UK-based.
+No international co-leads, subcontractors, or service providers are involved.
+The Consensus Audit Framework is designed for international applicability, and we will engage with international advisory bodies (IPCC, WHO) during the validation workshop (WP3) to ensure relevance beyond the UK context.
+This engagement constitutes dissemination rather than formal collaboration requiring additional funding.
+
+--------------------------------------------------------------------------------
+
+## References
+
+Cooke RM (1991).
+Experts in Uncertainty: Opinion and Subjective Probability in Science.
+Oxford University Press.
+Janis IL (1982).
+Groupthink: Psychological Studies of Policy Decisions and Fiascoes.
+Houghton Mifflin.
+Kahneman D, Sibony O, Sunstein CR (2021).
+Noise: A Flaw in Human Judgment.
+Little, Brown Spark.
+Mastrandrea MD et al.
+(2010).
+Guidance Note for Lead Authors of the IPCC Fifth Assessment Report on Consistent Treatment of Uncertainties.
+IPCC.
+Murphy AH, Winkler RL (1984).
+Probability forecasting in meteorology.
+Journal of the American Statistical Association.
+O'Hagan A et al.
+(2006).
+Uncertain Judgements: Eliciting Experts' Probabilities.
+Wiley.
+Sherratt K et al.
+(2023).
+Predictive performance of multi-model ensemble forecasts of COVID-19 across European nations.
+eLife.
+https://doi.org/10.7554/eLife.81916 Sunstein CR, Hastie R (2015).
+Wiser: Getting Beyond Groupthink to Make Groups Smarter.
+Harvard Business Press.
+Tetlock PE (2005).
+Expert Political Judgment: How Good Is It?
+How Can We Know?
+Princeton University Press.
+Thompson E (2022).
+Escape from Model Land.
+Basic Books.
+Tversky A, Kahneman D (1974).
+Judgment under Uncertainty: Heuristics and Biases.
+Science.
+[Add: Medley (2022) SPI-M reflection paper; Spiegelhalter uncertainty references]
