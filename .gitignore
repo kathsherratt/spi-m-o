@@ -61,3 +61,4 @@ rsconnect/
 _site/
 *_files/
 /.quarto/
+.DS_Store

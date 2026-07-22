@@ -1,0 +1,5 @@
+
+
+Database of probabilistic statements produced by SPI-M
+
+- cross reference against corpus of Inquiry witness statements to identify where probabilistic estimates were used or had influence

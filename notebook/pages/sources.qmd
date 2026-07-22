@@ -3,72 +3,62 @@ title: "Sources of evidence from which to evaluate SPI-M"
 format: html
 ---
 
-## Data
+## H1N1
 
-### Modelling inputs
+### SPI-M-O output
+
+- [SPI-M-O terms of reference and membership](https://webarchive.nationalarchives.gov.uk/ukgwa/+/www.dh.gov.uk/ab/SPI/DH_095904)
+- An [example consensus statement](https://webarchive.nationalarchives.gov.uk/ukgwa/20110609133736/http://www.dh.gov.uk/ab/SPI/DH_118862)
+- The [archive of consensus statements](https://webarchive.nationalarchives.gov.uk/ukgwa/20110609133736/http://www.dh.gov.uk/ab/SPI/DH_118862)
+
+### Post-event Inquiry
+
+- [Hine report](https://www.gov.uk/government/publications/independent-review-into-the-response-to-the-2009-swine-flu-pandemic)
+
+- A few selected witness statements submitted to Inquiry:
+  - [Department of Health](https://assets.publishing.service.gov.uk/media/5a79d52240f0b670a8025c17/doh.pdf)
+  - [Health protection authority](https://assets.publishing.service.gov.uk/media/5a79ec1140f0b670a80266c6/hpa-march31_0.pdf)
+  - [Gov. Office of Science](https://assets.publishing.service.gov.uk/media/5a79cf15ed915d042206b304/govt-office-science_0.pdf)
+
+## Covid-19
+
+Mix of sources and ideas for where to find further data
+
+### SPI-M
 
 - Model descriptions - https://www.gov.uk/government/publications/reproduction-number-r-and-growth-rate-methodology/reproduction-number-r-and-growth-rate-methodology
-- EMRG consensus statements' references, to seed author/citation/participant tracing
-- Author-published work
-- Freedom of Information requests
-- Codebase for each input
+- R and growth rate
+  - [Collated data download](https://assets.publishing.service.gov.uk/media/63a46e3ed3bf7f375c7d833d/221221_R_and_growth_rate_time_series_for_publication_v1.0.ods)
+  - [EMRG consensus statements](https://www.gov.uk/government/publications/consensus-statements-on-covid-19)
+    - weekly: 2021-07-21 to 2022-03-30
+    - fortnightly: 2022-04-13 to 2022-12-21
+- Medium term projections
+  - [EMRG MTPs](https://www.gov.uk/government/publications/consensus-statements-on-covid-19)
+    - fortnightly: 2022-04-13 to 2022-12-21
 
---------------------------------------------------------------------------------
+### Rapid response surveillance
 
-### Consensus process
+- [PHE dashboard](https://coronavirus.data.gov.uk/)
+- [ONS-CIS](https://www.ons.gov.uk/peoplepopulationandcommunity/healthandsocialcare/conditionsanddiseases/bulletins/coronaviruscovid19infectionsurveypilot/latest)
+- [REACT-1](https://www.gov.uk/government/collections/monthly-results-for-react-1-studies)
 
-- Political landscape
-  - Hine report & post-swine flu inquiry
-  - COVID Inquiriy witness statements & testimony
-    - https://covid19.public-inquiry.uk/documents/
-    - 1920 individual documents
-    - 12548 collected evidence
-    - 6 reports (to date)
-    - 21 Every Story Matters records
+## Inquiry & response
+
+- [Full Inquiry](https://covid19.public-inquiry.uk/documents/)
+  - 1920 individual documents
+  - 12548 pieces of evidence
+  - 6 reports (to date)
+  - [Specific recommendations](https://covid19.public-inquiry.uk/inquiry-recommendations/)
+
+- Government response dashboard:
+  - https://covidinquiry.dac.grid.civilservice.gov.uk/
+
+## Impact tracing
+
+- Published work of SPI-M membership via orcID/name search in pub databases
+- Freedom of Information requests where unavailable
+- Policy use
+  - Inquiry witness statements
   - Hansard: parliamentary debate
   - Freedom of Information requests
-  - Overton
-  - News media
-- Academic landscape
-  - Publications
-  - Citation networks
-
---------------------------------------------------------------------------------
-
-### Consensus outputs
-
-#### Real-time
-
-##### R and growth rate
-
-- [Collated data download](https://assets.publishing.service.gov.uk/media/63a46e3ed3bf7f375c7d833d/221221_R_and_growth_rate_time_series_for_publication_v1.0.ods)
-- [EMRG consensus statements](https://www.gov.uk/government/publications/consensus-statements-on-covid-19)
-  - weekly: 2021-07-21 to 2022-03-30
-  - fortnightly: 2022-04-13 to 2022-12-21
-
-##### Medium term projections
-
-- [EMRG MTPs](https://www.gov.uk/government/publications/consensus-statements-on-covid-19)
-  - fortnightly: 2022-04-13 to 2022-12-21
-
-##### Excess/avoidable deaths
-
-...
-
----
-
-## Rapid response surveillance
-
-ONS-CIS:
-
-- https://www.ons.gov.uk/peoplepopulationandcommunity/healthandsocialcare/conditionsanddiseases/bulletins/coronaviruscovid19infectionsurveypilot/latest
-
-UK dashboard:
-
-- https://coronavirus.data.gov.uk/
-
-REACT-1:
-
-- https://www.gov.uk/government/collections/monthly-results-for-react-1-studies
-
-
+  - Overton - traces where academics have been cited in policy/grey literature
