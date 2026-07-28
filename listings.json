@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/notebook/pages/idea-index.html",
       "/notebook/pages/history.html",
       "/notebook/pages/inquiry-evaluation.html",
       "/notebook/pages/sources.html",
