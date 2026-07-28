@@ -40,7 +40,18 @@ Given the intended assurance and improvement of quality, policy audiences might 
 ### What actually happened?
 
 In practice, peer review meant independent teams each contributing estimates through their own methods, then comparing them in group discussion.
-The recruitment, contribution, facilitation, and synthesis of the group has been documented patchily across various retrospectives and the COVID-19 Inquiry.
+Fairly little of this has been formally evaluated as far as I know.
+Funk (2021) evaluated short-term forecasts in 2020.
+Some groups have published retrospective evaluations of their own work (Keeling 2023).
+
+Group outputs focused on the consensus statements.
+These are accessible in the government archives for Covid-19 and for 2009 H1N1 (see [Sources](sources.html)).
+From individual modelling contributors: where participants submitted background papers, these are published alongside the consensus statements.
+Individual modelling outputs are otherwise not readily accessible, but should in theory exist (so could be requested) where they were submitted to the Secretariat (weekly Rt estimates, short and medium term incidence projections).
+
+In terms of the process: we have only patchily documented the recruitment, contribution, facilitation, and process for synthesis of the group.
+There are some various retrospectives published by the participants involved.
+Otherwise the major source of evidence for this is the COVID-19 Inquiry, and previously the H1N1 Inquiry.
 
 ### What should happen?
 
