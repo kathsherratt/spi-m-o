@@ -12,6 +12,8 @@ Notebook looking at the UK government's COVID-19 scientific advisory process, sp
 
 ## Context
 
-General overview / current thinking presented in April 2026
+General overview / current thinking (presented in April 2026)
 
-<iframe src="notebook/pages/consensus-modelling.pdf" width="100%" height="800px"></iframe>
+<iframe src="notebook/pages/consensus-modelling.pdf" width="100%" height="500px"></iframe>
+
+---

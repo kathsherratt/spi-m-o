@@ -1,0 +1,4 @@
+
+What would a best practice guide to evaluating real-time outbreak analysis include?
+What about a good practice, or a bad practice guide?
+

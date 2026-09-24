@@ -20,7 +20,7 @@ These functions also prompts some quite specific questions for the design of new
 
 As a side note, and a rationale for using these three functions rather than some other: I think this three-part structure maps nicely to the "Quality", "Value", and "Trust" framework used for evaluating official statistics (see: Office for Statistics Regulation).
 (I'm aware SPI-M-O *certainly does not* produce official statistics.
-But I don't think that should stop us from holding the work up to the same level of scrutiny just to see what falls out.)
+But I don't think that should stop us from holding the work up to the same level of scru[tiny, if only as an exercise.)
 
 Here are some notes and sketches on how evaluation could proceed, based on the "after action review" format.
 
@@ -39,15 +39,11 @@ Given the intended assurance and improvement of quality, policy audiences might 
 
 ### What actually happened?
 
-In practice, peer review meant independent teams each contributing estimates through their own methods, then comparing them in group discussion.
-Fairly little of this has been formally evaluated as far as I know.
-Funk (2021) evaluated short-term forecasts in 2020.
-Some groups have published retrospective evaluations of their own work (Keeling 2023).
+In practice, peer review meant independent teams each contributing estimates through their own methods, then comparing them in group discussion, and producing a single consensus statement.
 
-Group outputs focused on the consensus statements.
-These are accessible in the government archives for Covid-19 and for 2009 H1N1 (see [Sources](sources.html)).
 From individual modelling contributors: where participants submitted background papers, these are published alongside the consensus statements.
 Individual modelling outputs are otherwise not readily accessible, but should in theory exist (so could be requested) where they were submitted to the Secretariat (weekly Rt estimates, short and medium term incidence projections).
+Some groups have published retrospective evaluations of their own work (Keeling 2023).
 
 In terms of the process: we have only patchily documented the recruitment, contribution, facilitation, and process for synthesis of the group.
 There are some various retrospectives published by the participants involved.
@@ -64,19 +60,30 @@ Otherwise the major source of evidence for this is the COVID-19 Inquiry, and pre
 
 ### What was supposed to happen?
 
+SPI-M-O synthesised expert estimates into a single \~2 page consensus statement.
+This was first drafted by a civil service secretariat and checked by participants.
+Consensus statements use a qualitative narrative synthesis as a deliberate choice to convey uncertainty.
+Text was supposed to use the PHIA yardstick language to express uncertainty (unlikely, highly likely etc).
+
 ### What actually happened?
 
-SPI-M-O synthesised expert estimates into a single consensus statement produced by a non-academic secretariat.
-It reported only the range of Rt (a 90% CI of the mean of all contributing estimates), never a point estimate, which was a deliberate choice to convey uncertainty.
+*Evaluation question: was uncertainty well calibrated?*
 
-- Comparison with retrospective best estimates.
-  For example: even under the most favourable comparison, around 19% of consensus estimates did not correctly identify the direction of Rt (growth versus decline), relative to retrospective best-estimates using EpiEstim (McCabe 2024).
+- Numeric (note there are very few public numeric quantities as reported in the consensus statements)
+  - The two headline quantities were Rt and growth rate (each reported as the mean 90% CI of all contributing estimates).
+    Quantitative evaluation could compare with retrospective best estimates.
+    For example: even under the most favourable comparison, around 19% of consensus estimates did not correctly identify the direction of Rt (growth versus decline), relative to retrospective best-estimates using EpiEstim (McCabe 2024).
+  - Funk (2021) evaluated short-term forecasts in 2020.
+    This could be repeated based on the entire timeseries (and reanalysed using alternative scoring metrics eg log transform, ensemble contribution etc)
+
+- Narrative
+  - The consensus statement texts are accessible in the government archives for Covid-19 and for 2009 H1N1 (see [Sources](sources.html)).
+  - Text mine for probabilistic claims - assess whether uncertainty language was used (at all) and how well calibrated (if so).
 
 ### What should happen?
 
 - what are the most policy-relevant uncertainties, and how suited is the consensus process for addressing them?
 - how are estimates of likelihood versus estimates of impact (the two dimensions of risk) handled?
-- where does the group sit among the three lines of risk management, and is that position agreed, or assumed implictly?
 
 ## shared responsibility
 
@@ -99,11 +106,12 @@ If so, we could assess the statement text against standards for risk reporting, 
 
 ### What should happen?
 
+- where does the group sit among the three lines of risk management, and is that position agreed, or assumed implictly?
 - how should infrastructure and accountability change when SPI-M takes on the "SPI-M-O" operational role, rather than advisory?
 - Group advisory settings carry moral hazards, specifically the 'diffusion of responsibility' where no single actor is clearly accountable for the group output - how could this be protected against?
 - what institutional support exists for members during and after operationalisation?
 
-The government has also previously published guidance on [ethical research in emergencies](https://www.gov.uk/government/publications/ethical-integration-of-research-in-publ[…]-in-public-health-emergencies-preparation-response-and-recovery).
+The government has also (since?) published guidance on [ethical research in emergencies](https://www.gov.uk/government/publications/ethical-integration-of-research-in-publ[…]-in-public-health-emergencies-preparation-response-and-recovery).
 It would be useful to reflect on how these apply to SPI-M-O.
 Specifically:
 
