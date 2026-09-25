@@ -1,0 +1,85 @@
+term,pattern,class,framework,lo,hi,source,note
+remote chance,\bremote chance\b,PHIA,PHIA,0,0.05,phia,
+highly unlikely,\bhighly unlikely\b,PHIA,PHIA,0.10,0.20,phia,
+unlikely,\bunlikely\b,PHIA,PHIA,0.25,0.35,phia,longest match first: not preceded by highly/very/extremely/exceptionally
+realistic possibility,\brealistic possibility\b,PHIA,PHIA,0.40,0.50,phia,upper bound <50%
+likely,\blikely\b,PHIA,PHIA,0.55,0.75,phia,longest match first; comparative uses (more/less/equally likely) are not probabilities
+probable,\bprobable\b,PHIA,PHIA,0.55,0.75,phia,
+probably,\bprobably\b,PHIA,PHIA,0.55,0.75,spimo_annex,"SPI-M-O annex prints ""likely or probably""; PHIA page says ""likely or probable"""
+highly likely,\bhighly likely\b,PHIA,PHIA,0.80,0.90,phia,3 SPI-M-O HTML versions (Jan 2022) print 85-90%; the graphic they reproduce shows 80-90%
+almost certain,\balmost certain(ly)?\b,PHIA,PHIA,0.95,1,phia,upper bound <100%
+virtually certain,\bvirtually certain(ly)?\b,other_controlled,IPCC AR5,0.99,1,ipcc,
+extremely likely,\bextremely likely\b,other_controlled,IPCC AR5,0.95,1,ipcc,
+very likely,\bvery likely\b,other_controlled,IPCC AR5,0.90,1,ipcc,
+likely,\blikely\b,other_controlled,IPCC AR5,0.66,1,ipcc,same word as PHIA; counted as PHIA
+more likely than not,\bmore likely than not\b,other_controlled,IPCC AR5,0.50,1,ipcc,lower bound >50%
+about as likely as not,\babout as likely as not\b,other_controlled,IPCC AR5,0.33,0.66,ipcc,
+unlikely,\bunlikely\b,other_controlled,IPCC AR5,0,0.33,ipcc,same word as PHIA; counted as PHIA
+very unlikely,\bvery unlikely\b,other_controlled,IPCC AR5,0,0.10,ipcc,
+extremely unlikely,\bextremely unlikely\b,other_controlled,IPCC AR5,0,0.05,ipcc,
+exceptionally unlikely,\bexceptionally unlikely\b,other_controlled,IPCC AR5,0,0.01,ipcc,
+almost no chance,\balmost no chance\b,other_controlled,ICD 203,0.01,0.05,icd203,paired with remote
+remote,\bremote\b(?! chance),other_controlled,ICD 203,0.01,0.05,icd203,"""remote chance"" is PHIA; bare ""remote"" is mostly not a probability (remote learning); needs context"
+very unlikely,\bvery unlikely\b,other_controlled,ICD 203,0.05,0.20,icd203,
+highly improbable,\bhighly improbable\b,other_controlled,ICD 203,0.05,0.20,icd203,
+unlikely,\bunlikely\b,other_controlled,ICD 203,0.20,0.45,icd203,same word as PHIA; counted as PHIA
+improbable,\bimprobable\b,other_controlled,ICD 203,0.20,0.45,icd203,
+roughly even chance,\broughly even (chance|odds)\b,other_controlled,ICD 203,0.45,0.55,icd203,
+likely,\blikely\b,other_controlled,ICD 203,0.55,0.80,icd203,same word as PHIA; counted as PHIA
+probable,\bprobabl[ey]\b,other_controlled,ICD 203,0.55,0.80,icd203,same word as PHIA; counted as PHIA
+very likely,\bvery likely\b,other_controlled,ICD 203,0.80,0.95,icd203,
+highly probable,\bhighly probable\b,other_controlled,ICD 203,0.80,0.95,icd203,
+almost certain,\balmost certain(ly)?\b,other_controlled,ICD 203,0.95,0.99,icd203,same word as PHIA; counted as PHIA
+nearly certain,\bnearly certain(ly)?\b,other_controlled,ICD 203,0.95,0.99,icd203,
+almost certain,\balmost certain(ly)?\b,other_controlled,EFSA 2018,0.99,1,efsa,same word as PHIA; counted as PHIA
+extremely likely,\bextremely likely\b,other_controlled,EFSA 2018,0.95,0.99,efsa,
+very likely,\bvery likely\b,other_controlled,EFSA 2018,0.90,0.95,efsa,
+likely,\blikely\b,other_controlled,EFSA 2018,0.66,0.90,efsa,same word as PHIA; counted as PHIA
+about as likely as not,\babout as likely as not\b,other_controlled,EFSA 2018,0.33,0.66,efsa,
+unlikely,\bunlikely\b,other_controlled,EFSA 2018,0.10,0.33,efsa,same word as PHIA; counted as PHIA
+very unlikely,\bvery unlikely\b,other_controlled,EFSA 2018,0.05,0.10,efsa,
+extremely unlikely,\bextremely unlikely\b,other_controlled,EFSA 2018,0.01,0.05,efsa,
+almost impossible,\balmost impossible\b,other_controlled,EFSA 2018,0,0.01,efsa,
+certain,\bcertain\b,other_controlled,Kent 1964,1,1,kent,"""a certain number"" is not a probability; needs context"
+almost certain,\balmost certain(ly)?\b,other_controlled,Kent 1964,0.87,0.99,kent,93% give or take about 6%; same word as PHIA
+probable,\bprobabl[ey]\b,other_controlled,Kent 1964,0.63,0.87,kent,75% give or take about 12%; same word as PHIA
+chances about even,\bchances (are )?about even\b,other_controlled,Kent 1964,0.40,0.60,kent,50% give or take about 10%
+probably not,\bprobably not\b,other_controlled,Kent 1964,0.20,0.40,kent,30% give or take about 10%
+almost certainly not,\balmost certainly not\b,other_controlled,Kent 1964,0.02,0.12,kent,7% give or take about 5%
+impossible,\bimpossible\b,other_controlled,Kent 1964,0,0,kent,
+may,\bmay\b(?! 20\d\d),uncontrolled,,,,corpus,exclude the month: case-sensitive (lower-case may) and not followed by a year
+might,\bmight\b,uncontrolled,,,,corpus,
+could,\bcould\b,uncontrolled,,,,corpus,
+possible,\bpossibl[ey]\b,uncontrolled,,,,corpus,
+possibility,\b(a |the )?possibility\b,uncontrolled,,,,corpus,"after ""realistic possibility"" is excluded"
+plausible,\bplausibl[ey]\b,uncontrolled,,,,corpus,
+potentially,\bpotentially\b,uncontrolled,,,,corpus,
+expected to,\bexpect(s|ed)? to\b,uncontrolled,,,,corpus,
+best estimate,\bbest estimates?\b,uncontrolled,,,,corpus,216 uses; mostly R and growth-rate ranges
+central estimate,\bcentral estimates?\b,uncontrolled,,,,corpus,
+best guess,\bbest guess\b,uncontrolled,,,,corpus,not found in the corpus; kept because the issue names it
+suggests,\bsuggests?\b,uncontrolled,,,,corpus,"includes ""the evidence suggests"", which is GRADE low certainty"
+appears to,\b(appears?|seems?) to\b,uncontrolled,,,,corpus,
+indicates,\bindicates?\b,uncontrolled,,,,corpus,
+cannot be ruled out,\bcannot be (ruled out|excluded)\b,uncontrolled,,,,corpus,
+we believe,\bwe believe\b,uncontrolled,,,,fagen2019,survey median 75%
+we doubt,\bwe doubt\b,uncontrolled,,,,fagen2019,survey median 20%
+better than even,\bbetter than even\b,uncontrolled,,,,fagen2019,survey median 60%
+very good chance,\bvery good chance\b,uncontrolled,,,,fagen2019,survey median 80%
+little chance,\blittle chance\b,uncontrolled,,,,fagen2019,survey median 10%
+chances are slight,\bchances are slight\b,uncontrolled,,,,fagen2019,survey median 10%
+high confidence,\bhigh(ly)? confiden(ce|t)\b,confidence,PHIA / IPCC / ICD 203,,,phia;ipcc;icd203,
+moderate confidence,\b(moderate|medium) confidence\b,confidence,PHIA / IPCC / ICD 203,,,phia;ipcc;icd203,IPCC says medium; PHIA and ICD 203 say moderate
+low confidence,\blow confidence\b,confidence,PHIA / IPCC / ICD 203,,,phia;ipcc;icd203,
+very high confidence,\bvery high confidence\b,confidence,IPCC AR5,,,ipcc,
+very low confidence,\bvery low confidence\b,confidence,IPCC AR5,,,ipcc,
+limited evidence,\blimited evidence\b,confidence,IPCC AR5,,,ipcc,IPCC evidence summary term
+medium evidence,\bmedium evidence\b,confidence,IPCC AR5,,,ipcc,
+robust evidence,\b(robust|strong) evidence\b,confidence,IPCC AR5,,,ipcc;corpus,"""strong evidence"" is the corpus wording (9 uses)"
+agreement,\b(low|medium|high) agreement\b,confidence,IPCC AR5,,,ipcc,
+confident,\b(is|are|remains?|not) confident\b,confidence,,,,corpus,"""SPI-M-O is confident that"" (55 uses of confident)"
+data are limited,\b(data|evidence) (are|is|remain) (limited|sparse|scarce)\b,confidence,,,,corpus,
+uncertain,\b(highly |very |remains? )?uncertain\b,confidence,,,,corpus,
+very uncertain,\bthe evidence is very uncertain\b,confidence,GRADE,,,grade,very low certainty
+probably reduces,\b(likely|probably) (reduces|increases|results in)\b,confidence,GRADE,,,grade,moderate certainty; the words collide with PHIA likely/probably
+may reduce,\bmay (reduce|increase|result in)\b,confidence,GRADE,,,grade,low certainty; the word collides with uncontrolled may

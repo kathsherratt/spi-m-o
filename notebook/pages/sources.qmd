@@ -13,6 +13,10 @@ format: html
 - An [example consensus statement](https://webarchive.nationalarchives.gov.uk/ukgwa/20110609133736/http://www.dh.gov.uk/ab/SPI/DH_118862)
 - The [archive of consensus statements](https://webarchive.nationalarchives.gov.uk/ukgwa/20110609133736/http://www.dh.gov.uk/ab/SPI/DH_118862)
 
+### SAGE
+
+- [Redacted minutes of the 22 SAGE meetings on H1N1](https://webarchive.nationalarchives.gov.uk/ukgwa/20120907150455/http://www.dh.gov.uk/ab/SPI/DH_120535), May 2009 to January 2010 (text extracted by `R/download-consensus-h1n1.R`)
+
 ### Post-event Inquiry
 
 - [Hine report](https://www.gov.uk/government/publications/independent-review-into-the-response-to-the-2009-swine-flu-pandemic)
@@ -43,6 +47,32 @@ Mix of sources and ideas for where to find further data
 - [PHE dashboard](https://coronavirus.data.gov.uk/)
 - [ONS-CIS](https://www.ons.gov.uk/peoplepopulationandcommunity/healthandsocialcare/conditionsanddiseases/bulletins/coronaviruscovid19infectionsurveypilot/latest)
 - [REACT-1](https://www.gov.uk/government/collections/monthly-results-for-react-1-studies)
+
+### Public messaging
+
+- Government comms: https://www.gov.uk/government/collections/slides-and-datasets-to-accompany-coronavirus-press-conferences
+
+## JCVI
+
+The former DH site's JCVI section, 1963 to 2012, is in the UK Government Web Archive: 41 pages linking 521 PDFs, 516 of them archived. Pre-2000s minutes are scans without a text layer, so text analysis needs OCR. Post-2012 minutes are not on gov.uk; location not yet checked.
+
+- [Archive of meetings, 1963 to 2008](https://webarchive.nationalarchives.gov.uk/ukgwa/20120907151248/http://www.dh.gov.uk/ab/JCVI/DH_095054) (index page)
+- Main committee minutes:
+  - [1963 to 1970](https://webarchive.nationalarchives.gov.uk/ukgwa/20120907201153/http://www.dh.gov.uk/ab/JCVI/DH_117627) (13 PDFs)
+  - [1971 to 1980](https://webarchive.nationalarchives.gov.uk/ukgwa/20120907201122/http://www.dh.gov.uk/ab/JCVI/DH_095052) (23)
+  - [1981 to 1990](https://webarchive.nationalarchives.gov.uk/ukgwa/20120907095407/http://www.dh.gov.uk/ab/DH_095169) (20)
+  - [1991 to 2000](https://webarchive.nationalarchives.gov.uk/ukgwa/20120907200845/http://www.dh.gov.uk/ab/JCVI/DH_095050) (19)
+  - [2001 to 2008](https://webarchive.nationalarchives.gov.uk/ukgwa/20120907200724/http://www.dh.gov.uk/ab/JCVI/DH_095044) (25)
+  - [2009](https://webarchive.nationalarchives.gov.uk/ukgwa/20120907151228/http://www.dh.gov.uk/ab/JCVI/DH_113328), [2010](https://webarchive.nationalarchives.gov.uk/ukgwa/20120907151208/http://www.dh.gov.uk/ab/JCVI/DH_107556), [2011](https://webarchive.nationalarchives.gov.uk/ukgwa/20120907213933/http://www.dh.gov.uk/ab/JCVI/DH_123529), [2012](https://webarchive.nationalarchives.gov.uk/ukgwa/20120410033231/http://www.dh.gov.uk/ab/JCVI/DH_132441), with separate agenda and paper pages per meeting
+- Subgroup minutes:
+  - [1981 to 1990](https://webarchive.nationalarchives.gov.uk/ukgwa/20120907201037/http://www.dh.gov.uk/ab/JCVI/DH_120115) (36)
+  - [1991 to 2000](https://webarchive.nationalarchives.gov.uk/ukgwa/20120907200918/http://www.dh.gov.uk/ab/JCVI/DH_119951) (38)
+  - [2003 to 2008](https://webarchive.nationalarchives.gov.uk/ukgwa/20120907200754/http://www.dh.gov.uk/ab/JCVI/DH_095045) (37)
+  - [Joint sub-committee with the Committee on Safety of Medicines on adverse reactions](https://webarchive.nationalarchives.gov.uk/ukgwa/20120907231146/http://www.dh.gov.uk/ab/JCVI/DH_095294) (18)
+  - [MMR working group](https://webarchive.nationalarchives.gov.uk/ukgwa/20120907231213/http://www.dh.gov.uk/ab/JCVI/DH_095297) (6)
+- [Statements, advice and recommendations](https://webarchive.nationalarchives.gov.uk/ukgwa/20120907213931/http://www.dh.gov.uk/ab/JCVI/DH_094744) (20)
+- [Annual reports](https://webarchive.nationalarchives.gov.uk/ukgwa/20120907151330/http://www.dh.gov.uk/ab/JCVI/DH_094983) (4)
+- [FOI releases](https://webarchive.nationalarchives.gov.uk/ukgwa/20100629115602/http://www.dh.gov.uk/ab/JCVI/DH_096383) (30)
 
 ## Inquiry & response
 
