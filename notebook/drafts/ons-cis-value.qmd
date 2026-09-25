@@ -1,0 +1,77 @@
+---
+issue: 8
+---
+
+# What was the ONS CIS worth?
+
+Idea note, Aug 2026.
+Separate from a related PhD project, but shares its ascertainment machinery.
+
+## Question
+
+CIS was expensive and is gone.
+If something similar happens again, the question will be whether to rebuild it, at what size, and how often to run it.
+
+Better to avoid asking "was it worth it", which needs a decision model and a willingness-to-pay threshold we do not have.
+Ask instead: how much of what CIS told us was recoverable without it, and at what sampling intensity?
+
+Ex-post, empirical, answerable.
+Not ex-ante VOI in the health-economic sense, and should be labelled as such.
+
+## Bridge: case ascertainment
+
+CIS and case data differ by ascertainment.
+So `a(t) = cases(t) / CIS infections(t)` is the exact quantity CIS bought.
+
+Nouvellet reference: one covariate, one link function, no elaborate structure.
+
+- `a(t) ~ test positivity` --- Chiu and Ndeffo-Mbah 2021, geometric mean of cases and positivity approximates prevalence.
+- `a(t) ~ testing eligibility policy` --- OxCGRT H2, free and available for every country.
+
+Both computable with no survey at all.
+
+## Three counterfactuals
+
+1. No CIS.
+   Reconstruct infections from cases and positivity alone.
+   How wrong, and wrong where?
+2. CIS as periodic calibration.
+   Fit the ascertainment link on a short CIS window, apply prospectively, never refit.
+   How long does a calibration last before it decays?
+3. CIS at reduced intensity.
+   Retrospectively thin the survey --- monthly instead of weekly, a fraction of the sample --- and recompute.
+   Error against survey cost.
+
+Third is the real output: a design curve rather than a verdict.
+
+## The interesting bit
+
+CIS value is not constant over time.
+It should be highest when ascertainment is moving fastest (capacity ramp in spring, demand crunch in September) and near zero when ascertainment is stable, because a stable `a` is recoverable from anything.
+
+Implication: a fixed-frequency survey is inefficient.
+Run it hard when the ascertainment mapping is drifting, and let it idle when it is not.
+Adaptive sampling triggered by divergence between free proxies.
+
+That is a design recommendation with a real generalisation beyond England, and it is the part worth building the analysis around.
+
+## Relation to other work
+
+Shares machinery with a related PhD project, which asks a different question.
+This owns the survey-design side --- how much randomised sampling do you actually need.
+
+## To check
+
+- CIS cost.
+- Whether CIS microdata (participant swab, collection date) are accessible, or only modelled outputs.
+  Determines whether thinning is honest or simulated.
+- Whether inc2prev can be refit on thinned data without falling over.
+- Existing evaluations of CIS.
+  Someone at ONS or UKHSA may have done a version of this already.
+- Whether REACT gives a second randomised series to cross-check against, which would strengthen counterfactual 1 considerably.
+
+## Related
+
+- [cis-ascertainment](cis-ascertainment.qmd) --- CIS asked participants about tests taken outside the study, so ascertainment can be measured on people rather than reconstructed from a ratio. Changes how counterfactuals 1 and 2 would be built.
+- `ensemble-marginal-value` (kath-a-log #26) --- informational value as reduction in forecast variance against a partial-information baseline.
+  The Baur and Orazem setup is close to counterfactual 1 in spirit.

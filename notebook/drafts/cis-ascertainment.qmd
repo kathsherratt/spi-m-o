@@ -1,0 +1,176 @@
+---
+issue: 8
+---
+
+# Individual-level case ascertainment from ONS CIS
+
+Idea note, Aug 2026.
+Follows from [ons-cis-value](ons-cis-value.qmd).
+
+## The finding
+
+CIS asked participants, at every visit, whether they had been tested outside the study.
+
+Visit CRF v7.0 (18 Sep 2020):
+
+> Other than in this study, have you had a swab test of your nose and throat to test for COVID-19?
+
+Followed by the result of all tests (one or more positive, all negative, failed, awaiting), date of first positive, date of last negative.
+Same block for antibody tests, including where the test was done.
+
+Visit CRF v3.0 (7 May 2020) has a narrower version, nested under symptoms: do you think you have had COVID-19, then "Did you contact the NHS about this infection?", then "Were you tested?" and the result.
+
+Source: [CIS case record forms](https://www.ndm.ox.ac.uk/covid-19/covid-19-infection-survey/case-record-forms).
+
+## Why this matters
+
+Case ascertainment is normally reconstructed as a ratio of two aggregate series: reported cases over modelled infections.
+CIS lets you measure it on people instead.
+
+Among participants swabbing positive in a randomised sample, what proportion also report a positive test outside the study?
+That is the ascertainment rate, directly.
+
+This removes most of the technical difficulty of the aggregate approach:
+
+-   no modelled infection series, so no inc2prev;
+-   no incubation-to-test delay distribution needed to align numerator and denominator;
+-   no ratio of two uncertain quantities to propagate;
+-   random sample, so no selection bias in the denominator.
+
+## What it enables
+
+Ascertainment stratified by symptom status, age, region, occupation, deprivation, household size.
+Who was missed, not only how many.
+
+That is the more useful question.
+A national ascertainment rate of 25% tells you little; knowing that it was 60% among symptomatic working-age adults and 5% among asymptomatic older people tells you where surveillance was blind and who a case series represents.
+
+Also gives a validation route: does an aggregate ascertainment series, or a cheaper survey's test-seeking measure, reproduce what CIS shows directly?
+
+## Problems
+
+-   The question changes between v3 and v7, inside 2020. v3 conditions on believing you were infected and contacting the NHS; v7 asks everyone unconditionally. Different constructs, so there is a measurement break mid-series. Check v4 (10 Jul 2020) and v8 (Dec 2020) for where it moved.
+-   Self-reported, with recall error and imprecise dates.
+-   Asked at each visit, so covers the interval since the last visit rather than a fixed window.
+-   Needs CIS microdata through the ONS Secure Research Service. Access request, with a lead time.
+
+## Limits
+
+The behavioural component is one of four terms in ascertainment, and probably not the largest.
+Around a third of infections were asymptomatic and testing in 2020 was symptomatic-led, so the ceiling on ascertainment is set by the symptomatic fraction, which nobody decides.
+That makes this an indirect route to a behavioural finding, though a good question in its own right.
+
+If pursued, coordinate with the related PhD project.
+
+## Next
+
+-   Read v4 and v8 CRFs and pin the wording changes.
+-   Check whether anyone has already done this. It is an obvious thing to have done with CIS microdata, and ONS or Oxford may have.
+-   Establish SRS access route and lead time.
+
+------------------------------------------------------------------------
+
+# Parked: the two-process framing
+
+Developed in Aug 2026 for a related PhD project, then set aside.
+Worth keeping, because it is a cleaner statement of where behaviour sits in epidemic inference than the framing that replaced it.
+
+Estimating transmission from surveillance data always requires two models: one for how infections arise, and one for how infections become data.
+The renewal equation supplies the first.
+The second is usually a delay convolution and a reporting model, and it is where ascertainment lives.
+
+Behaviour drives one parameter in each, which makes them the same operation rather than two topics.
+
+-   In the transmission process, the parameter is the reproduction number and the mechanism is contact behaviour.
+-   In the observation process, the parameter is case ascertainment and the mechanism is test-seeking behaviour.
+
+Ascertainment is not itself a mechanism, being a proportion rather than a process, but it sits in the same place in its model that the reproduction number sits in the other.
+So both follow Nouvellet's template: a model parameter on the left, a behavioural signal on the right, one link function between them.
+
+Most work on behaviour and transmission puts behaviour in the first process only, and treats the second as a nuisance.
+Test-positive cases against ONS CIS is the one pair where the same construct is measured passively and actively at once, so it is the one place the gap between them can be estimated directly rather than inferred from predictive skill.
+
+## The feedback half
+
+The two processes are not independent, because behaviour responds to what is observed rather than to what is happening.
+That closes a loop by two routes.
+
+-   Individually. A test result changes what someone does: isolation, and fewer contacts. Detection feeds back into transmission, one person at a time.
+-   Collectively. Reported cases drive government response and public communication, which move everyone's contacts at once.
+
+Both routes run through the observation process, so both inherit its bias.
+Policy and messaging in 2020 responded to reported cases, not to infections, so when ascertainment moved the signal driving the response moved with it.
+The epidemic that people and governments reacted to was the observed epidemic.
+
+That is the part worth returning to.
+It implies ascertainment bias propagates into the behavioural response, and so into transmission, which is a stronger claim than measurement error and does not seem to have been made.
+
+------------------------------------------------------------------------
+
+# Parked: worked-up analysis plan
+
+An earlier worked-up plan, kept because the decomposition is the analysis this note would need if taken forward.
+
+## Question
+
+What does a case series represent?
+When case numbers move, what moved?
+
+## Why decompose first
+
+-   Ascertainment is not a behavioural quantity. Around a third of SARS-CoV-2 infections were asymptomatic, and testing in 2020 was symptomatic-led, so those infections were never ascertainable at all.
+-   The ceiling on ascertainment is therefore set by the symptomatic fraction, which moves with the age structure of infection, not with anyone's decisions.
+-   Beneath that ceiling sit eligibility, capacity, and test-seeking. Behaviour is the fourth of four.
+-   Asking only about the fourth risks attributing to behaviour a quantity that is mostly not behaviour, and risks a null that says nothing.
+
+## The decomposition
+
+Ascertainment is a product of four proportions, each between zero and one:
+
+`a(t) = s(t) × e(t) × k(t) × d(t)`
+
+| Term | Meaning | Measured by | Type |
+|------------------|------------------|------------------|------------------|
+| `s(t)` | Proportion of infections producing symptoms, so detectable at all under symptomatic testing | CIS, symptom status among PCR-positives | Active |
+| `e(t)` | Proportion of symptomatic infections eligible for a test under the rules | OxCGRT H2, with documented eligibility dates | Policy |
+| `k(t)` | Proportion of eligible test-seekers who obtained a test and had it reported | Testing volume and test positivity | Passive |
+| `d(t)` | Proportion of eligible symptomatic people who sought a test | CoMix testing and symptom items | Active |
+
+Taking logs makes this additive, so each component's contribution to change over time is separable:
+
+`log a(t) = log s(t) + log e(t) + log k(t) + log d(t)`
+
+This is a surveillance pyramid estimated with a multiplier model: infections narrow to symptomatic, to eligible, to tested, to reported.
+Standard in burden-of-disease estimation, and used during COVID to scale reported cases up to infections.
+Cite that literature rather than presenting it as new.
+
+Practical handling:
+
+-   `a(t)` and `s(t)` are computable directly, so `a(t) / s(t)` gives ascertainment among symptomatic infections immediately. That single division removes the largest non-behavioural component and is worth reporting on its own.
+-   `e(t)`, `k(t)` and `d(t)` need more assumption. Whatever is unaccounted for goes into a residual, whose size is reported as a finding.
+-   Report contributions to change between periods, not a static budget.
+
+## Design notes
+
+-   `a(t) = cases(t) / infections(t)`, weekly, infections from CIS via inc2prev. Both carry uncertainty; propagate it.
+-   `s(t)` from CIS symptom reporting among PCR-positives. CIS records symptoms at visit, so it understates the ever-symptomatic fraction; needs a sensitivity analysis against published symptom-profile estimates.
+-   `e(t)` as a step function from documented eligibility changes, with OxCGRT H2 as the coded version.
+-   `d(t)` as the proportion of symptomatic CoMix participants reporting a test.
+-   `k(t)` as the residual, or from testing volume against demand.
+-   Window starts 18 May 2020, when community testing opened to anyone with symptoms. Before that ascertainment is too low for the ratio to be stable.
+-   No deconvolution, no nowcasting, no latent infection process. Date alignment is a fixed shift, stated as an assumption.
+
+## The September 2020 case
+
+Eligibility did not change but access collapsed, which isolates `k(t)` and `d(t)` from `e(t)`.
+The cleanest natural experiment in the window, and the place where a policy indicator provably cannot see what happened.
+
+## Two gates
+
+-   Does CIS report symptom status among PCR-positives at weekly resolution for this window? If only a period average exists, `s(t)` becomes a constant and the decomposition loses its largest time-varying term.
+-   Is the weekly count of symptomatic CoMix participants large enough to estimate the proportion who tested? If not, `d(t)` folds into the residual, and the residual's size becomes the answer.
+
+## Extension
+
+Age-stratified decomposition, splitting change in ascertainment into change within age groups and change in the age composition of infections.
+That is shift-share proper, in the Oaxaca-Blinder family, and it speaks directly to Munday et al. 2023, who found the ranking of models reversed between cases and infections and attributed it to age-related reporting variation.

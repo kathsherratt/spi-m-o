@@ -1,0 +1,42 @@
+name: Idea
+description: A research idea on UK pandemic preparedness. Add one chain label (data, expertise, process, estimates, decisions) or history.
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+      description: The research question, in one or two sentences.
+    validations:
+      required: true
+
+  - type: textarea
+    id: lens
+    attributes:
+      label: Lens
+      description: One line each for whichever of quality, value and trust apply.
+    validations:
+      required: false
+
+  - type: textarea
+    id: preparedness
+    attributes:
+      label: Preparedness
+      description: What should run routinely and what should be stood up in a response. Which Inquiry recommendation it answers, if any.
+    validations:
+      required: false
+
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources
+      description: Data, documents and notes this draws on.
+    validations:
+      required: false
+
+  - type: textarea
+    id: links
+    attributes:
+      label: Links
+      description: The kath-a-log handle, if scheduled. Application sections that used this idea.
+    validations:
+      required: false

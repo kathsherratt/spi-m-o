@@ -1,0 +1,150 @@
+---
+title: "Public numbers & codes of practice"
+format: html
+issue: 20
+---
+
+I've been nosying quite a bit around the website of the UK Office of Statistics Regulation.
+They "ensure that statistics serve the public good".
+It's a pretty broad remit...
+
+> issues related to the production and misuse of statistics.^[[OSR Raise an Issue](https://osr.statisticsauthority.gov.uk/raise-an-issue/#pid-what-issues-do-you-consider-)]
+
+The OSR doesn't produce statistics, nor dictate the methods for doing so.
+But they hold the producers to account, via audit and compliance reviews: specifically against a [Code of Practice](https://code.statisticsauthority.gov.uk/).
+
+I really like their framework of "Trust, Quality, Value", as the basis for this.
+
+In a nutshell:
+
+> ### Trustworthiness, Quality and Value (TQV)
+>
+> Trustworthiness.
+> Confidence in integrity and professionalism; free from political influence.
+>
+> Quality.
+> Use of suitable data and sound methods; continuous improvement.
+>
+> Value.
+> Relevance, accessibility, and usefulness for decision-making.^[[Introducing the Code of Practice](https://osr.statisticsauthority.gov.uk/guidance/introducing-the-code-of-practice-for-statistics-summaries-about-why-the-code-is-helpful/pages/1/)]
+
+::: {.callout-note collapse="true"}
+
+### What does the OSR do?
+
+Quality check government numbers: from the population census to the quality of one's bathwater.
+There are currently 802 accredited statistics, covering crime rates, house prices, butterflies^[[Butterflies](https://osr.statisticsauthority.gov.uk/publication/assessment-of-compliance-with-the-code-of-practice-for-statistics-statistics-about-butterflies-england-and-uk/)], baby names^[[Baby names](https://osr.statisticsauthority.gov.uk/publication/statistics-on-births-in-england-and-wales-office-for-national-statistics/)], school meals, and surgeries.
+The OSR checks all of these against the Code of Practice.
+
+The public (anyone) is also welcome to request guidance or raise concerns about the production of offician statistics.
+The OSR publish such requests in a caselog^[[OSR Casework](https://osr.statisticsauthority.gov.uk/casework/)].
+
+:::
+
+::: {.callout-note collapse="true"}
+
+#### What does a review look like?
+
+For example, the OSR recently published a compliance review of NHS referral waiting times.
+The review found the statistics are "in compliance" and therefore worthy of accreditation, and an actual badge.
+
+I'm curious about the detail in the OSR understanding of the statistics they are evaluating.
+In their recommendations, the OSR compel NHS England to improve (quality?
+value?), by:
+
+> publish more information to support users understanding of unreported removals.
+> It should also prioritise further analysis into the reasons for pathway closures, and set out actions to reduce unreported removals, with these activities included in a published workplan.
+> This will help users understand the issue and interpret the waiting‑list statistics with greater confidence.^[[NHS England's Referral to Treatment RTT](https://osr.statisticsauthority.gov.uk/publication/nhs-englands-referral-to-treatment-rtt/)]
+
+While another recommendation gets at improving trust:
+
+> NHS England should take a more proactive approach to user engagement by widening participation and embedding clear and visible feedback routes within dashboards and datasets.
+> This would help ensure the RTT statistics meet the needs of all users and support greater transparency and trust.^[[NHS England's Referral to Treatment RTT](https://osr.statisticsauthority.gov.uk/publication/nhs-englands-referral-to-treatment-rtt/)]
+
+:::
+
+::: {.callout-note collapse="true"}
+
+#### What do they not cover?
+
+All that said, they note some pretty relevant exceptions:
+
+::::: {.callout-note collapse="true"}
+##### Forecasts and projections
+
+>
+> Forecasts are not routinely treated as official statistics due to the potentially subjective nature of the assumptions and models.
+> However, in some cases producers are electing to adopt the Code of Practice to guide their preparation and orderly release, and are therefore making them official statistics.
+>
+> ... We recognise that economic forecasts can draw on a wide range of potential assumptions and methodologies, so that different forecasters can arrive at quite different conclusions.
+> Nevertheless, our basic expectations around transparency of methodology and assumptions still stand.
+
+:::::
+
+::::: {.callout-note collapse="true"}
+##### Impact Assessments and Policy Models
+
+>
+> We do not routinely comment on governments' internal analysis, including models to inform government policy or impact assessments.
+> However, where information from these is referred to publicly we may comment in line with the transparency practices set out in our interventions policy.
+
+:::::
+
+:::
+
+## So what?
+
+The OSR clearly has an interest in all sort of public numbers.
+
+> Whether official statistics or not, we support transparency, accountability and orderly release.
+> Where figures from forecasts or projections are quoted publicly by government we expect clear information on the data sources, methods and assumptions.
+> We also expect clarity on the limitations and uncertainty around the estimates.
+
+Having found all this, I naturally picked up on the idea that, problem solved, we can just get the OSR in to evaluate the type of public statistics we were producing during COVID and tell us who's responsible for what.
+
+Naturally I went into the archive and searched for COVID era R estimates.
+I found 4 instances over 2020-2021 of requests for case work covering R estimation.
+The OSR reports resolving these cases with "informal discussion".
+
+In 2022, the UKHSA published a "voluntary" statement of compliance with the Code of Practice when publishing the reproduction number.
+
+TBC:
+
+- Awareness
+- Compliance
+- Incentives
+
+How far should advisory bodies be held to the same account?
+
+- JCVI as an example of routine advice with (lack of) QA protocols (MK)
+
+--------------------------------------------------------------------------------
+
+### Collecting codes of practice
+
+- [OSR Code of Practice](https://code.statisticsauthority.gov.uk/), Office for Statistics Regulation
+- [Aqua Book](https://www.gov.uk/government/publications/the-aqua-book-guidance-on-producing-quality-analysis-for-government), HM Treasury
+  - Treasury-led cross-government best practice guidance for analytical work; published 2015, substantially revised 2025 to include black-box and multi-use models
+  - Followed the [2013 Macpherson review](https://www.gov.uk/government/publications/review-of-quality-assurance-of-government-models), the original crisis and subsequent Inquiry that sparked the standardisation of quality assurance of modelling across government
+- [Modelling Quality Assurance tools and guidance](https://www.gov.uk/government/publications/energy-security-and-net-zero-modelling-quality-assurance-qa-tools-and-guidance#how-to-use-the-templates), BEIS
+  - Most detailed checklist I've found getting into the weeds of whether code is commented in-line or separately, which parts of the modelling process can be modularised and repeated, ...
+- [Quality Assurance of Administrative Data: Uncertainty Toolkit for Analysts in Government](https://analystsuncertaintytoolkit.github.io/UncertaintyWeb/index.html), Office for Statistics Regulation
+- Framework to review models, National Audit Office (NAO)
+  - Work on model quality assurance
+- [Scientific advisory committees: code of practice and map of connections](https://www.gov.uk/government/publications/scientific-advisory-committees-code-of-practice)
+
+--------------------------------------------------------------------------------
+
+European Statistical System Five Dimensions of Quality
+
+[Quality Assurance Framework of the European Statistical System](http://ec.europa.eu/eurostat/documents/64157/4392716/ESS-QAF-V1-2final.pdf/bbf5970c-1adf-46c8-afc3-58ce177a0646)
+
+> QAF presents five quality dimensions: relevance, accuracy and reliability, timeliness and punctuality, coherence and comparability, and, accessibility and clarity.
+
+[Comparison with the UK OSR](https://osr.statisticsauthority.gov.uk/blog/data-quality-and-the-code/)
+
+--------------------------------------------------------------------------------
+
+Continued in a Zotero library:
+
+- https://www.zotero.org/kathsherratt/collections/UI2PDPQX/collection
