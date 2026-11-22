@@ -1,0 +1,188 @@
+=== PAGE 1 ===
+    UK
+    Covid-19           Module 5: Procurement
+    Inquiry
+
+
+
+
+    Report and Recommendations In Brief
+    The UK Covid-19 Inquiry is an independent public inquiry examining the response to, and
+    impact of, the Covid-19 pandemic and to learn lessons for the future. Its terms of reference
+    were set by the then Prime Minister Boris Johnson.
+
+    The scale of the pandemic was unprecedented; the Inquiry has a huge range of issues to
+    cover. The Chair of the Inquiry, Baroness (Heather) Hallett DBE, decided to address this
+    challenge by dividing its work into separate investigations known as modules. Each module
+    focuses on a different topic with its own public hearings where the Chair heard evidence.
+
+    Following hearings, recommendations for change are developed and put into a Module
+    Report. These reports contain findings from the evidence collected across each module and
+    the Chair’s recommendations for the future. Reports for Modules 1, 2, 3 and 4 have already
+    been published.
+
+    The fifth module considers the procurement and distribution to end-users across the four
+    nations of the United Kingdom of key healthcare-related equipment and supplies.1 This
+    includes personal protective equipment (PPE), ventilators and testing equipment.
+
+    The Module 5 report contains a chapter that sets out the Inquiry’s findings on the evidence it
+    received relating to PPE Medpro Ltd. This chapter cannot be published on 14 July 2026 as it is
+    covered by a Restriction Order. The Order was granted by the Chair to ensure that ongoing
+    criminal investigations are not undermined. It continues until the conclusion of any criminal
+    proceedings in relation to PPE Medpro Ltd or unless the order is varied or revoked pursuant to
+    section 20 of the Inquiries Act 2005. This chapter will be published once the Order has been
+    lifted and should be read together with Chapter 5.
+
+    Future reports will focus on the following areas:
+•     Module 6 - The care sector
+
+•     Module 7 - Test, trace and isolate programmes
+
+•     Module 8 - Children and young people
+
+•     Module 9 - The economic response to the pandemic
+
+•     Module 10 - The impact on society
+
+
+
+    1 Procurement describes the process of identifying goods or services and negotiating an agreement to buy them.
+
+=== PAGE 2 ===
+UK
+Covid-19       Module 5: Procurement
+Inquiry
+
+
+
+
+Module 5: Procurement - findings
+
+The onset of the Covid-19 pandemic resulted in a global race to purchase vital supplies of
+PPE, testing equipment and ventilators, as governments around the world sought to protect
+their populations. International demand skyrocketed, global supply chains came under strain
+and prices rose uncontrollably.
+
+The stockpile of PPE and other equipment for the UK was inadequate to meet demand, with
+the UK government and devolved administrations wholly unprepared to increase rapidly the
+scale and speed of their emergency procurement and distribution operations. Across the UK,
+had ministers and officials been better equipped with appropriate information and systems to
+respond, procurement decisions would have been easier and fairer. There would have been
+less waste, more trust and greater confidence in the system.
+
+The Inquiry found several major flaws in the systems responsible for emergency procurement
+and distribution of key healthcare equipment and supplies, including:
+•    The pandemic stockpile of PPE was not subject to an adequate system of management
+     and oversight.
+•    The organisations responsible for emergency procurement and distribution across the UK
+     were not ready for a pandemic. There were inadequate plans to increase the speed and
+     scale of their responses. The plans that did exist had not been stress-tested in pandemic
+     response exercises.
+•    The structures established by the UK government to respond to the Covid-19 pandemic
+     did not sufficiently integrate procurement and distribution. Vital inventory, usage rates,
+     procurement and distribution data were not easily available to procurement teams.
+     Procurement systems were unduly complex, inefficient and unable to cope with the large
+     quantities of information they had to process.
+•    Healthcare equipment is subject to a complex system of regulation, which is poorly suited
+     to an emergency.
+•    There was no strategy for increasing international trade and domestic manufacturing
+     resilience for a pandemic. The UK’s supplier base was too concentrated in a single country,
+     China, and the capabilities of domestic manufacturers had not been adequately
+     considered in planning.
+•    There was not a sufficient number of officials within the UK government and devolved
+     administrations with the skills, expertise and experience specifically in the emergency
+     procurement of healthcare equipment.
+•    There was inadequate planning for the use of external advisers and businesses in an
+     emergency procurement and distribution response.
+
+=== PAGE 3 ===
+UK
+Covid-19        Module 5: Procurement
+Inquiry
+
+
+
+
+•    Public confidence in the emergency procurement system was undermined by the lack of
+     transparency, the lack of adequate processes to control spending and the unfairness of the
+     High Priority Lane which tended to favour suppliers with a connection to the UK
+     government.
+•    The technology and data systems for emergency procurement and distribution were
+     outdated and did not allow adequate sharing and analysis of procurement and distribution
+     data.
+
+Challenges and consequences
+•    Due to a lack of planning, ministers and officials were forced to improvise quickly to
+     establish new, untested emergency procurement and distribution systems.
+•    The lack of plans and infrastructure meant officials could not respond with sufficient speed
+     and efficiency to fundamental problems, such as which and how much equipment to buy, at
+     what prices, and how it should be distributed.
+•    There were risks of waste caused by overbuying, resulting in the loss of large sums of
+     public money, and the buying of substandard equipment that jeopardised health and social
+     care workers.
+•    The total expenditure by the UK government and devolved administrations on PPE,
+     ventilators and testing equipment between 1 January 2020 and 28 June 2022 was
+     approximately £42.3 billion. Of the approximately £15 billion of PPE purchased, almost £10
+     billion was wasted.
+•    The establishment of the High Priority Lane embedded unfairness in the UK government’s
+     emergency procurement system. It was a misguided attempt at prioritisation, caused by a
+     fundamental lack of readiness rather than ill-intention. The High Priority Lane should not
+     have been set up and should not be repeated.
+•    Mistakes were made under pressure, leading to:
+
+    — allegations of cronyism and corruption;
+    — waste of public money; and
+    — a lack of transparency about contract awards as officials, understandably, prioritised
+      getting healthcare equipment to health and social care workers.
+
+Positive aspects of the response
+•    UK embassies and trade missions successfully used their contacts and expertise globally to
+     identify suppliers.
+•    The response from the public and businesses, who were invited to help source,
+     manufacture, and supply critical equipment, was enthusiastic.
+•    The effective collaboration between the public and private sectors should serve as an
+     example of how governments should respond to future pandemics.
+
+=== PAGE 4 ===
+UK
+Covid-19      Module 5: Procurement
+Inquiry
+
+
+
+
+Recommendations
+The UK government has started to make progress, especially with the publication of the
+Pandemic Preparedness Strategy in March 2026. However, there is more to be done.
+
+This Report makes 11 recommendations. In summary, as well as important recommendations
+spanning improvements to the composition and management of the pandemic stockpile, a
+programme of training for officials and better transparency, governance and accountability, the
+Inquiry recommends:
+
+
+     establishing systems for the emergency procurement and distribution of healthcare
+     equipment, with a radical overhaul of supply chain resilience and emergency
+     procurement and distribution systems;
+
+     creating an emergency international trade and domestic industrial strategy as part
+     of pandemic planning, in which key healthcare equipment is regarded as a strategic
+     national asset worthy of investment;
+
+     setting specific objectives for international trade and domestic industry during a
+     pandemic, creating an environment to encourage investment, research and
+     development in the advanced manufacturing of healthcare equipment to increase
+     self-sufficiency; and
+
+     deploying technology and the effective use of real-time data, which works across the
+     UK government and devolved administrations.
+
+
+
+A full list of the Inquiry’s recommendations is included in Appendix 3 of the full report. The
+Chair expects that all recommendations are acted upon and implemented. The Inquiry will
+monitor the implementation of the recommendations during its lifetime.
+
+To find out more or to download a copy of the full Module 5 Report or other accessible formats,
+visit: https://covid19.public-inquiry.uk/reports.
+

@@ -1,0 +1,111 @@
+---
+title: "Lessons learned about outbreak modelling: a review pilot"
+---
+
+Pilot for the [natural history of SPI-M](natural-history.qmd): a review of how the field talks about itself, not of what happened. Different methods from the book.
+
+## Questions in mind
+
+- How big, or bad, does an outbreak have to be to justify lessons learned, or an inquiry?
+- What methods are used to assess what happened against recommended lessons?
+- How specific were the lessons to the outbreak, and who were they meant for?
+- How repetitive are the problems, actors, and content of recommended lessons?
+
+## Why lessons repeat
+
+| Mechanism | What it looks like | Signal in the texts |
+|---|---|---|
+| Ignored | Lesson stated, nothing changes | No formal response, or "noted" |
+| Learned, then decayed | Implemented, then lost to turnover, restructuring, funding | Earlier lesson cited as done, then the problem returns |
+| Never actionable | Too vague, or no addressee | No named actor, no test of success |
+
+Output in its own right: a concrete suggestion for how modellers write or monitor lessons.
+
+- Spaced repetition as analogy (half joke): inquiries arrive once per crisis, spacing longer than institutional memory; exercises (Cygnus, Pegasus) as retrieval practice; decay as a forgetting curve
+- Timing of preparatory exercises: are they designed to rehearse old lessons or find new ones? Discussion point
+- Aside, not this piece: what changes a lesson?
+- Lessons management already exists as a practice (NATO, UK Lessons Management Best Practice Guidance 2025, WHO AAR guidance). NATO: "identified" until a change is made and checked, then "learned" (from memory, verify). Ready-made outcome measure?
+
+## Candidate review questions
+
+1. What lessons about ___ have been explicitly stated after outbreak responses, and how often do they recur across ___ (events / authors / decades)?
+2. When explicit lessons about modelling in outbreak response repeat, is it the ___ (problem / actor / recommendation) that repeats, and by which mechanism?
+3. Who are lessons about outbreak modelling addressed to, and how ___ are they (specific / actionable / time-bound)?
+4. How does the gap between ___ (a crisis / an exercise) and the next ___ relate to whether its lessons are new or repeated?
+5. What does the outbreak modelling field say it has ___ (failed to learn / learned), and from whose position?
+
+## Criteria
+
+- States explicitly that it is a lesson learned, or to be learned
+- About modelling in public health policy
+- Possibly limited to outbreaks, as a uniquely time-bound problem
+- Global; the explicit-lessons rule keeps volume manageable
+
+## Before search terms
+
+1. Where must the explicit lesson claim appear: title/abstract, or anywhere? Databases search title and abstract only
+2. Seed set of 10-20 that clearly qualify, plus near misses; tests recall, supplies vocabulary
+3. Grey literature: WHO AARs say "lessons" but rarely discuss modelling
+4. Start year: HIV in the 1980s, or later?
+5. Existing reviews: OpenAlex done (below); PROSPERO and OSF registries not yet searched
+
+## Existing reviews (OpenAlex, Oct 2026)
+
+None found of lessons-learned pieces about modelling. Closest:
+
+| Piece | Reviews | Difference |
+|---|---|---|
+| [All models are wrong, but can they be useful? Lessons from COVID-19 ABMs](https://doi.org/10.18564/jasss.5937) (JASSS 2026) | Models | Lessons are the reviewers', not the field's stated lessons |
+| [Scoping review of COVID-19 modelling in Belgium 2020-2024](https://doi.org/10.1186/s13690-026-01959-3) (2026) | Models, incl. lessons learned | One country, one pandemic |
+| Simulation exercises and after action reviews, 2016-2019 (2020) | Outputs of lessons exercises | Not modelling. Closest method precedent |
+| Assessing public health preparedness in the EU: simulation exercises and AARs (2023) | Same, EU | Not modelling |
+
+Search vocabulary: "model" alone is swamped by animal models, models of care, "lesson study" in education. Needs "mathematical", "epidemic", "transmission", or "forecast". Most clear cases carry "lessons" in the title.
+
+## Seed set (from Zotero, first pass, to prune)
+
+Clearly qualifies
+
+- Van Kerkhove & Ferguson 2012, Epidemic and intervention modelling: a scientific rationale for policy decisions? Lessons from the 2009 influenza pandemic
+- Modeling and public health emergency responses: lessons from SARS (2011)
+- Chowell et al. 2017, Perspectives on model forecasts of the 2014-2015 Ebola epidemic in West Africa: lessons and the way forward
+- The RAPIDD Ebola forecasting challenge: synthesis and lessons learnt (2018)
+- Modernizing and expanding outbreak science to support better decision making during public health crises: lessons for COVID-19 and beyond (2020)
+- The use and misuse of mathematical modeling for infectious disease policymaking: lessons for the COVID-19 pandemic (2021)
+- Nowcasting epidemics of novel pathogens: lessons from COVID-19 (2021)
+- Epidemic tracking and forecasting: lessons learned from a tumultuous year (2021)
+- Getting the most out of maths: lessons learnt from three initiatives that were part of the COVID-19 response in the UK (2023)
+- Lessons learned from COVID-19 modelling efforts for policy decision-making in LMICs (2024)
+- Nowcasting and forecasting the 2022 US mpox outbreak: lessons learned (2024)
+- The future of pandemic modeling in support of decision making: lessons learned from COVID-19 (2025)
+- Epidemic forecasting: lessons learned from the SARS-CoV-2 pandemic (2025)
+- Lessons learned from modeling COVID-19 ... focusing on ensemble models (2026)
+- Unidentified, titles truncated in Zotero: "The use of modelling to inform decision-making in an emergency: lessons from ..."; "Lessons from modelling the pandemic"
+
+Near misses: test the rule
+
+- Controlling infectious disease outbreaks: lessons from mathematical modelling (2009): lessons from models about epidemics, not about modelling
+- Reflections on epidemiological modeling to inform policy during COVID-19 in Western Europe (2023): "reflections", not "lessons"
+- EpiForecasts: reflections on two years estimating effective reproduction numbers (2022)
+- Model-based ensembles: lessons learned from retrospective analysis of COVID-19 forecasts across 10 countries (2022): technical lessons
+
+Scope questions
+
+- The African swine fever modelling challenge: model comparison and lessons learnt (2022): animal
+- Fogarty International Center collaborative networks in infectious disease modeling: lessons learnt (2019): capacity, not response
+
+Science advice generally (book material)
+
+- Foot and mouth disease 2001: Lessons to be Learned inquiry report; FMD 2007: a review and lessons learned
+- Policy framing and learning the lessons from the UK's FMD crisis (2004)
+- Cummings 2010, Learning the lessons of the BSE crisis
+- Parallels, differences and lessons: FMD and COVID-19, UK 2001/2020 (2020)
+- Learning policy lessons from the pandemic: the UK's COVID Inquiry (2024)
+- Behavioural science policy advice-making during COVID-19 in four countries (2026)
+
+Lessons management as a field
+
+- UK Lessons Management Best Practice Guidance (2025); NATO Lessons Learned Handbook, 4th ed.
+- WHO Guidance for after action review (2019)
+- Use of after action reports to promote organizational and systems learning in emergency preparedness (2012)
+- Getting the most from after action reviews to improve global health security (2019)

@@ -1,32 +1,68 @@
 ---
-title: "Sources of evidence from which to evaluate SPI-M"
+title: "Sources of evidence from which to evaluate (SPI-M)"
 date: 2026-04-23
 categories: [Notes]
 format: html
 ---
 
+## HIV/AIDS
+
+::: {.callout-note collapse="true"}
+### Outputs
+
+### Data
+
+### Evaluation
+
+Cox report (HMSO, 1988) - Day report follow-ups (1990, 1993) Isham's 1988 review in JRSS A the Acheson report (1988)
+:::
+
+## BSE/vCJD
+
+::: {.callout-note collapse="true"}
+### Outputs
+
+### Data
+
+### Evaluation
+:::
+
+## FMD
+
+::: {.callout-note collapse="true"}
+### Outputs
+
+### Data
+
+### Evaluation
+:::
+
 ## H1N1
 
-### SPI-M-O output
+::: {.callout-note collapse="true"}
+### Outputs
 
 - [SPI-M-O terms of reference and membership](https://webarchive.nationalarchives.gov.uk/ukgwa/+/www.dh.gov.uk/ab/SPI/DH_095904)
 - An [example consensus statement](https://webarchive.nationalarchives.gov.uk/ukgwa/20110609133736/http://www.dh.gov.uk/ab/SPI/DH_118862)
 - The [archive of consensus statements](https://webarchive.nationalarchives.gov.uk/ukgwa/20110609133736/http://www.dh.gov.uk/ab/SPI/DH_118862)
 
-### Post-event Inquiry
+### Data
 
-- [Hine report](https://www.gov.uk/government/publications/independent-review-into-the-response-to-the-2009-swine-flu-pandemic)
+### Evaluation
 
+- Post-event Inquiry [Hine report](https://www.gov.uk/government/publications/independent-review-into-the-response-to-the-2009-swine-flu-pandemic)
 - A few selected witness statements submitted to Inquiry:
   - [Department of Health](https://assets.publishing.service.gov.uk/media/5a79d52240f0b670a8025c17/doh.pdf)
   - [Health protection authority](https://assets.publishing.service.gov.uk/media/5a79ec1140f0b670a80266c6/hpa-march31_0.pdf)
   - [Gov. Office of Science](https://assets.publishing.service.gov.uk/media/5a79cf15ed915d042206b304/govt-office-science_0.pdf)
+:::
 
 ## Covid-19
 
-Mix of sources and ideas for where to find further data
+::: {.callout-note collapse="true"}
+### Outputs
 
-### SPI-M
+#### SPI-M
 
 - Model descriptions - https://www.gov.uk/government/publications/reproduction-number-r-and-growth-rate-methodology/reproduction-number-r-and-growth-rate-methodology
 - R and growth rate
@@ -38,29 +74,27 @@ Mix of sources and ideas for where to find further data
   - [EMRG MTPs](https://www.gov.uk/government/publications/consensus-statements-on-covid-19)
     - fortnightly: 2022-04-13 to 2022-12-21
 
-### Rapid response surveillance
+### Data
 
 - [PHE dashboard](https://coronavirus.data.gov.uk/)
 - [ONS-CIS](https://www.ons.gov.uk/peoplepopulationandcommunity/healthandsocialcare/conditionsanddiseases/bulletins/coronaviruscovid19infectionsurveypilot/latest)
 - [REACT-1](https://www.gov.uk/government/collections/monthly-results-for-react-1-studies)
 
-## Inquiry & response
+### Evaluation
 
+- All Inquiry documents [collated here](https://www.inquestsandinquiries.com/projects/covid-19)
 - [Full Inquiry](https://covid19.public-inquiry.uk/documents/)
-  - 1920 individual documents
-  - 12548 pieces of evidence
-  - 6 reports (to date)
   - [Specific recommendations](https://covid19.public-inquiry.uk/inquiry-recommendations/)
-
 - Government response dashboard:
   - https://covidinquiry.dac.grid.civilservice.gov.uk/
+:::
 
-## Impact tracing
+## Other sources
 
-- Published work of SPI-M membership via orcID/name search in pub databases
-- Freedom of Information requests where unavailable
-- Policy use
-  - Inquiry witness statements
+- for academics
+  - Published work via orcID/name search in pub databases
+  - Overton - traces where academics have been cited in policy/grey literature
+- for policy
+  - Inquiry evidence submissions
   - Hansard: parliamentary debate
   - Freedom of Information requests
-  - Overton - traces where academics have been cited in policy/grey literature

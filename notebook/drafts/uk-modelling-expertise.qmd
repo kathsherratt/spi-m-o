@@ -30,6 +30,18 @@ Example outbreaks: HIV, FMD, SARS, H1N1, Ebola
 - RQ3: test for the "matthew effect" (cumulative power): early response disproportionately increasing weight/centrality in the network
 - RQ4: identify how the patterns of one oubtreak influenced response to subsequent
 
+_Crisis shapes the modeller (notes, Oct 2026)_
+- Modellers respond to a new crisis with a bias from the one they last experienced
+- Hypothesis: modellers are shaped by policy as much as policy is by models, because modelling is a system of fallacies
+  - Open: fallacy as error, or as a reasonable heuristic under uncertainty (Cummings' reading, unverified)?
+  - Cummings 2010, *Rethinking the BSE Crisis*, ch. "Learning the Lessons of the BSE Crisis" (Zotero, annotated)
+- Methods travel with people: BSE back-calculation adapted from HIV/AIDS incidence work ([Donnelly et al. 2003](https://researchonline.lshtm.ac.uk/13527)); Anderson's group carried modelling from BSE into FMD 2001, Anderson as David King's chief FMD adviser
+- Anderson and May's own first crisis arguably AIDS (1991 textbook); BSE the first crisis for the next cohort (Ferguson, Donnelly, Ghani: check)
+- Two channels from one partnership: May (CSA 1995-2000) reshaped the rules for advice after BSE ([1997 guidelines](https://royalsociety.org/-/media/policy/publications/1998/10150.pdf)); Anderson carried models into advice
+- Data-driven test: successive waves of modelling cohorts, first-crisis experience against later modelling style and interests
+- Not confirmed: Anderson on SEAC; May's role in the Royal Society FMD inquiry (Follett 2002)
+- See also: [natural-history](natural-history.qmd) (book proposal, cohort survey), [potted history](../pages/history.qmd), [issue 12](https://github.com/kathsherratt/spi-m-o/issues/12) (career trajectories)
+
 #### Methods
 
 _Data collection_

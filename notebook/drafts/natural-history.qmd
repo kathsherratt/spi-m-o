@@ -23,6 +23,14 @@ issue: 23
 -   General public
     -   Why? SPI-M is a matter of national interest - as a body with strong influence on the politicians and policies governing a democratic society, potentially at any time and with extreme and universal impact.
 
+### Shape (notes, Oct 2026)
+
+-   Subject is SPI-M, as a particular expression of general forces: governing risk \> in crisis \> with uncertainty and expertise \> infectious disease \> SPI-M as main character, shaped by and shaping the narrative
+-   Structure: chronological, opening out through the nesting in reverse, arriving at risk as the conclusion
+-   Aspiration: a Hacking-style text. Likely a university press list that publishes for a wide readership (Chicago, Princeton, Yale, Bristol UP): proposal direct to editors, no agent
+-   Looping effect, tangent: experts classified somewhat at random, by luck of being in position during an outbreak; the classification shapes the expert, who then changes the field. Links to the Matthew effect hypothesis below and RQ3 in [uk-modelling-expertise](uk-modelling-expertise.qmd)
+-   Pilot: [lessons-learned](lessons-learned.qmd)
+
 ### Informative comparisons
 
 -   Hacking, The Taming of Chance
@@ -38,6 +46,7 @@ Context: epidemiological analysis contributing to policy
 Choice of approach
 
 -   Outbreak-by-outbreak\
+    -   Start from BSE: just predates SPI-M; Phillips Inquiry (2000) and May's 1997 guidelines reshaped UK science advice\
 -   Outbreak phase: detection, wave, stand-down\
 -   Evaluation criteria: credibility/scientific validity, relevance/policy interaction, legitimacy/public accountability
 
@@ -52,4 +61,5 @@ Themes:
 -   Resources - "we had a single computer"\
 -   Teams: who was working on what, when, where? What training did they have? Who left & where did they move to? Who stayed & why?\
     -   Hypothesis - survivor bias & Matthew effect of self-reinforcing career path dependency\
+    -   Hypothesis - crisis shapes the modeller: each cohort carries the bias of its first crisis. See [uk-modelling-expertise](uk-modelling-expertise.qmd)\
     -   Lessons: selection, recruitment, diversity, participation
